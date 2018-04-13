@@ -1,23 +1,28 @@
 ###################################################### Utility Functions ######################################################
 
-def get_classTerms():
-	labels = []
-	terms = []
-	with open("wordList.txt") as fl:
-		# data = fl.readlines(fl)
-		for line in fl:
-			if line == "#$#\n":
-				labels.append(fl.readline().strip())
-				terms.append(fl.readline().strip())
-
-	return (terms, labels)
-
-
-def get_testDoc(file_path="target_doc"):
+def get_testDoc(file_path="pred_sent"):
 	docs = []
 	with open(file_path, encoding='latin-1') as fl:
 		docs.append(fl.read())
 	return docs
+
+
+def get_sent_label_pair(test_docs):
+	import re
+	sentence_list = []
+	label_list = []
+
+	text_blocks = test_docs[0].splitlines()
+	for block in text_blocks:
+		classes = re.search(r"\<([A-Za-z0-9_, ]+)\>", block)
+		if not classes == None:				# Check whether sentences have a class
+			classes = classes.group(1)		# Get string containing classes
+			all_class = classes.split(", ")
+			label_list.append(all_class)
+			sentence = block.replace(" <"+classes+">", "")
+			sentence_list.append(sentence)
+
+	return (sentence_list, label_list)
 
 
 def treebank2wordnet_pos(treebank_tag):
@@ -76,30 +81,46 @@ def doc2sentences(docs):
 	return sentences
 
 
-def binary_rel(similarity_matrix, threshold=0.0):
-	for i in range(similarity_matrix.shape[0]):
-		for j in range(similarity_matrix.shape[1]):
-			similarity_matrix[i][j] = 0 if similarity_matrix[i][j] <= threshold else 1
-	return similarity_matrix
-
-
-
 
 
 
 ###################################################### Main Functions ######################################################
 
 
-def run_similarity(terms, labels, test_docs, output_file="pred_sent"):
+def run_extraction(test_docs, output_file="ext_sent"):
 	import numpy as np
+	event_types = set(["Drought", "Earthquake", "Epidemic", "Hurricane", "Rebellion", "Terrorism", "Tornado", "Tsunami"])
+	frame_types = set(["displaced_people_and_evacuations", "donation_needs_or_offers_or_volunteering_services", \
+					"infrastructure_and_utilities_damage", "injured_or_dead_people", \
+					"missing_trapped_or_found_people", "time"])
+
+	sentences, labels = get_sent_label_pair(test_docs)
+	for i in range(len(sentences)):
+		locations = parse_loc(sentences[i]) # Use Stanforf NER
+		if not location == None:
+
+		if "time" in labels[i]:
+			time_attr = parse_for_time(sentences[i]) # Use SUTime or Timex
+			if not time_attr == None:
+
+		if len(event_types.intersection(set(labels))) > 0:
+
+
+
+
+
+
+
+
+
 	class_terms_matrix, tfidf = tf_idf_fit_transform(terms)
 
 	test_sentences = doc2sentences(test_docs)
 	sentence_matrix = tfidf.transform(test_sentences)
 
 	print("Shape of sentence matrix : ", sentence_matrix.shape)
-	# print("Original order of lables:")
-	# print(labels)
+	print("Original order of lables:")
+	print(labels)
 
 	from sklearn.metrics.pairwise import cosine_similarity
 	similarity_matrix = cosine_similarity(sentence_matrix, class_terms_matrix)
@@ -119,10 +140,9 @@ def run_similarity(terms, labels, test_docs, output_file="pred_sent"):
 ###################################################### Calling Functions ######################################################
 
 
-terms, labels = get_classTerms()
-# test_docs = get_testDocs()
-# run_similarity(terms, labels, test_docs)
+# test_docs = get_testDoc()
+# run_extraction(test_docs)
 import os
-for filename in os.listdir("./text_data/Data_Docs"):
-	test_doc = get_testDoc(os.path.join("./text_data/Data_Docs", filename))
-	run_similarity(terms, labels, test_doc, os.path.join("./text_data/Data_Docs_Classified", filename))
+for filename in os.listdir("./text_data/Data_Docs_Classified"):
+	test_docs = get_testDoc(os.path.join("./text_data/Data_Docs_Classified", filename))
+	run_extraction(test_docs, os.path.join("./text_data/Data_Docs_Extracted", filename))

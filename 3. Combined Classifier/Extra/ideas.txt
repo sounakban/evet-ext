@@ -1,0 +1,3 @@
+Sentences classified as containing time information wil be passed to SUTime or Timex.
+Classify with : month year week day yesterday tomorrow today <All months & days in short and long form>
+Sentences determined to have location tags will be passed through Stanford NER.
