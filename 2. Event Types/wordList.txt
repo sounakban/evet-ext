@@ -1,0 +1,27 @@
+#$#
+Drought
+drought droughts starve hunger hungry produce cattle food water | dead death repair restore tragedy disaster conflict injure kill injured killed effect effected devastate devastated rebuild rebuilding report investigate damage calamity calamities restore help relief fund threat die survivor survivors bodies cloth clothes material operation effort evacuate evacuated safe safety
+#$#
+Earthquake
+earthquake earthquakes quake quakes richter epicentre archaeological archaeology destruction collapse seismic magnitude | dead death repair restore tragedy disaster conflict injure kill injured killed effect effected devastate devastated rebuild rebuilding report investigate damage calamity calamities restore help relief fund threat die survivor survivors bodies cloth clothes material operation effort evacuate evacuated safe safety
+#$#
+Epidemic
+hiv infection infections disease diseases positive hospital water medical health injection injections control medicine medicines unsafe disposable treatment hepatitis epidemic syringe syringes | dead death repair restore tragedy disaster conflict injure kill injured killed effect effected devastate devastated rebuild rebuilding report investigate damage calamity calamities restore help relief fund threat die survivor survivors bodies cloth clothes material operation effort evacuate evacuated safe safety
+#$#
+Hurricane
+storm storms hurricane hurricanes wind winds rain coast coastal coasts coastline coastlines beach water sand flood flooding cyclone torrential lash eye speed | dead death repair restore tragedy disaster conflict injure kill injured killed effect effected devastate devastated rebuild rebuilding report investigate damage calamity calamities restore help relief fund threat die survivor survivors bodies cloth clothes material operation effort evacuate evacuated safe safety
+#$#
+Other
+die dead death repair restore tragedy disaster injure kill injured killed effect effected devastate devastated rebuild rebuilding report investigate damage calamity calamities restore help relief fund threat survivor survivors bodies cloth clothes material operation effort evacuate evacuated safe safety
+#$#
+Rebellion
+arm rebel rebels police pistol border seize guerrilla grenade war hostage arrest ammunition seized intelligence arsenal criminal conflict interrogation explosives explosion task special force brigade capital military cadre group illegal troop riot protest angry anger angered queue queued | dead death repair restore tragedy disaster conflict injure kill injured killed effect effected devastate devastated rebuild rebuilding report investigate damage calamity calamities restore help relief fund threat die survivor survivors bodies cloth clothes material operation effort evacuate evacuated safe safety
+#$#
+Terrorism
+terrorism terrorist attack group intelligence national hostage religion attacker leader terror sinister jihadi border isi blast gunman explosives explosion | dead death repair restore tragedy disaster conflict injure kill injured killed effect effected devastate devastated rebuild rebuilding report investigate damage calamity calamities restore help relief fund threat die survivor survivors bodies cloth clothes material operation effort evacuate evacuated safe safety
+#$#
+Tornado
+tornado tornados storm weather uprooted uproot black cloud suck rise tear eye speed | dead death repair restore tragedy disaster conflict injure kill injured killed effect effected devastate devastated rebuild rebuilding report investigate damage calamity calamities restore help relief fund threat die survivor survivors bodies cloth clothes material operation effort evacuate evacuated safe safety
+#$#
+Tsunami
+tsunami tsunamis water earthquake earthquakes quake quakes epicentre sea  coast coastal coasts coastline coastlines ocean pacific metre feet trigger cause coastal speed ship high height tall wave | dead death repair restore tragedy disaster conflict injure kill injured killed effect effected devastate devastated rebuild rebuilding report investigate damage calamity calamities restore help relief fund threat die survivor survivors bodies cloth clothes material operation effort evacuate evacuated safe safety

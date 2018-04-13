@@ -1,0 +1,56 @@
+displaced_people_and_evacuations	0
+TP : 10
+FP : 4
+FN : 8
+
+
+donation_needs_or_offers_or_volunteering_services	1
+TP : 7
+FP : 2
+FN : 2
+
+
+infrastructure_and_utilities_damage	2
+TP : 11
+FP : 1
+FN : 5
+
+
+injured_or_dead_people		3
+TP : 3
+FP : 
+FN : 8
+
+
+missing_trapped_or_found_people		4
+TP : 5
+FP : 2
+FN : 2
+
+
+not_related_or_irrelevant	5
+TP : 8
+FP : 
+FN : 
+
+
+other_useful_information	6
+TP : 34
+FP : 19
+FN : 4
+
+
+
+
+Observations:
+1. dead and injured not being classfied properly because of less num of common words
+2. When multiple infrmation present, being wrongly classified as category 6
+3. Rescue operations (Category 4) are being categorized as other info
+4. Classifier gets onfused in complex sentences
+
+
+Question :
+1. Which category ? 1 or 4
+	Emergency teams were called on to carry out rescues in the Salinas River in San Luis Obispo County (10), Los Angeles River in the Sepulveda Basin (1), Tuolumne County (2) and in Folsom, Sacramento County (1).
+
+

@@ -1,0 +1,39 @@
+#$#
+Drought
+drought droughts starve hunger hungry produce cattle food water
+#$#
+Earthquake
+earthquake earthquakes quake quakes richter epicentre collapse seismic magnitude
+#$#
+Epidemic
+hiv infection infections disease diseases positive hospital medical health injection injections medicine medicines disposable treatment hepatitis epidemic syringe syringes
+#$#
+Hurricane
+storm storms hurricane hurricanes wind winds rain coast coastal coasts coastline coastlines beach water sand flood flooding cyclone torrential lash eye speed
+#$#
+Rebellion
+arm rebel rebels police border seize guerrilla war arrest ammunition seized seize arsenal criminal conflict interrogation explosives explosion task force military group illegal troop riot protest angry anger angered queue queued mob
+#$#
+Terrorism
+terrorism terrorist attack group intelligence national hostage religion attacker leader terror sinister jihadi border isi isis blast gunman explosives explosion task force military arsenal grenade
+#$#
+Tornado
+tornado tornados storm weather uprooted uproot suck rise raise tear eye speed
+#$#
+Tsunami
+tsunami tsunamis water earthquake earthquakes quake quakes epicentre sea  coast coastal coasts coastline coastlines ocean atlantic pacific metre feet speed high height tall wave
+#$#
+displaced_people_and_evacuations
+displace maroon homeless rescue operation flee evacuate evacuated
+#$#
+donation_needs_or_offers_or_volunteering_services
+relief help support contribute fund volunteer supply food meal
+#$#
+infrastructure_and_utilities_damage
+damage submerge destruction house homeless build closed close overflow building destroy collapse
+#$#
+injured_or_dead_people
+kill killed dead death claim live die died victim body bodies
+#$#
+missing_trapped_or_found_people
+remain strand stranded survive survivors survived rescue find found search
