@@ -99,3 +99,8 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+
+# Jar Files
+python-sutime-master/
+stanford-ner-2018-02-27/
