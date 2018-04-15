@@ -14,10 +14,10 @@ def get_sent_label_pair(test_docs):
 
 	text_blocks = test_docs[0].splitlines()
 	for block in text_blocks:
-		classes = re.search(r"\<([A-Za-z0-9_, ]+)\>", block)
+		classes = re.search(r"\<([A-Za-z0-9_; ]+)\>", block)
 		if not classes == None:				# Check whether sentences have a class
 			classes = classes.group(1)		# Get string containing classes
-			all_class = classes.split(", ")
+			all_class = classes.split(" ; ")
 			label_list.append(all_class)
 			sentence = block.replace(" <"+classes+">", "")
 			sentence_list.append(sentence)
@@ -25,60 +25,60 @@ def get_sent_label_pair(test_docs):
 	return (sentence_list, label_list)
 
 
-def treebank2wordnet_pos(treebank_tag):
-	from nltk.corpus import wordnet
-	if treebank_tag.startswith('J'):
-		return wordnet.ADJ
-	elif treebank_tag.startswith('V'):
-		return wordnet.VERB
-	elif treebank_tag.startswith('N'):
-		return wordnet.NOUN
-	elif treebank_tag.startswith('R'):
-		return wordnet.ADV
-	else:
-		return wordnet.NOUN
+# def treebank2wordnet_pos(treebank_tag):
+# 	from nltk.corpus import wordnet
+# 	if treebank_tag.startswith('J'):
+# 		return wordnet.ADJ
+# 	elif treebank_tag.startswith('V'):
+# 		return wordnet.VERB
+# 	elif treebank_tag.startswith('N'):
+# 		return wordnet.NOUN
+# 	elif treebank_tag.startswith('R'):
+# 		return wordnet.ADV
+# 	else:
+# 		return wordnet.NOUN
+#
+#
+# def tokenize(text):
+# 	from nltk.tokenize import RegexpTokenizer
+# 	tokenizer = RegexpTokenizer(r'\w+')
+# 	from nltk import pos_tag
+# 	from nltk.stem import WordNetLemmatizer
+# 	wordnet_lemmatizer = WordNetLemmatizer()
+# 	# import re
+# 	from nltk.corpus import stopwords
+# 	cachedStopWords = stopwords.words("english")
+#
+# 	min_length = 3
+# 	words = map(lambda word: word.lower(), tokenizer.tokenize(text))
+# 	words = [word for word in words if word not in cachedStopWords]
+# 	tags = pos_tag(words)		# tags contains tuple pairs of ('words', 'POS tags')
+# 	# tokens = (list(map(lambda token: wordnet_lemmatizer.lemmatize(token), words)))
+# 	tokens = (list(map(lambda token: wordnet_lemmatizer.lemmatize(token[0], treebank2wordnet_pos(token[1])), tags)))
+# 	filtered_tokens = tokens
+# 	# p = re.compile('[a-zA-Z]+');
+# 	# filtered_tokens = list(filter(lambda token: p.match(token) and len(token)>=min_length, tokens));
+# 	return filtered_tokens
 
 
-def tokenize(text):
-	from nltk.tokenize import RegexpTokenizer
-	tokenizer = RegexpTokenizer(r'\w+')
-	from nltk import pos_tag
-	from nltk.stem import WordNetLemmatizer
-	wordnet_lemmatizer = WordNetLemmatizer()
-	# import re
-	from nltk.corpus import stopwords
-	cachedStopWords = stopwords.words("english")
-
-	min_length = 3
-	words = map(lambda word: word.lower(), tokenizer.tokenize(text))
-	words = [word for word in words if word not in cachedStopWords]
-	tags = pos_tag(words)		# tags contains tuple pairs of ('words', 'POS tags')
-	# tokens = (list(map(lambda token: wordnet_lemmatizer.lemmatize(token), words)))
-	tokens = (list(map(lambda token: wordnet_lemmatizer.lemmatize(token[0], treebank2wordnet_pos(token[1])), tags)))
-	filtered_tokens = tokens
-	# p = re.compile('[a-zA-Z]+');
-	# filtered_tokens = list(filter(lambda token: p.match(token) and len(token)>=min_length, tokens));
-	return filtered_tokens
-
-
-# Perform fit and transform input
-def tf_idf_fit_transform(docs):
-	from sklearn.feature_extraction.text import TfidfVectorizer
-	# tfidf = TfidfVectorizer(tokenizer=tokenize, min_df=1, max_df=1.0, max_features=1000, use_idf=True, sublinear_tf=True);
-	tfidf = TfidfVectorizer(tokenizer=tokenize, min_df=1, max_df=1.0, max_features=1000, use_idf=True, sublinear_tf=False);
-	tdm = tfidf.fit_transform(docs);
-	return (tdm, tfidf)
-
-
-def doc2sentences(docs):
-	from nltk import sent_tokenize
-
-	sentences = []
-	for doc in docs:
-		sent_text = sent_tokenize(doc)
-		sentences.extend(sent_text)
-
-	return sentences
+# # Perform fit and transform input
+# def tf_idf_fit_transform(docs):
+# 	from sklearn.feature_extraction.text import TfidfVectorizer
+# 	# tfidf = TfidfVectorizer(tokenizer=tokenize, min_df=1, max_df=1.0, max_features=1000, use_idf=True, sublinear_tf=True);
+# 	tfidf = TfidfVectorizer(tokenizer=tokenize, min_df=1, max_df=1.0, max_features=1000, use_idf=True, sublinear_tf=False);
+# 	tdm = tfidf.fit_transform(docs);
+# 	return (tdm, tfidf)
+#
+#
+# def doc2sentences(docs):
+# 	from nltk import sent_tokenize
+#
+# 	sentences = []
+# 	for doc in docs:
+# 		sent_text = sent_tokenize(doc)
+# 		sentences.extend(sent_text)
+#
+# 	return sentences
 
 
 
@@ -115,6 +115,7 @@ def run_extraction(test_docs, output_file="ext_sent"):
 			# If sentence contains an event mention
 			if not curr_event['type'] == "None":	# for 1st loop
 				events_list.append(curr_event)
+			# Reset initial values for new event
 			curr_event = {}
 			curr_event['type'] = " ".join(list(sentence_events))
 			curr_event['location'] = ""
@@ -139,34 +140,11 @@ def run_extraction(test_docs, output_file="ext_sent"):
 			# If sentence contains an frame elements
 			for frame in sentence_frames:
 				if not frame == "time":
-					# if not 'frames' in curr_event:
-					# 	curr_event['frames'] = []
 					curr_event['frames'].append(frame+" #:# "+sentences[i])
 					print(frame+" #:# "+sentences[i])
 
 	print("-----------------------End of Document-----------------------")
 
-
-
-
-
-
-
-
-
-
-	# class_terms_matrix, tfidf = tf_idf_fit_transform(terms)
-	#
-	# test_sentences = doc2sentences(test_docs)
-	# sentence_matrix = tfidf.transform(test_sentences)
-	#
-	# print("Shape of sentence matrix : ", sentence_matrix.shape)
-	# print("Original order of lables:")
-	# print(labels)
-	#
-	# from sklearn.metrics.pairwise import cosine_similarity
-	# similarity_matrix = cosine_similarity(sentence_matrix, class_terms_matrix)
-	# similarity_matrix = binary_rel(similarity_matrix)
 	#
 	# with open(output_file+"_output", "w") as fl:
 	# 	for i in range(len(test_sentences)):
