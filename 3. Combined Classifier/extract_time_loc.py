@@ -87,23 +87,64 @@ def doc2sentences(docs):
 ###################################################### Main Functions ######################################################
 
 
+# from Resources.time_loc_inferface import get_location, get_time
+from Resources import time_loc_inferface as tli
+
 def run_extraction(test_docs, output_file="ext_sent"):
 	import numpy as np
-	event_types = set(["Drought", "Earthquake", "Epidemic", "Hurricane", "Rebellion", "Terrorism", "Tornado", "Tsunami"])
-	frame_types = set(["displaced_people_and_evacuations", "donation_needs_or_offers_or_volunteering_services", \
-					"infrastructure_and_utilities_damage", "injured_or_dead_people", \
-					"missing_trapped_or_found_people", "time"])
+
+	event_types = set(["Drought", "Earthquake", "Epidemic", "Hurricane", \
+						"Rebellion", "Terrorism", "Tornado", "Tsunami"])
+	frame_types = set(["displaced_people_and_evacuations", \
+						"donation_needs_or_offers_or_volunteering_services", \
+						"infrastructure_and_utilities_damage", "injured_or_dead_people", \
+						"missing_trapped_or_found_people", "time"])
+
+	events_list = []
+	# Set initial values
+	curr_event = {}
+	curr_event['type'] = "None"
+	curr_event['location'] = ""
+	curr_event['time'] = ""
+	curr_event['frames'] = []
 
 	sentences, labels = get_sent_label_pair(test_docs)
 	for i in range(len(sentences)):
-		locations = parse_loc(sentences[i]) # Use Stanforf NER
-		if not location == None:
+		sentence_events = event_types.intersection(set(labels[i]))
+		if len(sentence_events) > 0:
+			# If sentence contains an event mention
+			if not curr_event['type'] == "None":	# for 1st loop
+				events_list.append(curr_event)
+			curr_event = {}
+			curr_event['type'] = " ".join(list(sentence_events))
+			curr_event['location'] = ""
+			curr_event['time'] = ""
+			curr_event['frames'] = []
+			print("Event : ", curr_event['type'])
+
+			locations = tli.get_location(sentences[i])
+			if not locations == None:
+				curr_event['location'] = locations
+				print("Location : ", locations)
 
 		if "time" in labels[i]:
-			time_attr = parse_for_time(sentences[i]) # Use SUTime or Timex
+			time_attr = tli.get_time(sentences[i])
 			if not time_attr == None:
+				if len(time_attr) > len(curr_event['time']):
+					curr_event['time'] = time_attr
+					print("Time : ", time_attr)
 
-		if len(event_types.intersection(set(labels))) > 0:
+		sentence_frames = frame_types.intersection(set(labels[i]))
+		if len(sentence_frames) > 0:
+			# If sentence contains an frame elements
+			for frame in sentence_frames:
+				if not frame == "time":
+					# if not 'frames' in curr_event:
+					# 	curr_event['frames'] = []
+					curr_event['frames'].append(frame+" #:# "+sentences[i])
+					print(frame+" #:# "+sentences[i])
+
+	print("-----------------------End of Document-----------------------")
 
 
 
@@ -113,28 +154,29 @@ def run_extraction(test_docs, output_file="ext_sent"):
 
 
 
-	class_terms_matrix, tfidf = tf_idf_fit_transform(terms)
 
-	test_sentences = doc2sentences(test_docs)
-	sentence_matrix = tfidf.transform(test_sentences)
-
-	print("Shape of sentence matrix : ", sentence_matrix.shape)
-	print("Original order of lables:")
-	print(labels)
-
-	from sklearn.metrics.pairwise import cosine_similarity
-	similarity_matrix = cosine_similarity(sentence_matrix, class_terms_matrix)
-	similarity_matrix = binary_rel(similarity_matrix)
-
-	with open(output_file+"_output", "w") as fl:
-		for i in range(len(test_sentences)):
-			predictions = [labels[x] for x in range(similarity_matrix.shape[1]) if similarity_matrix[i][x]==1]
-			predictions = " ; ".join(predictions)
-			# fl.write(str(test_sentences[i])+" :\t: "+predictions+"\n\n")
-			if len(predictions) > 0:
-				fl.write("\n"+str(test_sentences[i])[0:-1]+" <"+predictions+">.\n")
-			else:
-				fl.write(str(test_sentences[i])+" ")
+	# class_terms_matrix, tfidf = tf_idf_fit_transform(terms)
+	#
+	# test_sentences = doc2sentences(test_docs)
+	# sentence_matrix = tfidf.transform(test_sentences)
+	#
+	# print("Shape of sentence matrix : ", sentence_matrix.shape)
+	# print("Original order of lables:")
+	# print(labels)
+	#
+	# from sklearn.metrics.pairwise import cosine_similarity
+	# similarity_matrix = cosine_similarity(sentence_matrix, class_terms_matrix)
+	# similarity_matrix = binary_rel(similarity_matrix)
+	#
+	# with open(output_file+"_output", "w") as fl:
+	# 	for i in range(len(test_sentences)):
+	# 		predictions = [labels[x] for x in range(similarity_matrix.shape[1]) if similarity_matrix[i][x]==1]
+	# 		predictions = " ; ".join(predictions)
+	# 		# fl.write(str(test_sentences[i])+" :\t: "+predictions+"\n\n")
+	# 		if len(predictions) > 0:
+	# 			fl.write("\n"+str(test_sentences[i])[0:-1]+" <"+predictions+">.\n")
+	# 		else:
+	# 			fl.write(str(test_sentences[i])+" ")
 
 
 ###################################################### Calling Functions ######################################################

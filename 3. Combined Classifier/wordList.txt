@@ -39,4 +39,4 @@ missing_trapped_or_found_people
 remain strand stranded survive survivors survived rescue find found search
 #$#
 time
-year month week day yesterday tomorrow today jan january feb february mar march apr april may jun june jul july aug august sept september oct october nov november dec december mon monday tue tuesday wed wednesday thursday fri friday sat saturday sun sunday
+year month week day yesterday tomorrow today jan january feb february mar march apr april may jun june jul july aug august sept september oct october nov november dec december mon monday tue tuesday wed wednesday thursday fri friday sat saturday sun sunday am pm
