@@ -1,0 +1,43 @@
+[
+    {
+        "type": "Hurricane",
+        "location": "Florida; Florida; Bahamas; US",
+        "time": "2018-09-04, 2018-04-16",
+        "frames": []
+    },
+    {
+        "type": "Hurricane",
+        "location": "Floridas Atlantic; Bahamas",
+        "time": "",
+        "frames": [
+            "displaced_people_and_evacuations #:# Although weaker than it had been, Frances promised to bring torrential rain to Floridas Atlantic coast, where 2.5 million people had been told to evacuate their homes, after delivering a long pounding to the Bahamas.",
+            "infrastructure_and_utilities_damage #:# Federal emergency management agency director Michael Brown said people should not let their guard down because Frances had weakened, as it could still cause huge damage."
+        ]
+    },
+    {
+        "type": "Hurricane",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Hurricane",
+        "location": "Bahamas",
+        "time": "",
+        "frames": [
+            "injured_or_dead_people #:# In the Bahamas, the hurricane killed one person, blew off roofs, downed trees and power lines and caused widespread flooding in the 700-island archipelago that is home to 300,000 people."
+        ]
+    },
+    {
+        "type": "Hurricane",
+        "location": "West Palm; Beach; Florida; Grand Bahama; US",
+        "time": "2018-04-17",
+        "frames": []
+    },
+    {
+        "type": "Hurricane",
+        "location": "Floridas east; coast; Miami; Fort Lauderdale",
+        "time": "",
+        "frames": []
+    }
+]

@@ -1,0 +1,70 @@
+[
+    {
+        "type": "Earthquake",
+        "location": "",
+        "time": "",
+        "frames": [
+            "injured_or_dead_people #:# Undersea earthquakes are the most frequent causes of the giant ripples in sea water called tsunamis that can move as fast as commercial aircraft and cause death and destruction on land, scientists say.",
+            "infrastructure_and_utilities_damage #:# Undersea earthquakes are the most frequent causes of the giant ripples in sea water called tsunamis that can move as fast as commercial aircraft and cause death and destruction on land, scientists say.",
+            "displaced_people_and_evacuations #:# But undersea volcanoes, submarine landslides and, rarely, asteroids or comets falling into the sea can also displace huge volumes of sea water and trigger tsunamis which spread out in all directions, sometimes at speeds of up to 800 km an hour."
+        ]
+    },
+    {
+        "type": "Earthquake",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Tsunami",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Tsunami",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Tsunami",
+        "location": "Alaska; US; West Coast; Alaska Tsunami; Warning Centre",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Tsunami",
+        "location": "Krakatoa",
+        "time": "1883-08",
+        "frames": [
+            "injured_or_dead_people #:# a giant wall of sea water that killed 35,000 people in Indonesia."
+        ]
+    },
+    {
+        "type": "Tsunami",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Earthquake Tsunami",
+        "location": "Chile; Pacific Ocean; Japan",
+        "time": "",
+        "frames": [
+            "injured_or_dead_people #:# An earthquake off the coast of Chile in 1960 triggered a tsunami that took over 20 hours to move to the other side of the Pacific Ocean and hit Japan killing 150 people there."
+        ]
+    },
+    {
+        "type": "Tsunami",
+        "location": "Pacific Ocean; Latin America; Chile; Peru; Japan",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Tsunami",
+        "location": "Pacific Ocean",
+        "time": "",
+        "frames": []
+    }
+]

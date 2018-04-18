@@ -1,0 +1,85 @@
+[
+    {
+        "type": "Epidemic",
+        "location": "",
+        "time": "",
+        "frames": [
+            "infrastructure_and_utilities_damage #:# A damaged McDonald?s mannequin inside a destroyed restaurant in Phuket, Thailand."
+        ]
+    },
+    {
+        "type": "Tsunami",
+        "location": "Indonesia; Indian Ocean",
+        "time": "2017-12-30, 2018-04-16",
+        "frames": [
+            "injured_or_dead_people #:#  Banda Aceh (Indonesia), Dec. 30 (Reuters): The death toll in the Indian Ocean tsunami disaster soared above 125,000 today as millions scrambled for food and fresh water.",
+            "donation_needs_or_offers_or_volunteering_services #:#  Banda Aceh (Indonesia), Dec. 30 (Reuters): The death toll in the Indian Ocean tsunami disaster soared above 125,000 today as millions scrambled for food and fresh water."
+        ]
+    },
+    {
+        "type": "Epidemic",
+        "location": "Indonesia; Sri Lanka",
+        "time": "",
+        "frames": [
+            "displaced_people_and_evacuations #:# Aid agencies warned many more, from Indonesia to Sri Lanka, could die in epidemics if shattered communications and transport hampered what may prove history?s biggest relief operation.",
+            "injured_or_dead_people #:# Aid agencies warned many more, from Indonesia to Sri Lanka, could die in epidemics if shattered communications and transport hampered what may prove history?s biggest relief operation.",
+            "donation_needs_or_offers_or_volunteering_services #:# Aid agencies warned many more, from Indonesia to Sri Lanka, could die in epidemics if shattered communications and transport hampered what may prove history?s biggest relief operation."
+        ]
+    },
+    {
+        "type": "Hurricane",
+        "location": "Bangladesh",
+        "time": "",
+        "frames": [
+            "displaced_people_and_evacuations #:# Rescue workers pressed on into isolated villages shattered by a disaster that could yet eclipse a cyclone that struck Bangladesh in 1991, killing 138,000 people.",
+            "injured_or_dead_people #:# Rescue workers pressed on into isolated villages shattered by a disaster that could yet eclipse a cyclone that struck Bangladesh in 1991, killing 138,000 people.",
+            "missing_trapped_or_found_people #:# Rescue workers pressed on into isolated villages shattered by a disaster that could yet eclipse a cyclone that struck Bangladesh in 1991, killing 138,000 people."
+        ]
+    },
+    {
+        "type": "Epidemic",
+        "location": "",
+        "time": "P1D",
+        "frames": [
+            "injured_or_dead_people #:# Prime Minister Goran Persson said more than 1,000 Swedes may have been killed in the disaster."
+        ]
+    },
+    {
+        "type": "Earthquake",
+        "location": "Aceh",
+        "time": "",
+        "frames": [
+            "injured_or_dead_people #:# Indonesian health ministry sources said just under 80,000 had died in the northern Aceh province that was close to the undersea quake, some 28,000 more than previously announced.",
+            "infrastructure_and_utilities_damage #:# Indonesian health ministry sources said just under 80,000 had died in the northern Aceh province that was close to the undersea quake, some 28,000 more than previously announced."
+        ]
+    },
+    {
+        "type": "Epidemic",
+        "location": "Banda Aceh",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Epidemic",
+        "location": "",
+        "time": "",
+        "frames": [
+            "donation_needs_or_offers_or_volunteering_services #:# ?Some cars come by and throw food like that.",
+            "donation_needs_or_offers_or_volunteering_services #:# The fastest get the food, the strong one wins."
+        ]
+    },
+    {
+        "type": "Earthquake",
+        "location": "",
+        "time": "P40Y",
+        "frames": [
+            "displaced_people_and_evacuations #:# Residents of the city fled their homes when two aftershocks revived fresh memories of the worst earthquake in 40 years.",
+            "displaced_people_and_evacuations #:# ?I was sleeping, but fled outside in panic.",
+            "injured_or_dead_people #:# If I am going to die, I will die here.",
+            "donation_needs_or_offers_or_volunteering_services #:# ?This isn?t just a situation of giving out food and water.",
+            "injured_or_dead_people #:# Authorities warned of many deaths from dysentery, cholera and typhoid fever caused by contaminated food and water, and malaria and dengue fever carried by mosquitoes.",
+            "donation_needs_or_offers_or_volunteering_services #:# Authorities warned of many deaths from dysentery, cholera and typhoid fever caused by contaminated food and water, and malaria and dengue fever carried by mosquitoes.",
+            "donation_needs_or_offers_or_volunteering_services #:# Indonesian aircraft dropped food to isolated areas in Aceh, areas that may not be reached by land for days."
+        ]
+    }
+]

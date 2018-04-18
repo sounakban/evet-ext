@@ -1,0 +1,80 @@
+[
+    {
+        "type": "Tsunami",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Earthquake Tsunami",
+        "location": "India",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Tsunami",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Earthquake Tsunami",
+        "location": "west coast; of Sumatra",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Tsunami",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Tsunami",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Earthquake",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Earthquake Tsunami",
+        "location": "Sumatra",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Earthquake Tsunami",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Tsunami",
+        "location": "Pacific Ocean",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Earthquake Tsunami",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Tsunami",
+        "location": "Indian Ocean",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Tsunami",
+        "location": "",
+        "time": "2013-04-16",
+        "frames": []
+    }
+]

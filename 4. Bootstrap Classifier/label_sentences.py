@@ -105,24 +105,17 @@ def run_classifier(terms, labels, test_docs):
 
 	predictions = []
 	for i in range(len(test_sentences)):
-		predictions.append([labels[x] for x in range(similarity_matrix.shape[1]) if similarity_matrix[i][x]==1])
+		predictions.append(tuple([labels[x] for x in range(similarity_matrix.shape[1]) if similarity_matrix[i][x]==1]))
 
 	sent_class_list = []
+	# for i in range(len(test_sentences)):
+	# 	for j in range(len(predictions[i])):
+	# 		sent_class_list.append((test_sentences[i][0:-1], predictions[i][j]))
 	for i in range(len(test_sentences)):
-		for j in range(len(predictions[i])):
-			sent_class_list.append((test_sentences[i][0:-1], predictions[i][j]))
+		if len(predictions[i]) > 0:
+			sent_class_list.append((test_sentences[i][0:-1], predictions[i]))
 
 	return sent_class_list
-
-	# with open(output_file+"_classified", "w") as fl:
-	# 	for i in range(len(test_sentences)):
-	# 		predictions = [labels[x] for x in range(similarity_matrix.shape[1]) if similarity_matrix[i][x]==1]
-	# 		predictions = " ; ".join(predictions)
-	# 		# fl.write(str(test_sentences[i])+" :\t: "+predictions+"\n\n")
-	# 		if len(predictions) > 0:
-	# 			fl.write("\n"+str(test_sentences[i])[0:-1]+" <"+predictions+">.\n")
-	# 		else:
-	# 			fl.write(str(test_sentences[i])+" ")
 
 
 ###################################################### Calling Functions ######################################################

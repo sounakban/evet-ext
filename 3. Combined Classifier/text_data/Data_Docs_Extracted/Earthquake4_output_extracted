@@ -1,0 +1,55 @@
+[
+    {
+        "type": "Earthquake",
+        "location": "Bay of; Bengal",
+        "time": "P40Y",
+        "frames": [
+            "injured_or_dead_people #:# The earthquake was the biggest in 40 years, but it was the violently disturbed sea that burst onto the coasts ringing the Bay of Bengal to destroy and kill.",
+            "infrastructure_and_utilities_damage #:# The earthquake was the biggest in 40 years, but it was the violently disturbed sea that burst onto the coasts ringing the Bay of Bengal to destroy and kill."
+        ]
+    },
+    {
+        "type": "Tsunami",
+        "location": "Kenya; Somalia",
+        "time": "",
+        "frames": [
+            "injured_or_dead_people #:# The tsunami travelled miles to cause deaths in as far away as Kenya and Somalia."
+        ]
+    },
+    {
+        "type": "Earthquake",
+        "location": "Iran",
+        "time": "2017-12-26",
+        "frames": []
+    },
+    {
+        "type": "Earthquake",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Tsunami",
+        "location": "Indian Ocean",
+        "time": "",
+        "frames": [
+            "infrastructure_and_utilities_damage #:# The destruction caused by the immense forces that moved earth and sea could not have been completely avoided."
+        ]
+    },
+    {
+        "type": "Tsunami",
+        "location": "India",
+        "time": "",
+        "frames": [
+            "displaced_people_and_evacuations #:# What was remarkable was the fearlessness of the local people in immediate rescue operations, while the response from the government was prompt and coordinated.",
+            "missing_trapped_or_found_people #:# What was remarkable was the fearlessness of the local people in immediate rescue operations, while the response from the government was prompt and coordinated.",
+            "infrastructure_and_utilities_damage #:# In India, Indonesia, Thailand, Sri Lanka and the Maldives, it is not merely the toll in lives, livelihoods, and property that will have to be counted, but the damage to infrastructure, the threat to health and, especially in the regions most dependent on tourism, the damage to the economy."
+        ]
+    },
+    {
+        "type": "Earthquake",
+        "location": "Aceh; Sumatra",
+        "time": "P26Y",
+        "frames": []
+    }
+]

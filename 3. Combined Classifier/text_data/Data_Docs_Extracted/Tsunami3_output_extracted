@@ -1,0 +1,32 @@
+[
+    {
+        "type": "Tsunami",
+        "location": "Andaman; Nicobar Islands",
+        "time": "2018-01-01",
+        "frames": [
+            "missing_trapped_or_found_people #:# stranded in the tsunami-hit Andaman and Nicobar Islands .",
+            "missing_trapped_or_found_people #:# But now they are all stranded.",
+            "displaced_people_and_evacuations #:# We have received information that tourists are feeling insecure as quite a few of them are yet to be evacuated,.",
+            "donation_needs_or_offers_or_volunteering_services #:# Revenue minister Manmohan Samal and special relief commissioner R. Balakrishnan were at a loss for answers when reporters here asked how many people from the state were in Port Blair and other places of the Andamans."
+        ]
+    },
+    {
+        "type": "Epidemic",
+        "location": "",
+        "time": "2018-04-16",
+        "frames": [
+            "injured_or_dead_people #:# The government, quick to react to the Centre?s call for aid, today sent a plane carrying relief material to the Andamans, where thousands are feared dead.",
+            "donation_needs_or_offers_or_volunteering_services #:# The government, quick to react to the Centre?s call for aid, today sent a plane carrying relief material to the Andamans, where thousands are feared dead."
+        ]
+    },
+    {
+        "type": "Earthquake Tsunami",
+        "location": "Sumatra; Orissa; Orissa",
+        "time": "P1W",
+        "frames": [
+            "injured_or_dead_people #:# Expressing concern and sorrow over the deaths caused by the tsunami following an earthquake, which originated in Sumatra, Orissa chief minister Naveen Patnaik said, ?Orissa has faced a similar disaster and we want to help the others..",
+            "donation_needs_or_offers_or_volunteering_services #:# Expressing concern and sorrow over the deaths caused by the tsunami following an earthquake, which originated in Sumatra, Orissa chief minister Naveen Patnaik said, ?Orissa has faced a similar disaster and we want to help the others..",
+            "donation_needs_or_offers_or_volunteering_services #:# This morning, the government set up a relief centre at Kalyan Mandap in the Unit-8 area of the city where scores of people were engaged in making food packets."
+        ]
+    }
+]

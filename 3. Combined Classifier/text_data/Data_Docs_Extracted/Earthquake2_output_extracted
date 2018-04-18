@@ -1,0 +1,62 @@
+[
+    {
+        "type": "Earthquake",
+        "location": "Gujarat",
+        "time": "2001-01-26, P1D",
+        "frames": []
+    },
+    {
+        "type": "Earthquake",
+        "location": "Bhuj",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Earthquake",
+        "location": "",
+        "time": "",
+        "frames": [
+            "injured_or_dead_people #:# The death and destruction that followed the earthquake spread over 15,000 kilometres with the loss of life estimated at 20,000, apart from loss of livestock and crores worth of property.",
+            "infrastructure_and_utilities_damage #:# The death and destruction that followed the earthquake spread over 15,000 kilometres with the loss of life estimated at 20,000, apart from loss of livestock and crores worth of property."
+        ]
+    },
+    {
+        "type": "Earthquake",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Earthquake",
+        "location": "Gujarat",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Earthquake",
+        "location": "India",
+        "time": "PXW",
+        "frames": []
+    },
+    {
+        "type": "Earthquake",
+        "location": "Kutch; Indias",
+        "time": "PXY, PXY",
+        "frames": []
+    },
+    {
+        "type": "Earthquake",
+        "location": "Kalyaneshwar Temple; Bhuj",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Earthquake",
+        "location": "Ahmedabad; Hriday Kunj",
+        "time": "2018-05, P1D, P1Y",
+        "frames": [
+            "infrastructure_and_utilities_damage #:# Even in Ahmedabad the quake damaged Gandhis historic meeting place, the Hriday Kunj, where he had sat spinning his charka in the Sabarmati Ashram.",
+            "infrastructure_and_utilities_damage #:# The clock tower at the Ranjit Vilas palace in Wankaner was seriously damaged and the clock had stopped at 8.46 am."
+        ]
+    }
+]

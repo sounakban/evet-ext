@@ -1,0 +1,55 @@
+[
+    {
+        "type": "Rebellion",
+        "location": "Patna",
+        "time": "2018-04-15, 2017-11-25",
+        "frames": []
+    },
+    {
+        "type": "Rebellion",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Rebellion",
+        "location": "Bihar",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Rebellion",
+        "location": "Patna; Gaya",
+        "time": "",
+        "frames": [
+            "donation_needs_or_offers_or_volunteering_services #:# Officers interrogating Subodh and other suspects said the rebels had many contacts masquerading as white-collar traders and professionals in Patna, Gaya and several towns in Jharkhand serving as conduit in supply of arms from smugglers to guerrilla cadres.",
+            "donation_needs_or_offers_or_volunteering_services #:# Central intelligence agencies, too, have indicated to their state counterparts that the Maoists were increasing their arsenal thanks to supply of arms from international smugglers."
+        ]
+    },
+    {
+        "type": "Rebellion",
+        "location": "China; Indo-China; Northeast; Bihar",
+        "time": "",
+        "frames": [
+            "donation_needs_or_offers_or_volunteering_services #:# These officials believe that illegal arms from China were being supplied to rebel groups through the Indo-China borders in the Northeast and also through over 750km porous Indo-Nepal border in Bihar."
+        ]
+    },
+    {
+        "type": "Rebellion",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Rebellion",
+        "location": "Patna; Gaya",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Rebellion",
+        "location": "",
+        "time": "",
+        "frames": []
+    }
+]

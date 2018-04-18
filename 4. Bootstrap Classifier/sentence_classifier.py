@@ -11,10 +11,9 @@ def get_trainData():
 
 
 def get_testDoc(file_path="target_doc"):
-	docs = []
 	with open(file_path, encoding='latin-1') as fl:
-		docs.append(fl.read())
-	return docs
+		doc = fl.read()
+	return doc
 
 
 def doc2sentences(docs):
@@ -87,29 +86,33 @@ def binary_rel(similarity_matrix, threshold=0.0):
 ###################################################### Main Functions ######################################################
 
 
-def run_classifier(terms, labels, test_docs):
+def run_classifier(sentences, labels, test_docs):
 	import numpy as np
-	class_terms_matrix, tfidf = tf_idf_fit_transform(terms)
+
+	train_matrix, tfidf = tf_idf_fit_transform(sentences)
 
 	test_sentences = doc2sentences(test_docs)
 	sentence_matrix = tfidf.transform(test_sentences)
-
 	print("Shape of sentence matrix : ", sentence_matrix.shape)
 
-	from sklearn.metrics.pairwise import cosine_similarity
-	similarity_matrix = cosine_similarity(sentence_matrix, class_terms_matrix)
-	similarity_matrix = binary_rel(similarity_matrix)
+	from sklearn.preprocessing import MultiLabelBinarizer
+	mlb = MultiLabelBinarizer()
+	label_matrix = mlb.fit_transform(labels)
 
-	predictions = []
-	for i in range(len(test_sentences)):
-		predictions.append([labels[x] for x in range(similarity_matrix.shape[1]) if similarity_matrix[i][x]==1])
+	from sklearn.multiclass import OneVsRestClassifier
+	from sklearn.svm import SVC
+	estimator = SVC(kernel='linear')
+	classifier = OneVsRestClassifier(estimator, n_jobs=-1)
+	classifier.fit(train_matrix, label_matrix)
+	predictions = classifier.predict(sentence_matrix)
 
-	sent_class_list = []
-	for i in range(len(test_sentences)):
-		for j in range(len(predictions[i])):
-			sent_class_list.append((test_sentences[i][0:-1], predictions[i][j]))
+	import csv
+	with open("classified.csv", "w") as fl:
+		writer = csv.writer(fl)
+		for i in range(len(test_sentences)):
+			curr_pred = [mlb.classes_[x] for x in range(predictions.shape[1]) if predictions[i][x]==1]
+			writer.writerow((test_sentences[i], curr_pred))
 
-	return sent_class_list
 
 	# with open(output_file+"_classified", "w") as fl:
 	# 	for i in range(len(test_sentences)):
@@ -126,14 +129,12 @@ def run_classifier(terms, labels, test_docs):
 
 
 sentences, labels = get_trainData()
+labels = [tuple(label[1:-1].replace('\'', '').replace(' ', '').split(',')) for label in labels]
 
+test_docs = []
 import os
-for filename in os.listdir("./text_data/natural_disaster_text"):
-	test_doc = get_testDoc(os.path.join("./text_data/natural_disaster_text", filename))
-	sentence_label_list.extend(run_classifier(terms, labels, test_doc))
+for filename in os.listdir("./text_data/Test_Data"):
+	test_doc = get_testDoc(os.path.join("./text_data/Test_Data", filename))
+	test_docs.append(test_doc)
 
-# import csv
-# with open('train_sentences.csv', 'w') as fl:
-#    writer = csv.writer(fl)
-#    for row in sentence_label_list:
-# 	   writer.writerow(row)
+run_classifier(sentences, labels, test_docs)

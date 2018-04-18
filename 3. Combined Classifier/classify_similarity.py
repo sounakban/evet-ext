@@ -105,7 +105,7 @@ def run_similarity(terms, labels, test_docs, output_file="pred_sent"):
 	similarity_matrix = cosine_similarity(sentence_matrix, class_terms_matrix)
 	similarity_matrix = binary_rel(similarity_matrix)
 
-	with open(output_file+"_output", "w") as fl:
+	with open(output_file+"_classified", "w") as fl:
 		for i in range(len(test_sentences)):
 			predictions = [labels[x] for x in range(similarity_matrix.shape[1]) if similarity_matrix[i][x]==1]
 			predictions = " ; ".join(predictions)

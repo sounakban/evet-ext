@@ -1,0 +1,102 @@
+[
+    {
+        "type": "Epidemic",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Epidemic",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Epidemic",
+        "location": "",
+        "time": "",
+        "frames": [
+            "injured_or_dead_people #:# Unlike disposable or glass syringes, the AD variety can never be reused as it punctures automatically the moment the injection is pushed into the human body."
+        ]
+    },
+    {
+        "type": "Epidemic",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Epidemic",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Epidemic",
+        "location": "",
+        "time": "2018-04-13",
+        "frames": []
+    },
+    {
+        "type": "Epidemic",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Epidemic",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Epidemic",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Epidemic",
+        "location": "India",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Epidemic",
+        "location": "Bengal",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Epidemic",
+        "location": "Bengal",
+        "time": "PXY",
+        "frames": []
+    },
+    {
+        "type": "Epidemic",
+        "location": "",
+        "time": "",
+        "frames": [
+            "missing_trapped_or_found_people #:# ?There is no way of finding out how the infections are spreading, but we cannot take chances."
+        ]
+    },
+    {
+        "type": "Epidemic",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Epidemic",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Epidemic",
+        "location": "",
+        "time": "",
+        "frames": []
+    }
+]

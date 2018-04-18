@@ -1,0 +1,21 @@
+[
+    {
+        "type": "Tornado Hurricane",
+        "location": "India",
+        "time": "",
+        "frames": [
+            "injured_or_dead_people #:# One of the questions posed by a disaster concerns the degree of involvement of the state once some rehabilitation has been achieved for the victims of a particular catastrophe.",
+            "injured_or_dead_people #:# Rehabilitation undertaken by the state has helped resettle many of the victims in new locations and livelihoods, in some cases, in new family-like combinations of bereaved adults and children in order to help them deal with their traumatic losses and memories.",
+            "donation_needs_or_offers_or_volunteering_services #:# Rehabilitation undertaken by the state has helped resettle many of the victims in new locations and livelihoods, in some cases, in new family-like combinations of bereaved adults and children in order to help them deal with their traumatic losses and memories."
+        ]
+    },
+    {
+        "type": "Hurricane",
+        "location": "Erasama",
+        "time": "P5Y",
+        "frames": [
+            "injured_or_dead_people #:# Yet five years after the cyclone, a large number of victims feel no desire to live, and the suicide rate, especially among the survivors of the cyclone from the Erasama area, is an indicator of deep mental disturbance.",
+            "missing_trapped_or_found_people #:# Yet five years after the cyclone, a large number of victims feel no desire to live, and the suicide rate, especially among the survivors of the cyclone from the Erasama area, is an indicator of deep mental disturbance."
+        ]
+    }
+]

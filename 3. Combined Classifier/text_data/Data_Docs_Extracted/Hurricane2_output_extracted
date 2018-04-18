@@ -1,0 +1,60 @@
+[
+    {
+        "type": "Hurricane",
+        "location": "Florida",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Hurricane",
+        "location": "Florida; Florida",
+        "time": "2018-09-05",
+        "frames": [
+            "displaced_people_and_evacuations #:# The massive storm crept over Floridas Atlantic coast, where 2.5 million people had been told to flee inland."
+        ]
+    },
+    {
+        "type": "Hurricane",
+        "location": "Floridas Atlantic",
+        "time": "2018-04-15, PT15H",
+        "frames": [
+            "infrastructure_and_utilities_damage #:# Power lines snapped and sparked while lightning illuminated blacked-out beach towns and flood waters submerged cars in low-lying parking garages."
+        ]
+    },
+    {
+        "type": "Hurricane",
+        "location": "",
+        "time": "",
+        "frames": []
+    },
+    {
+        "type": "Epidemic",
+        "location": "Florida; Florida; Brevard; Indian River; Palm Beach; St. Lucie",
+        "time": "2018-04-15",
+        "frames": []
+    },
+    {
+        "type": "Hurricane",
+        "location": "",
+        "time": "2018-03-26",
+        "frames": [
+            "displaced_people_and_evacuations #:# State officials reported some 71,000 people in public shelters, including some left homeless by Hurricane Charley, which caused $7.4 billion in insured losses and killed more than 20 people when it hit Floridas southwest coast three weeks ago.",
+            "injured_or_dead_people #:# State officials reported some 71,000 people in public shelters, including some left homeless by Hurricane Charley, which caused $7.4 billion in insured losses and killed more than 20 people when it hit Floridas southwest coast three weeks ago.",
+            "infrastructure_and_utilities_damage #:# State officials reported some 71,000 people in public shelters, including some left homeless by Hurricane Charley, which caused $7.4 billion in insured losses and killed more than 20 people when it hit Floridas southwest coast three weeks ago."
+        ]
+    },
+    {
+        "type": "Terrorism",
+        "location": "",
+        "time": "",
+        "frames": [
+            "injured_or_dead_people #:# Local television reported one shelter resident died of a heart attack as Frances howled ashore."
+        ]
+    },
+    {
+        "type": "Hurricane",
+        "location": "West Palm; Beach; Florida; US; Miami",
+        "time": "",
+        "frames": []
+    }
+]
