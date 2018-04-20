@@ -104,3 +104,4 @@ ENV/
 # Jar Files
 python-sutime-master/
 stanford-ner-2018-02-27/
+text_data/

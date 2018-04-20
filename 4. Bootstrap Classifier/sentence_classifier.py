@@ -113,7 +113,6 @@ def run_classifier(sentences, labels, test_docs):
 			curr_pred = [mlb.classes_[x] for x in range(predictions.shape[1]) if predictions[i][x]==1]
 			writer.writerow((test_sentences[i], curr_pred))
 
-
 	# with open(output_file+"_classified", "w") as fl:
 	# 	for i in range(len(test_sentences)):
 	# 		predictions = [labels[x] for x in range(similarity_matrix.shape[1]) if similarity_matrix[i][x]==1]

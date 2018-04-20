@@ -76,7 +76,7 @@ def tf_idf_fit_transform(docs):
 	return (tdm, tfidf)
 
 
-def binary_rel(similarity_matrix, threshold=0.0):
+def binary_rel(similarity_matrix, threshold=0.1):
 	for i in range(similarity_matrix.shape[0]):
 		for j in range(similarity_matrix.shape[1]):
 			similarity_matrix[i][j] = 0 if similarity_matrix[i][j] <= threshold else 1
@@ -125,8 +125,8 @@ sentence_label_list = []
 terms, labels = get_classTerms()
 
 import os
-for filename in os.listdir("./text_data/natural_disaster_text"):
-	test_doc = get_testDoc(os.path.join("./text_data/natural_disaster_text", filename))
+for filename in os.listdir("./text_data/docs_for_train_text"):
+	test_doc = get_testDoc(os.path.join("./text_data/docs_for_train_text", filename))
 	sentence_label_list.extend(run_classifier(terms, labels, test_doc))
 
 import csv

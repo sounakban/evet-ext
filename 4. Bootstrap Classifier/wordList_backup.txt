@@ -1,0 +1,42 @@
+#$#
+Drought
+drought droughts
+#$#
+Earthquake
+earthquake earthquakes quake quakes richter epicentre collapse seismic magnitude
+#$#
+Flood
+flood
+#$#
+Epidemic
+hiv aids virus infection infections disease diseases positive injection injections medicine medicines hepatitis epidemic syringe syringes
+#$#
+Hurricane
+hurricane hurricanes cyclone torrential
+#$#
+Rebellion
+rebel rebels war arrest conflict interrogation illegal riot riots protest protester protests protesters angry anger angered mob
+#$#
+Terrorism
+terrorism terrorist attack hostage attacker leader terror jihadi isi isis guerrilla ammunition
+#$#
+Tornado
+tornado tornados
+#$#
+Tsunami
+tsunami tsunamis wave
+#$#
+displaced_people_and_evacuations
+displace maroon homeless rescue operation flee evacuate evacuated
+#$#
+donation_needs_or_offers_or_volunteering_services
+relief volunteer food meal
+#$#
+infrastructure_and_utilities_damage
+damage submerge destruction homeless build closed overflow destroy collapse
+#$#
+injured_or_dead_people
+kill killed dead death claim live die died victim body bodies patient suffer
+#$#
+missing_trapped_or_found_people
+remain strand stranded survive survivors survived rescue find found search
