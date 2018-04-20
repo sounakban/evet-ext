@@ -25,5 +25,8 @@ def run_extraction(input_file, output_file):
 ###################################################### Calling Functions ######################################################
 
 import os
-for filename in os.listdir("./text_data/docs_for_train"):
-	run_extraction(os.path.join("./text_data/docs_for_train", filename), os.path.join("./text_data/docs_for_train_text", filename))
+for filename in os.listdir("/home/sounak/Resources/Data/rcv1_flat"):
+	try:
+		run_extraction(os.path.join("/home/sounak/Resources/Data/rcv1_flat", filename), os.path.join("/home/sounak/Resources/Data/rcv1_flat_text", filename))
+	except:
+		pass
