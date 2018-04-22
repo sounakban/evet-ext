@@ -4,9 +4,9 @@
         "location": "Tamil Nadu; Nagapattinam",
         "time": "",
         "frames": [
+            "donation_needs_or_offers_or_volunteering_services #:# Soldiers stepped in to help tsunami-hit Tamil Nadu after dozens of angry survivors blocked roads to protest the delay in disposing of unclaimed bodies in Nagapattinam, the state?s worst-hit district.",
             "injured_or_dead_people #:# Soldiers stepped in to help tsunami-hit Tamil Nadu after dozens of angry survivors blocked roads to protest the delay in disposing of unclaimed bodies in Nagapattinam, the state?s worst-hit district.",
-            "missing_trapped_or_found_people #:# Soldiers stepped in to help tsunami-hit Tamil Nadu after dozens of angry survivors blocked roads to protest the delay in disposing of unclaimed bodies in Nagapattinam, the state?s worst-hit district.",
-            "donation_needs_or_offers_or_volunteering_services #:# Soldiers stepped in to help tsunami-hit Tamil Nadu after dozens of angry survivors blocked roads to protest the delay in disposing of unclaimed bodies in Nagapattinam, the state?s worst-hit district."
+            "missing_trapped_or_found_people #:# Soldiers stepped in to help tsunami-hit Tamil Nadu after dozens of angry survivors blocked roads to protest the delay in disposing of unclaimed bodies in Nagapattinam, the state?s worst-hit district."
         ]
     },
     {
@@ -14,10 +14,10 @@
         "location": "",
         "time": "",
         "frames": [
-            "injured_or_dead_people #:# in restoring communication links, damaged bridges and particularly in mass burial of the dead, chief minister Jayalalithaa told reporters, asked about rising public anger over health concerns in the tropical climate.",
             "infrastructure_and_utilities_damage #:# in restoring communication links, damaged bridges and particularly in mass burial of the dead, chief minister Jayalalithaa told reporters, asked about rising public anger over health concerns in the tropical climate.",
-            "displaced_people_and_evacuations #:# In Akkarapatti village, Jayalalithaa said, a massive operation by the army was going on for ?removing a huge heap of bodies.",
+            "injured_or_dead_people #:# in restoring communication links, damaged bridges and particularly in mass burial of the dead, chief minister Jayalalithaa told reporters, asked about rising public anger over health concerns in the tropical climate.",
             "injured_or_dead_people #:# In Akkarapatti village, Jayalalithaa said, a massive operation by the army was going on for ?removing a huge heap of bodies.",
+            "displaced_people_and_evacuations #:# In Akkarapatti village, Jayalalithaa said, a massive operation by the army was going on for ?removing a huge heap of bodies.",
             "injured_or_dead_people #:# Huge cranes were pressed into service in Kanyakumari district, which has reported 665 deaths so far, to scoop out bodies from the debris and bury them quickly."
         ]
     },
@@ -37,10 +37,10 @@
     {
         "type": "Tsunami",
         "location": "",
-        "time": "2018-04-15",
+        "time": "2018-04-21",
         "frames": [
-            "displaced_people_and_evacuations #:# ?Some fire service personnel came yesterday and fled after seeing the destruction..",
-            "infrastructure_and_utilities_damage #:# ?Some fire service personnel came yesterday and fled after seeing the destruction.."
+            "infrastructure_and_utilities_damage #:# ?Some fire service personnel came yesterday and fled after seeing the destruction..",
+            "displaced_people_and_evacuations #:# ?Some fire service personnel came yesterday and fled after seeing the destruction.."
         ]
     },
     {
@@ -60,8 +60,8 @@
         "location": "",
         "time": "",
         "frames": [
-            "injured_or_dead_people #:# ?We just want the government to help us dispose of bodies, spread some disinfectant and give medicines.",
-            "donation_needs_or_offers_or_volunteering_services #:# ?We just want the government to help us dispose of bodies, spread some disinfectant and give medicines."
+            "donation_needs_or_offers_or_volunteering_services #:# ?We just want the government to help us dispose of bodies, spread some disinfectant and give medicines.",
+            "injured_or_dead_people #:# ?We just want the government to help us dispose of bodies, spread some disinfectant and give medicines."
         ]
     }
 ]

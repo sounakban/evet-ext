@@ -2,7 +2,7 @@
     {
         "type": "Epidemic",
         "location": "",
-        "time": "PRESENT_REF, 2018-04-15",
+        "time": "PRESENT_REF, 2018-04-21",
         "frames": [
             "donation_needs_or_offers_or_volunteering_services #:# The Prime Minister?s Office asked him to return to take stock of the situation and ensure that authorities are ready not just with supplies of medicines but a focused plan to prevent the outbreak of epidemics like cholera and dysentery."
         ]
@@ -10,10 +10,10 @@
     {
         "type": "Epidemic",
         "location": "",
-        "time": "2018-04-16",
+        "time": "2018-04-22",
         "frames": [
-            "injured_or_dead_people #:# Ramadoss has also asked the Indian Council of Medical Research to assist state government efforts to provide relief to victims.",
-            "donation_needs_or_offers_or_volunteering_services #:# Ramadoss has also asked the Indian Council of Medical Research to assist state government efforts to provide relief to victims."
+            "donation_needs_or_offers_or_volunteering_services #:# Ramadoss has also asked the Indian Council of Medical Research to assist state government efforts to provide relief to victims.",
+            "injured_or_dead_people #:# Ramadoss has also asked the Indian Council of Medical Research to assist state government efforts to provide relief to victims."
         ]
     },
     {
@@ -35,10 +35,10 @@
     {
         "type": "Tsunami",
         "location": "India",
-        "time": "2018-04-15",
+        "time": "2018-04-21",
         "frames": [
-            "injured_or_dead_people #:# The UN agency-supplied water tanks began arriving at relief camps in some of the worst-hit areas yesterday to provide safe drinking water to the disaster victims.",
-            "donation_needs_or_offers_or_volunteering_services #:# The UN agency-supplied water tanks began arriving at relief camps in some of the worst-hit areas yesterday to provide safe drinking water to the disaster victims."
+            "donation_needs_or_offers_or_volunteering_services #:# The UN agency-supplied water tanks began arriving at relief camps in some of the worst-hit areas yesterday to provide safe drinking water to the disaster victims.",
+            "injured_or_dead_people #:# The UN agency-supplied water tanks began arriving at relief camps in some of the worst-hit areas yesterday to provide safe drinking water to the disaster victims."
         ]
     }
 ]

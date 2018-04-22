@@ -1,6 +1,6 @@
 [
     {
-        "type": "Epidemic Hurricane",
+        "type": "Hurricane Epidemic",
         "location": "US",
         "time": "PXM",
         "frames": [
@@ -11,7 +11,7 @@
     {
         "type": "Epidemic",
         "location": "North Carolina; Virginia; Maryland",
-        "time": "2018-04-19, 2018-04-15",
+        "time": "2018-04-19, 2018-04-21",
         "frames": [
             "injured_or_dead_people #:# The department of homeland security said it was coordinating the federal government response after Isabel ripped through the mid-Atlantic region, leaving at least 23 people dead.",
             "donation_needs_or_offers_or_volunteering_services #:# More that 70 truckloads of water, emergency meals, tents, cots, blankets, portable toilets, generators, plastic sheeting and roofing material had been sent to areas hit by floods and high winds, the department said."

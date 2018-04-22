@@ -2,7 +2,7 @@
     {
         "type": "Terrorism",
         "location": "",
-        "time": "2018-04-16",
+        "time": "2018-04-22",
         "frames": [
             "donation_needs_or_offers_or_volunteering_services #:# The BJP today rejected the view that terrorist attacks have risen despite the enactment of the Prevention of Terrorism Act, calling upon all state governments, including those ruled by the Congress and the Left, to take urgent steps to smash the local logistical support cells of jihadi terrorism sponsored by Pakistans Inter-Services Intelligence."
         ]
@@ -10,7 +10,7 @@
     {
         "type": "Terrorism",
         "location": "",
-        "time": "2018-04-16, P1D",
+        "time": "2018-04-22, P1D",
         "frames": []
     },
     {
@@ -22,7 +22,7 @@
     {
         "type": "Terrorism",
         "location": "Bangalore",
-        "time": "2018-04-15",
+        "time": "2018-04-22",
         "frames": [
             "injured_or_dead_people #:# Imam Ali, the dreaded terrorist who was killed in Bangalore on Sunday, also possessed a photograph of Osama bin Laden."
         ]
@@ -36,7 +36,7 @@
     {
         "type": "Rebellion Terrorism",
         "location": "India",
-        "time": "P1D, 2018-04-16",
+        "time": "P1D, 2018-04-22",
         "frames": []
     },
     {
@@ -58,8 +58,8 @@
         "location": "",
         "time": "",
         "frames": [
-            "injured_or_dead_people #:# The BJP chief claimed that terrorists had received local support in terms of accommodation and logistical help in each of these incidents.",
-            "donation_needs_or_offers_or_volunteering_services #:# The BJP chief claimed that terrorists had received local support in terms of accommodation and logistical help in each of these incidents."
+            "donation_needs_or_offers_or_volunteering_services #:# The BJP chief claimed that terrorists had received local support in terms of accommodation and logistical help in each of these incidents.",
+            "injured_or_dead_people #:# The BJP chief claimed that terrorists had received local support in terms of accommodation and logistical help in each of these incidents."
         ]
     },
     {

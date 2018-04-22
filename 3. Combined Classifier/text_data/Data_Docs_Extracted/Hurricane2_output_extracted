@@ -16,7 +16,7 @@
     {
         "type": "Hurricane",
         "location": "Floridas Atlantic",
-        "time": "2018-04-15, PT15H",
+        "time": "2018-04-21, PT15H",
         "frames": [
             "infrastructure_and_utilities_damage #:# Power lines snapped and sparked while lightning illuminated blacked-out beach towns and flood waters submerged cars in low-lying parking garages."
         ]
@@ -30,17 +30,17 @@
     {
         "type": "Epidemic",
         "location": "Florida; Florida; Brevard; Indian River; Palm Beach; St. Lucie",
-        "time": "2018-04-15",
+        "time": "2018-04-21",
         "frames": []
     },
     {
         "type": "Hurricane",
         "location": "",
-        "time": "2018-03-26",
+        "time": "2018-04-01",
         "frames": [
-            "displaced_people_and_evacuations #:# State officials reported some 71,000 people in public shelters, including some left homeless by Hurricane Charley, which caused $7.4 billion in insured losses and killed more than 20 people when it hit Floridas southwest coast three weeks ago.",
             "injured_or_dead_people #:# State officials reported some 71,000 people in public shelters, including some left homeless by Hurricane Charley, which caused $7.4 billion in insured losses and killed more than 20 people when it hit Floridas southwest coast three weeks ago.",
-            "infrastructure_and_utilities_damage #:# State officials reported some 71,000 people in public shelters, including some left homeless by Hurricane Charley, which caused $7.4 billion in insured losses and killed more than 20 people when it hit Floridas southwest coast three weeks ago."
+            "infrastructure_and_utilities_damage #:# State officials reported some 71,000 people in public shelters, including some left homeless by Hurricane Charley, which caused $7.4 billion in insured losses and killed more than 20 people when it hit Floridas southwest coast three weeks ago.",
+            "displaced_people_and_evacuations #:# State officials reported some 71,000 people in public shelters, including some left homeless by Hurricane Charley, which caused $7.4 billion in insured losses and killed more than 20 people when it hit Floridas southwest coast three weeks ago."
         ]
     },
     {

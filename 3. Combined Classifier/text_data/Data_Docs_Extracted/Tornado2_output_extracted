@@ -2,7 +2,7 @@
     {
         "type": "Tornado",
         "location": "Knoxville; Tennessee; United States; South",
-        "time": "2017-11-11, 2018-04-15, 2018-04-16",
+        "time": "2017-11-11, 2018-04-21, 2018-04-22",
         "frames": [
             "injured_or_dead_people #:#  \tKnoxville (Tennessee), Nov. 11 (Reuters): Tornadoes ripped through the eastern United States from the Great Lakes into the deep South yesterday and early today, wiping out small towns, killing at least 30 and leaving up to 150 missing.",
             "displaced_people_and_evacuations #:# Officials warned the death toll could rise as rescue workers began tearing into devastated homes and other structures amid fog and continuing rain in some areas.",
@@ -16,14 +16,14 @@
         "location": "",
         "time": "",
         "frames": [
-            "injured_or_dead_people #:# Its mass destruction, death, a police officer in nearby Oliver Springs told the Knoxville News-Sentinel.Mossy Grove is destroyed.",
-            "infrastructure_and_utilities_damage #:# Its mass destruction, death, a police officer in nearby Oliver Springs told the Knoxville News-Sentinel.Mossy Grove is destroyed."
+            "infrastructure_and_utilities_damage #:# Its mass destruction, death, a police officer in nearby Oliver Springs told the Knoxville News-Sentinel.Mossy Grove is destroyed.",
+            "injured_or_dead_people #:# Its mass destruction, death, a police officer in nearby Oliver Springs told the Knoxville News-Sentinel.Mossy Grove is destroyed."
         ]
     },
     {
         "type": "Tornado",
         "location": "North; Alabama; East; Tennessee; Ohio",
-        "time": "2018-04-15TMO",
+        "time": "2018-04-21TMO",
         "frames": [
             "infrastructure_and_utilities_damage #:# Roger Edwards, a forecaster at the centre, said massive tornadic outbreaks are not unusual in November and that many of the same areas hit in the latest storms suffered damage from a similar outbreak in 1992."
         ]
