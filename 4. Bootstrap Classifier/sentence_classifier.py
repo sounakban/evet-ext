@@ -10,6 +10,16 @@ def get_trainData():
 	return (sentences, labels)
 
 
+def get_testSentences():
+	import pandas as pd
+
+	df = pd.read_csv("classification_groundTruth.csv", header=None)
+	sentences = df[0].tolist()
+	labels = df[1].tolist()
+
+	return (sentences, labels)
+
+
 def get_testDoc(file_path="target_doc"):
 	with open(file_path, encoding='latin-1') as fl:
 		doc = fl.read()
@@ -124,16 +134,64 @@ def run_classifier(sentences, labels, test_docs):
 	# 			fl.write(str(test_sentences[i])+" ")
 
 
+
+
+def run_classifierAccuracy(trainSentences, trainLabels, testSentences, testLabels):
+	import numpy as np
+
+	train_matrix, tfidf = tf_idf_fit_transform(trainSentences)
+	test_matrix = tfidf.transform(testSentences)
+	print("Shape of sentence matrix : ", test_matrix.shape)
+
+	from sklearn.preprocessing import MultiLabelBinarizer
+	mlb = MultiLabelBinarizer()
+	train_label_matrix = mlb.fit_transform(trainLabels)
+	test_label_matrix = mlb.transform(testLabels)
+	print("Shape of label matrix : ", test_label_matrix.shape)
+	print("Labels : ", mlb.classes_)
+
+
+	from sklearn.multiclass import OneVsRestClassifier
+	from sklearn.svm import SVC
+	estimator = SVC(kernel='linear')
+	classifier = OneVsRestClassifier(estimator, n_jobs=1)
+	classifier.fit(train_matrix, train_label_matrix)
+	predictions = classifier.predict(test_matrix)
+
+	from sklearn.metrics import f1_score, precision_score, recall_score
+	print("Micro-Precision", precision_score(test_label_matrix, predictions, average='micro'))
+	print("Micro-Recall", recall_score(test_label_matrix, predictions, average='micro'))
+	print("Micro-F1", f1_score(test_label_matrix, predictions, average='micro'))
+	print("Macro-Precision", precision_score(test_label_matrix, predictions, average='macro'))
+	print("Macro-Recall", recall_score(test_label_matrix, predictions, average='macro'))
+	print("Macro-F1", f1_score(test_label_matrix, predictions, average='macro'))
+	print("Macro-Precision", precision_score(test_label_matrix, predictions, average='all'))
+	print("Macro-Recall", recall_score(test_label_matrix, predictions, average='all'))
+	print("Macro-F1", f1_score(test_label_matrix, predictions, average='all'))
+
+
+
+
 ###################################################### Calling Functions ######################################################
 
 
-sentences, labels = get_trainData()
-labels = [tuple(label[1:-1].replace('\'', '').replace(' ', '').split(',')) for label in labels]
+trainSentences, trainLabels = get_trainData()
+trainLabels = [set(label[1:-1].replace('\'', '').replace(' ', '').split(',')) for label in trainLabels]
+# print(trainLabels[1])
 
-test_docs = []
-import os
-for filename in os.listdir("./text_data/Test_Data"):
-	test_doc = get_testDoc(os.path.join("./text_data/Test_Data", filename))
-	test_docs.append(test_doc)
 
-run_classifier(sentences, labels, test_docs)
+# For classifying sentences in docs
+# test_docs = []
+# import os
+# for filename in os.listdir("./text_data/Test_Data"):
+# 	test_doc = get_testDoc(os.path.join("./text_data/Test_Data", filename))
+# 	test_docs.append(test_doc)
+#
+# run_classifier(trainSentences, trainLabels, test_docs)
+
+
+# For classifying pre-labelled sentences and get accuracy
+testSentences, testLabels = get_trainData()
+testLabels = [tuple(label[1:-1].replace('\'', '').replace(' ', '').split(',')) for label in testLabels]
+
+run_classifierAccuracy(trainSentences, trainLabels, testSentences, testLabels)
