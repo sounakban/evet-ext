@@ -75,7 +75,11 @@ def run_extraction(test_docs, output_file="ext_sent"):
 			time_attr = tli.get_time(sentences[i])
 			if not time_attr == None:
 				if len(time_attr) > len(curr_event['time']):
-					curr_event['time'] = time_attr
+					time_split = time_attr.split(" ")
+					for part in time_split:
+						if part.startswith("P") or part.startswith("W"):
+							time_attr.replace(part, "")
+					curr_event['time'] = time_attr.strip()
 					# print("Time : ", time_attr)
 
 		sentence_frames = frame_types.intersection(set(labels[i]))
@@ -84,7 +88,7 @@ def run_extraction(test_docs, output_file="ext_sent"):
 			for frame in sentence_frames:
 				if not frame == "time":
 					curr_event['frames'].append(frame+" #:# "+sentences[i])
-					print(frame+" #:# "+sentences[i])
+					# print(frame+" #:# "+sentences[i])
 
 	print("-----------------------End of Document-----------------------")
 
