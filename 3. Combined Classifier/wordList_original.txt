@@ -1,0 +1,42 @@
+#$#
+Drought
+drought droughts
+#$#
+Earthquake
+earthquake earthquakes quake quakes richter epicentre collapse seismic magnitude
+#$#
+Epidemic
+hiv aids virus infection infections disease diseases positive injection injections medicine medicines hepatitis epidemic syringe syringes
+#$#
+Hurricane
+hurricane hurricanes cyclone torrential
+#$#
+Rebellion
+rebel rebels guerrilla war arrest ammunition conflict interrogation illegal riot riots protest protester protests protesters angry anger angered mob
+#$#
+Terrorism
+terrorism terrorist attack hostage attacker leader terror jihadi isi isis
+#$#
+Tornado
+tornado tornados
+#$#
+Tsunami
+tsunami tsunamis wave
+#$#
+displaced_people_and_evacuations
+displace maroon homeless rescue operation flee evacuate evacuated
+#$#
+donation_needs_or_offers_or_volunteering_services
+relief help support contribute fund volunteer supply food meal
+#$#
+infrastructure_and_utilities_damage
+damage submerge destruction homeless build closed overflow destroy collapse
+#$#
+injured_or_dead_people
+kill killed dead death claim live die died victim body bodies
+#$#
+missing_trapped_or_found_people
+remain strand stranded survive survivors survived rescue find found search
+#$#
+time
+year month week day yesterday tomorrow today jan january feb february mar march apr april may jun june jul july aug august sept september oct october nov november dec december mon monday tue tuesday wed wednesday thursday fri friday sat saturday sun sunday am pm

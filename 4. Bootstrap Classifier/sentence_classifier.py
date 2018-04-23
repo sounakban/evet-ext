@@ -135,20 +135,25 @@ def run_classifier(sentences, labels, test_docs):
 
 
 
-
 def run_classifierAccuracy(trainSentences, trainLabels, testSentences, testLabels):
+	labels = ["Drought", "Earthquake", "Flood", "Epidemic", "Hurricane", \
+			"Rebellion", "Terrorism", "Tornado", "Tsunami", "displaced_people_and_evacuations", \
+			"donation_needs_or_offers_or_volunteering_services", "infrastructure_and_utilities_damage", \
+			"injured_or_dead_people", "missing_trapped_or_found_people"]
 	import numpy as np
+
+	from sklearn.preprocessing import MultiLabelBinarizer
+	mlb = MultiLabelBinarizer(classes=labels)
+	# mlb = MultiLabelBinarizer()
+	train_label_matrix = mlb.fit(trainLabels)
+	print("Labels : ", mlb.classes_)
+	train_label_matrix = mlb.transform(trainLabels)
+	test_label_matrix = mlb.transform(testLabels)
+	print("Shape of label matrix : ", test_label_matrix.shape)
 
 	train_matrix, tfidf = tf_idf_fit_transform(trainSentences)
 	test_matrix = tfidf.transform(testSentences)
 	print("Shape of sentence matrix : ", test_matrix.shape)
-
-	from sklearn.preprocessing import MultiLabelBinarizer
-	mlb = MultiLabelBinarizer()
-	train_label_matrix = mlb.fit_transform(trainLabels)
-	test_label_matrix = mlb.transform(testLabels)
-	print("Shape of label matrix : ", test_label_matrix.shape)
-	print("Labels : ", mlb.classes_)
 
 
 	from sklearn.multiclass import OneVsRestClassifier
@@ -165,9 +170,9 @@ def run_classifierAccuracy(trainSentences, trainLabels, testSentences, testLabel
 	print("Macro-Precision", precision_score(test_label_matrix, predictions, average='macro'))
 	print("Macro-Recall", recall_score(test_label_matrix, predictions, average='macro'))
 	print("Macro-F1", f1_score(test_label_matrix, predictions, average='macro'))
-	print("Macro-Precision", precision_score(test_label_matrix, predictions, average='all'))
-	print("Macro-Recall", recall_score(test_label_matrix, predictions, average='all'))
-	print("Macro-F1", f1_score(test_label_matrix, predictions, average='all'))
+	print("Macro-Precision", precision_score(test_label_matrix, predictions, average=None))
+	print("Macro-Recall", recall_score(test_label_matrix, predictions, average=None))
+	print("Macro-F1", f1_score(test_label_matrix, predictions, average=None))
 
 
 
@@ -177,7 +182,10 @@ def run_classifierAccuracy(trainSentences, trainLabels, testSentences, testLabel
 
 trainSentences, trainLabels = get_trainData()
 trainLabels = [set(label[1:-1].replace('\'', '').replace(' ', '').split(',')) for label in trainLabels]
-# print(trainLabels[1])
+for labels in trainLabels:
+	if '' in labels:
+		labels.remove('')
+# print(trainLabels[10])
 
 
 # For classifying sentences in docs
@@ -191,7 +199,10 @@ trainLabels = [set(label[1:-1].replace('\'', '').replace(' ', '').split(',')) fo
 
 
 # For classifying pre-labelled sentences and get accuracy
-testSentences, testLabels = get_trainData()
-testLabels = [tuple(label[1:-1].replace('\'', '').replace(' ', '').split(',')) for label in testLabels]
+testSentences, testLabels = get_testSentences()
+testLabels = [set(label[1:-1].replace('\'', '').replace(' ', '').split(',')) for label in testLabels]
+for labels in testLabels:
+	if '' in labels:
+		labels.remove('')
 
 run_classifierAccuracy(trainSentences, trainLabels, testSentences, testLabels)

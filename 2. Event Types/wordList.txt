@@ -1,27 +1,42 @@
 #$#
 Drought
-drought droughts starve hunger hungry produce cattle food water | dead death repair restore tragedy disaster conflict injure kill injured killed effect effected devastate devastated rebuild rebuilding report investigate damage calamity calamities restore help relief fund threat die survivor survivors bodies cloth clothes material operation effort evacuate evacuated safe safety
+drought droughts
 #$#
 Earthquake
-earthquake earthquakes quake quakes richter epicentre archaeological archaeology destruction collapse seismic magnitude | dead death repair restore tragedy disaster conflict injure kill injured killed effect effected devastate devastated rebuild rebuilding report investigate damage calamity calamities restore help relief fund threat die survivor survivors bodies cloth clothes material operation effort evacuate evacuated safe safety
+earthquake earthquakes quake quakes richter epicentre seismic
+#$#
+Flood
+flood
 #$#
 Epidemic
-hiv infection infections disease diseases positive hospital water medical health injection injections control medicine medicines unsafe disposable treatment hepatitis epidemic syringe syringes | dead death repair restore tragedy disaster conflict injure kill injured killed effect effected devastate devastated rebuild rebuilding report investigate damage calamity calamities restore help relief fund threat die survivor survivors bodies cloth clothes material operation effort evacuate evacuated safe safety
+hiv aids hepatitis virus infection infections disease diseases injection injections medicine medicines epidemic syringe syringes
 #$#
 Hurricane
-storm storms hurricane hurricanes wind winds rain coast coastal coasts coastline coastlines beach water sand flood flooding cyclone torrential lash eye speed | dead death repair restore tragedy disaster conflict injure kill injured killed effect effected devastate devastated rebuild rebuilding report investigate damage calamity calamities restore help relief fund threat die survivor survivors bodies cloth clothes material operation effort evacuate evacuated safe safety
-#$#
-Other
-die dead death repair restore tragedy disaster injure kill injured killed effect effected devastate devastated rebuild rebuilding report investigate damage calamity calamities restore help relief fund threat survivor survivors bodies cloth clothes material operation effort evacuate evacuated safe safety
+hurricane hurricanes cyclone
 #$#
 Rebellion
-arm rebel rebels police pistol border seize guerrilla grenade war hostage arrest ammunition seized intelligence arsenal criminal conflict interrogation explosives explosion task special force brigade capital military cadre group illegal troop riot protest angry anger angered queue queued | dead death repair restore tragedy disaster conflict injure kill injured killed effect effected devastate devastated rebuild rebuilding report investigate damage calamity calamities restore help relief fund threat die survivor survivors bodies cloth clothes material operation effort evacuate evacuated safe safety
+rebel rebels war riot riots protest protester protests protesters angry anger angered mob
 #$#
 Terrorism
-terrorism terrorist attack group intelligence national hostage religion attacker leader terror sinister jihadi border isi blast gunman explosives explosion | dead death repair restore tragedy disaster conflict injure kill injured killed effect effected devastate devastated rebuild rebuilding report investigate damage calamity calamities restore help relief fund threat die survivor survivors bodies cloth clothes material operation effort evacuate evacuated safe safety
+terrorism terrorist attack hostage attacker terror jihadi isi isis guerrilla
 #$#
 Tornado
-tornado tornados storm weather uprooted uproot black cloud suck rise tear eye speed | dead death repair restore tragedy disaster conflict injure kill injured killed effect effected devastate devastated rebuild rebuilding report investigate damage calamity calamities restore help relief fund threat die survivor survivors bodies cloth clothes material operation effort evacuate evacuated safe safety
+tornado tornados
 #$#
 Tsunami
-tsunami tsunamis water earthquake earthquakes quake quakes epicentre sea  coast coastal coasts coastline coastlines ocean pacific metre feet trigger cause coastal speed ship high height tall wave | dead death repair restore tragedy disaster conflict injure kill injured killed effect effected devastate devastated rebuild rebuilding report investigate damage calamity calamities restore help relief fund threat die survivor survivors bodies cloth clothes material operation effort evacuate evacuated safe safety
+tsunami tsunamis
+#$#
+displaced_people_and_evacuations
+displace maroon homeless rescue operation flee evacuate evacuated evacuation
+#$#
+donation_needs_or_offers_or_volunteering_services
+relief volunteer food meal
+#$#
+infrastructure_and_utilities_damage
+damage submerge destruction overflow destroy collapse
+#$#
+injured_or_dead_people
+kill killed dead death claim live die died victim body bodies patient suffer
+#$#
+missing_trapped_or_found_people
+remain strand stranded survive survivors survived rescue

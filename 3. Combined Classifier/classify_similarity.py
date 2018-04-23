@@ -13,6 +13,16 @@ def get_classTerms():
 	return (terms, labels)
 
 
+def get_testSentences():
+	import pandas as pd
+
+	df = pd.read_csv("classification_groundTruth.csv", header=None)
+	sentences = df[0].tolist()
+	labels = df[1].tolist()
+
+	return (sentences, labels)
+
+
 def get_testDoc(file_path="target_doc"):
 	docs = []
 	with open(file_path, encoding='latin-1') as fl:
@@ -116,13 +126,67 @@ def run_similarity(terms, labels, test_docs, output_file="pred_sent"):
 				fl.write(str(test_sentences[i])+" ")
 
 
+def run_classifierAccuracy(terms, labels, testSentences, testLabels):
+	labels = ["Drought", "Earthquake", "Flood", "Epidemic", "Hurricane", \
+			"Rebellion", "Terrorism", "Tornado", "Tsunami", "displaced_people_and_evacuations", \
+			"donation_needs_or_offers_or_volunteering_services", "infrastructure_and_utilities_damage", \
+			"injured_or_dead_people", "missing_trapped_or_found_people"]
+	import numpy as np
+	class_terms_matrix, tfidf = tf_idf_fit_transform(terms)
+
+	sentence_matrix = tfidf.transform(testSentences)
+
+	print("Shape of sentence matrix : ", sentence_matrix.shape)
+	# print("Original order of lables:")
+	# print(labels)
+
+	from sklearn.metrics.pairwise import cosine_similarity
+	similarity_matrix = cosine_similarity(sentence_matrix, class_terms_matrix)
+	similarity_matrix = binary_rel(similarity_matrix)
+
+	predictions = []
+	for i in range(len(testSentences)):
+		predictions.append([labels[x] for x in range(similarity_matrix.shape[1]) if similarity_matrix[i][x]==1])
+
+	from sklearn.preprocessing import MultiLabelBinarizer
+	mlb = MultiLabelBinarizer(classes=labels)
+	# mlb = MultiLabelBinarizer()
+	test_label_matrix = mlb.fit_transform(testLabels)
+	predictions = mlb.transform(predictions)
+	print("Shape of label matrix : ", test_label_matrix.shape)
+	print("Labels : ", mlb.classes_)
+
+	from sklearn.metrics import f1_score, precision_score, recall_score
+	print("Micro-Precision", precision_score(test_label_matrix, predictions, average='micro'))
+	print("Micro-Recall", recall_score(test_label_matrix, predictions, average='micro'))
+	print("Micro-F1", f1_score(test_label_matrix, predictions, average='micro'))
+	print("Macro-Precision", precision_score(test_label_matrix, predictions, average='macro'))
+	print("Macro-Recall", recall_score(test_label_matrix, predictions, average='macro'))
+	print("Macro-F1", f1_score(test_label_matrix, predictions, average='macro'))
+	print("Macro-Precision", precision_score(test_label_matrix, predictions, average=None))
+	print("Macro-Recall", recall_score(test_label_matrix, predictions, average=None))
+	print("Macro-F1", f1_score(test_label_matrix, predictions, average=None))
+
+
 ###################################################### Calling Functions ######################################################
 
 
-terms, labels = get_classTerms()
+terms, classLabels = get_classTerms()
 # test_docs = get_testDocs()
-# run_similarity(terms, labels, test_docs)
-import os
-for filename in os.listdir("./text_data/Data_Docs"):
-	test_doc = get_testDoc(os.path.join("./text_data/Data_Docs", filename))
-	run_similarity(terms, labels, test_doc, os.path.join("./text_data/Data_Docs_Classified", filename))
+# run_similarity(terms, classLabels, test_docs)
+
+
+# import os
+# for filename in os.listdir("./text_data/Data_Docs"):
+# 	test_doc = get_testDoc(os.path.join("./text_data/Data_Docs", filename))
+# 	run_similarity(terms, classLabels, test_doc, os.path.join("./text_data/Data_Docs_Classified", filename))
+
+
+# For classifying pre-labelled sentences and get accuracy
+testSentences, testLabels = get_testSentences()
+testLabels = [set(label[1:-1].replace('\'', '').replace(' ', '').split(',')) for label in testLabels]
+for labels in testLabels:
+	if '' in labels:
+		labels.remove('')
+
+run_classifierAccuracy(terms, classLabels, testSentences, testLabels)

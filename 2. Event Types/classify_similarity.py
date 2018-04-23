@@ -108,9 +108,9 @@ def run_similarity(terms, labels, test_docs):
 	# predictions = [(predictions[i], similarity_matrix[i][predictions[i]]) for i in range(len(predictions))]
 	predictions = [predictions[i] if similarity_matrix[i][predictions[i]]>0.0 else "Irrelevant" for i in range(len(predictions))]
 
-	with open("sent_pred.txt", "w") as fl:
-		for i in range(len(test_sentences)):
-			fl.write(str(test_sentences[i])+" :\t: "+str(predictions[i])+"\n\n")
+	# with open("sent_pred.txt", "w") as fl:
+	# 	for i in range(len(test_sentences)):
+	# 		fl.write(str(test_sentences[i])+" :\t: "+str(predictions[i])+"\n\n")
 
 
 ###################################################### Calling Functions ######################################################
