@@ -1,26 +1,27 @@
-[
-    {
-        "type": "Tornado",
-        "location": "Kansas City; Montana; US",
-        "time": "2018-05-05, 2018-04-22",
-        "frames": [
-            "injured_or_dead_people #:# Kansas City (Montana), May 5 (Reuters): Tornadoes raked parts of the central US, killing at least 27 people in a rampage that blew a freight train off the tracks and flattened block after block of buildings, officials said today.",
-            "injured_or_dead_people #:# Missouri reported nine deaths and neighboring Kansas seven, while 10 died in Tennessee.",
-            "displaced_people_and_evacuations #:# Daylight brought frantic rescue efforts in some areas where officials feared debris hid more victims, living and dead.",
-            "injured_or_dead_people #:# Daylight brought frantic rescue efforts in some areas where officials feared debris hid more victims, living and dead.",
-            "missing_trapped_or_found_people #:# Daylight brought frantic rescue efforts in some areas where officials feared debris hid more victims, living and dead.",
-            "displaced_people_and_evacuations #:# Rescue workers climbed around the ruins of a National Guard armoury in Pierce City where some residents had fled seeking shelter as the storms approached.",
-            "missing_trapped_or_found_people #:# Rescue workers climbed around the ruins of a National Guard armoury in Pierce City where some residents had fled seeking shelter as the storms approached."
-        ]
-    },
-    {
-        "type": "Earthquake",
-        "location": "",
-        "time": "",
-        "frames": [
-            "infrastructure_and_utilities_damage #:# The roof of the building had collapsed.",
-            "injured_or_dead_people #:# It looked like a big wall.",
-            "infrastructure_and_utilities_damage #:# His home escaped with minor damage but his bedroom was filled with broken glass."
-        ]
-    }
-]
+{
+    "Events": [
+        {
+            "type": "Tornado",
+            "location": "Kansas City; Montana; US",
+            "time": "2018-05-05, 2018-04-24"
+        },
+        {
+            "type": "Earthquake",
+            "location": "",
+            "time": ""
+        }
+    ],
+    "Frames": [
+        "injured_or_dead_people #:# Kansas City (Montana), May 5 (Reuters): Tornadoes raked parts of the central US, killing at least 27 people in a rampage that blew a freight train off the tracks and flattened block after block of buildings, officials said today.",
+        "injured_or_dead_people #:# Missouri reported nine deaths and neighboring Kansas seven, while 10 died in Tennessee.",
+        "missing_trapped_or_found_people #:# Daylight brought frantic rescue efforts in some areas where officials feared debris hid more victims, living and dead.",
+        "displaced_people_and_evacuations #:# Daylight brought frantic rescue efforts in some areas where officials feared debris hid more victims, living and dead.",
+        "injured_or_dead_people #:# Daylight brought frantic rescue efforts in some areas where officials feared debris hid more victims, living and dead.",
+        "missing_trapped_or_found_people #:# Rescue workers climbed around the ruins of a National Guard armoury in Pierce City where some residents had fled seeking shelter as the storms approached.",
+        "displaced_people_and_evacuations #:# Rescue workers climbed around the ruins of a National Guard armoury in Pierce City where some residents had fled seeking shelter as the storms approached.",
+        "infrastructure_and_utilities_damage #:# The roof of the building had collapsed.",
+        "injured_or_dead_people #:# It looked like a big wall.",
+        "infrastructure_and_utilities_damage #:# His home escaped with minor damage but his bedroom was filled with broken glass.",
+        "infrastructure_and_utilities_damage #:# The storms dealt the worst damage to southern Missouri and southern Kansas, as well as western Tennessee where downtown Jackson resembled a war zone."
+    ]
+}

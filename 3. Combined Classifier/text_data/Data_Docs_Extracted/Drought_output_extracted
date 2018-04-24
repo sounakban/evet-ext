@@ -1,35 +1,33 @@
-[
-    {
-        "type": "Drought",
-        "location": "",
-        "time": "2018-05-07",
-        "frames": []
-    },
-    {
-        "type": "Drought",
-        "location": "",
-        "time": "P1M",
-        "frames": [
-            "donation_needs_or_offers_or_volunteering_services #:# Amitabh Bachchan has decided to bring relief to two drought-affected villages there by adopting them.",
-            "donation_needs_or_offers_or_volunteering_services #:# The superstar will provide mid-day meals to about 500 villagers of Kumthe and Upalavi for a month."
-        ]
-    },
-    {
-        "type": "Drought",
-        "location": "Kohlapur; Maharashtra",
-        "time": "2018-05-11, P1M",
-        "frames": [
-            "injured_or_dead_people #:# We havent heard of any deaths, but these villages are starving.",
-            "donation_needs_or_offers_or_volunteering_services #:# Mr Bachchans association with this cause will help us to bring it into focus, and hopefully encourage other people and generate more funds, said Shah.",
-            "infrastructure_and_utilities_damage #:# We chose these villages because they are close to the Sangli district town and more convenient in terms of communication and transport, she added."
-        ]
-    },
-    {
-        "type": "Drought",
-        "location": "",
-        "time": "P2Y",
-        "frames": [
-            "infrastructure_and_utilities_damage #:# More than 30 sugar mills have closed down, leaving 5,000 workers jobless."
-        ]
-    }
-]
+{
+    "Events": [
+        {
+            "type": "Drought",
+            "location": "",
+            "time": "2018-05-07"
+        },
+        {
+            "type": "Drought",
+            "location": "",
+            "time": "P1M"
+        },
+        {
+            "type": "Drought",
+            "location": "Kohlapur; Maharashtra",
+            "time": "2018-05-11, P1M"
+        },
+        {
+            "type": "Drought",
+            "location": "",
+            "time": "P2Y"
+        }
+    ],
+    "Frames": [
+        "donation_needs_or_offers_or_volunteering_services #:# Amitabh Bachchan has decided to bring relief to two drought-affected villages there by adopting them.",
+        "donation_needs_or_offers_or_volunteering_services #:# The superstar will provide mid-day meals to about 500 villagers of Kumthe and Upalavi for a month.",
+        "injured_or_dead_people #:# We havent heard of any deaths, but these villages are starving.",
+        "donation_needs_or_offers_or_volunteering_services #:# Mr Bachchans association with this cause will help us to bring it into focus, and hopefully encourage other people and generate more funds, said Shah.",
+        "infrastructure_and_utilities_damage #:# We chose these villages because they are close to the Sangli district town and more convenient in terms of communication and transport, she added.",
+        "infrastructure_and_utilities_damage #:# More than 30 sugar mills have closed down, leaving 5,000 workers jobless.",
+        "donation_needs_or_offers_or_volunteering_services #:# This is the first time that a celebrity has adopted a village-in-need; though Aamir Khan provided relief to Kanuria, a village in Bhuj that was devastated by the earthquake in 2001."
+    ]
+}

@@ -1,32 +1,30 @@
-[
-    {
-        "type": "Rebellion Terrorism",
-        "location": "Moscow",
-        "time": "2018-04-22",
-        "frames": [
-            "injured_or_dead_people #:# An Arab satellite television station showed today tapes of Chechen rebels saying they were ready to die for the independence of their homeland and to take the lives of infidel hostages seized in a Moscow theatre."
-        ]
-    },
-    {
-        "type": "Rebellion",
-        "location": "Moscow",
-        "time": "",
-        "frames": [
-            "injured_or_dead_people #:# Al Jazeera television showed a tape of what it said was one of the women rebels saying: It makes no difference to us where we die and we chose to die here in Moscow and we will take with us the souls of the infidels."
-        ]
-    },
-    {
-        "type": "Rebellion",
-        "location": "",
-        "time": "",
-        "frames": [
-            "injured_or_dead_people #:# We seek death more than you seek life, said the man, who was also dressed in black."
-        ]
-    },
-    {
-        "type": "Rebellion Terrorism",
-        "location": "Moscow; Russia",
-        "time": "2018-04-21",
-        "frames": []
-    }
-]
+{
+    "Events": [
+        {
+            "type": "Terrorism Rebellion",
+            "location": "Moscow",
+            "time": "2018-04-24"
+        },
+        {
+            "type": "Rebellion",
+            "location": "Moscow",
+            "time": ""
+        },
+        {
+            "type": "Rebellion",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Terrorism Rebellion",
+            "location": "Moscow; Russia",
+            "time": "2018-04-23"
+        }
+    ],
+    "Frames": [
+        "injured_or_dead_people #:# An Arab satellite television station showed today tapes of Chechen rebels saying they were ready to die for the independence of their homeland and to take the lives of infidel hostages seized in a Moscow theatre.",
+        "injured_or_dead_people #:# Al Jazeera television showed a tape of what it said was one of the women rebels saying: It makes no difference to us where we die and we chose to die here in Moscow and we will take with us the souls of the infidels.",
+        "injured_or_dead_people #:# We seek death more than you seek life, said the man, who was also dressed in black.",
+        "injured_or_dead_people #:# We came to the Russian capital to stop the war or to die for the sake of God, said the man, adding that the rebels belonged to sabotage and reconnaissance military brigade in Chechnya."
+    ]
+}

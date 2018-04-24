@@ -1,70 +1,62 @@
-[
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "",
-        "frames": []
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "",
-        "frames": []
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "",
-        "frames": []
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "2018",
-        "frames": [
-            "missing_trapped_or_found_people #:# has found that the number of HIV positive people in the state has shot up by 21 per cent over the last year."
-        ]
-    },
-    {
-        "type": "Epidemic",
-        "location": "Maharashtra",
-        "time": "",
-        "frames": []
-    },
-    {
-        "type": "Epidemic",
-        "location": "Andhra Pradesh; ); South Africa",
-        "time": "2018-04-22, 2008-04-22",
-        "frames": []
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "",
-        "frames": []
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "",
-        "frames": []
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "",
-        "frames": []
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "2018",
-        "frames": []
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "2018",
-        "frames": []
-    }
-]
+{
+    "Events": [
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": "2018"
+        },
+        {
+            "type": "Epidemic",
+            "location": "Maharashtra",
+            "time": ""
+        },
+        {
+            "type": "Epidemic",
+            "location": "Andhra Pradesh; ); South Africa",
+            "time": "2018-04-24, 2008-04-24"
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": "2018"
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": "2018"
+        }
+    ],
+    "Frames": [
+        "missing_trapped_or_found_people #:# has found that the number of HIV positive people in the state has shot up by 21 per cent over the last year."
+    ]
+}

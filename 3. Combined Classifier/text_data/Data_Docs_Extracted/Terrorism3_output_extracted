@@ -1,105 +1,88 @@
-[
-    {
-        "type": "Terrorism",
-        "location": "",
-        "time": "2018-04-22",
-        "frames": [
-            "donation_needs_or_offers_or_volunteering_services #:# The BJP today rejected the view that terrorist attacks have risen despite the enactment of the Prevention of Terrorism Act, calling upon all state governments, including those ruled by the Congress and the Left, to take urgent steps to smash the local logistical support cells of jihadi terrorism sponsored by Pakistans Inter-Services Intelligence."
-        ]
-    },
-    {
-        "type": "Terrorism",
-        "location": "",
-        "time": "2018-04-22, P1D",
-        "frames": []
-    },
-    {
-        "type": "Terrorism",
-        "location": "India",
-        "time": "",
-        "frames": []
-    },
-    {
-        "type": "Terrorism",
-        "location": "Bangalore",
-        "time": "2018-04-22",
-        "frames": [
-            "injured_or_dead_people #:# Imam Ali, the dreaded terrorist who was killed in Bangalore on Sunday, also possessed a photograph of Osama bin Laden."
-        ]
-    },
-    {
-        "type": "Terrorism",
-        "location": "",
-        "time": "",
-        "frames": []
-    },
-    {
-        "type": "Rebellion Terrorism",
-        "location": "India",
-        "time": "P1D, 2018-04-22",
-        "frames": []
-    },
-    {
-        "type": "Terrorism",
-        "location": "Gandhinagar; Gujarat",
-        "time": "2017-12",
-        "frames": []
-    },
-    {
-        "type": "Terrorism",
-        "location": "Coimbatore; Chennai",
-        "time": "1998-02, 1993",
-        "frames": [
-            "injured_or_dead_people #:# Further, the ISIs connections with the Coimbatore serial blasts in February, 1998, and the 1993 blast at the RSS office in Chennai have also come to light after Imam Alis death, solving a long-pending mystery, he said."
-        ]
-    },
-    {
-        "type": "Terrorism",
-        "location": "",
-        "time": "",
-        "frames": [
-            "donation_needs_or_offers_or_volunteering_services #:# The BJP chief claimed that terrorists had received local support in terms of accommodation and logistical help in each of these incidents.",
-            "injured_or_dead_people #:# The BJP chief claimed that terrorists had received local support in terms of accommodation and logistical help in each of these incidents."
-        ]
-    },
-    {
-        "type": "Terrorism",
-        "location": "India",
-        "time": "",
-        "frames": []
-    },
-    {
-        "type": "Terrorism",
-        "location": "",
-        "time": "",
-        "frames": [
-            "donation_needs_or_offers_or_volunteering_services #:# Therefore, irrespective of the party in power in the various states, local jihadi support cells should be smashed as a national mission, Naidu said."
-        ]
-    },
-    {
-        "type": "Terrorism",
-        "location": "",
-        "time": "",
-        "frames": []
-    },
-    {
-        "type": "Terrorism",
-        "location": "",
-        "time": "",
-        "frames": [
-            "donation_needs_or_offers_or_volunteering_services #:# Support to terrorists and anti-national activities, inspired by the misleading propaganda of religious extremism is also irreligious in nature, Naidu said, cautioning against any go-slow tactic in this regard."
-        ]
-    },
-    {
-        "type": "Terrorism",
-        "location": "",
-        "time": "",
-        "frames": []
-    },
-    {
-        "type": "Terrorism",
-        "location": "Pakistan",
-        "time": "",
-        "frames": []
-    }
-]
+{
+    "Events": [
+        {
+            "type": "Terrorism",
+            "location": "",
+            "time": "2018-04-24"
+        },
+        {
+            "type": "Terrorism",
+            "location": "",
+            "time": "2018-04-24, P1D"
+        },
+        {
+            "type": "Terrorism",
+            "location": "India",
+            "time": ""
+        },
+        {
+            "type": "Terrorism",
+            "location": "Bangalore",
+            "time": "2018-04-22"
+        },
+        {
+            "type": "Terrorism",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Terrorism Rebellion",
+            "location": "India",
+            "time": "P1D, 2018-04-24"
+        },
+        {
+            "type": "Terrorism",
+            "location": "Gandhinagar; Gujarat",
+            "time": "2017-12"
+        },
+        {
+            "type": "Terrorism",
+            "location": "Coimbatore; Chennai",
+            "time": "1998-02, 1993"
+        },
+        {
+            "type": "Terrorism",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Terrorism",
+            "location": "India",
+            "time": ""
+        },
+        {
+            "type": "Terrorism",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Terrorism",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Terrorism",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Terrorism",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Terrorism",
+            "location": "Pakistan",
+            "time": ""
+        }
+    ],
+    "Frames": [
+        "donation_needs_or_offers_or_volunteering_services #:# The BJP today rejected the view that terrorist attacks have risen despite the enactment of the Prevention of Terrorism Act, calling upon all state governments, including those ruled by the Congress and the Left, to take urgent steps to smash the local logistical support cells of jihadi terrorism sponsored by Pakistans Inter-Services Intelligence.",
+        "injured_or_dead_people #:# Imam Ali, the dreaded terrorist who was killed in Bangalore on Sunday, also possessed a photograph of Osama bin Laden.",
+        "injured_or_dead_people #:# Further, the ISIs connections with the Coimbatore serial blasts in February, 1998, and the 1993 blast at the RSS office in Chennai have also come to light after Imam Alis death, solving a long-pending mystery, he said.",
+        "injured_or_dead_people #:# The BJP chief claimed that terrorists had received local support in terms of accommodation and logistical help in each of these incidents.",
+        "donation_needs_or_offers_or_volunteering_services #:# The BJP chief claimed that terrorists had received local support in terms of accommodation and logistical help in each of these incidents.",
+        "donation_needs_or_offers_or_volunteering_services #:# Therefore, irrespective of the party in power in the various states, local jihadi support cells should be smashed as a national mission, Naidu said.",
+        "donation_needs_or_offers_or_volunteering_services #:# Support to terrorists and anti-national activities, inspired by the misleading propaganda of religious extremism is also irreligious in nature, Naidu said, cautioning against any go-slow tactic in this regard."
+    ]
+}

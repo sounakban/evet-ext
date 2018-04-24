@@ -1,86 +1,74 @@
-[
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "",
-        "frames": []
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "",
-        "frames": []
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "2018-04-20",
-        "frames": []
-    },
-    {
-        "type": "Epidemic",
-        "location": "India",
-        "time": "",
-        "frames": []
-    },
-    {
-        "type": "Epidemic",
-        "location": "Calcutta",
-        "time": "2005-01, 2018-04-20",
-        "frames": []
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "2018, 2017",
-        "frames": []
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "",
-        "frames": []
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "PXY",
-        "frames": []
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "",
-        "frames": [
-            "infrastructure_and_utilities_damage #:# The School of Tropical Medicine disclosure comes close on the heels of a survey conducted by the National AIDS Control Organisation that monitors HIV infection nationally."
-        ]
-    },
-    {
-        "type": "Epidemic",
-        "location": "Delhi; Bengal",
-        "time": "",
-        "frames": []
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "",
-        "frames": []
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "2018-W16",
-        "frames": [
-            "donation_needs_or_offers_or_volunteering_services #:# State government officials have agreed to extend support to the CNI hospital project."
-        ]
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "",
-        "frames": [
-            "missing_trapped_or_found_people #:# We were surprised to find that many women have heard about AIDS but they do not know how fatal the disease is."
-        ]
-    }
-]
+{
+    "Events": [
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": "2018-04-20"
+        },
+        {
+            "type": "Epidemic",
+            "location": "India",
+            "time": ""
+        },
+        {
+            "type": "Epidemic",
+            "location": "Calcutta",
+            "time": "2005-01, 2018-04-20"
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": "2018, 2017"
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": "PXY"
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Epidemic",
+            "location": "Delhi; Bengal",
+            "time": ""
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": "2018-W17"
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": ""
+        }
+    ],
+    "Frames": [
+        "infrastructure_and_utilities_damage #:# The School of Tropical Medicine disclosure comes close on the heels of a survey conducted by the National AIDS Control Organisation that monitors HIV infection nationally.",
+        "donation_needs_or_offers_or_volunteering_services #:# State government officials have agreed to extend support to the CNI hospital project.",
+        "missing_trapped_or_found_people #:# We were surprised to find that many women have heard about AIDS but they do not know how fatal the disease is."
+    ]
+}

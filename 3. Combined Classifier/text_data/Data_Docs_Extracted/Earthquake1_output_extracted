@@ -1,51 +1,46 @@
-[
-    {
-        "type": "Earthquake",
-        "location": "Bhuj",
-        "time": "2018-02-19",
-        "frames": [
-            "infrastructure_and_utilities_damage #:# Bhuj, Feb. 19 (Reuters): A security guard in a bright blue uniform frisks Baburam Humble at the iron gate before he is let into the newly-built factory office where he works."
-        ]
-    },
-    {
-        "type": "Earthquake",
-        "location": "",
-        "time": "P29Y",
-        "frames": []
-    },
-    {
-        "type": "Earthquake",
-        "location": "",
-        "time": "",
-        "frames": [
-            "injured_or_dead_people #:# Measuring 6.7 on the Richter scale, the earthquake had killed nearly 20,000 people and flattened residential complexes and businesses across large parts here."
-        ]
-    },
-    {
-        "type": "Earthquake",
-        "location": "",
-        "time": "P1M",
-        "frames": [
-            "infrastructure_and_utilities_damage #:# Humble, who lost all his savings after the concrete-roofed house he shared with his four brothers collapsed in the quake, has begun a new chapter in his life with Rs 2,500 a month he earns from the detergent and chemical factory.",
-            "donation_needs_or_offers_or_volunteering_services #:# Like Humble, thousands of Kutchis from this arid region on the Pakistan border are now rebuilding their lives with help from the industrial community, which, in turn, gets tax breaks for setting up there."
-        ]
-    },
-    {
-        "type": "Earthquake",
-        "location": "Bhuj; Anjar; Bachhau",
-        "time": "P1Y",
-        "frames": [
-            "infrastructure_and_utilities_damage #:# The huge piles of debris and mangled metal from the flattened buildings in Bhuj, Anjar and Bachhau, three major towns destroyed by the quake, are giving way to multi-storied buildings and factories protected by iron gates and barbed wire fences.",
-            "donation_needs_or_offers_or_volunteering_services #:# The tax breaks are helping Kutch gain an altogether new look, said F.S."
-        ]
-    },
-    {
-        "type": "Earthquake",
-        "location": "",
-        "time": "",
-        "frames": [
-            "donation_needs_or_offers_or_volunteering_services #:# It is also helping quake survivors find much-needed livelihoods.",
-            "missing_trapped_or_found_people #:# It is also helping quake survivors find much-needed livelihoods."
-        ]
-    }
-]
+{
+    "Events": [
+        {
+            "type": "Earthquake",
+            "location": "Bhuj",
+            "time": "2018-02-19"
+        },
+        {
+            "type": "Earthquake",
+            "location": "",
+            "time": "P29Y"
+        },
+        {
+            "type": "Earthquake",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Earthquake",
+            "location": "",
+            "time": "P1M"
+        },
+        {
+            "type": "Earthquake",
+            "location": "Bhuj; Anjar; Bachhau",
+            "time": "P1Y"
+        },
+        {
+            "type": "Earthquake",
+            "location": "",
+            "time": ""
+        }
+    ],
+    "Frames": [
+        "infrastructure_and_utilities_damage #:# Bhuj, Feb. 19 (Reuters): A security guard in a bright blue uniform frisks Baburam Humble at the iron gate before he is let into the newly-built factory office where he works.",
+        "injured_or_dead_people #:# Measuring 6.7 on the Richter scale, the earthquake had killed nearly 20,000 people and flattened residential complexes and businesses across large parts here.",
+        "infrastructure_and_utilities_damage #:# Humble, who lost all his savings after the concrete-roofed house he shared with his four brothers collapsed in the quake, has begun a new chapter in his life with Rs 2,500 a month he earns from the detergent and chemical factory.",
+        "donation_needs_or_offers_or_volunteering_services #:# Like Humble, thousands of Kutchis from this arid region on the Pakistan border are now rebuilding their lives with help from the industrial community, which, in turn, gets tax breaks for setting up there.",
+        "infrastructure_and_utilities_damage #:# The huge piles of debris and mangled metal from the flattened buildings in Bhuj, Anjar and Bachhau, three major towns destroyed by the quake, are giving way to multi-storied buildings and factories protected by iron gates and barbed wire fences.",
+        "donation_needs_or_offers_or_volunteering_services #:# The tax breaks are helping Kutch gain an altogether new look, said F.S.",
+        "missing_trapped_or_found_people #:# It is also helping quake survivors find much-needed livelihoods.",
+        "donation_needs_or_offers_or_volunteering_services #:# It is also helping quake survivors find much-needed livelihoods.",
+        "donation_needs_or_offers_or_volunteering_services #:# The presence of two major ports on the west coast, the state-run Kandla and privately operated Mundra, and better road and rail networks are also helping Kutchs mushrooming industry.",
+        "missing_trapped_or_found_people #:# Officials say Kutchs new-found status as an investment magnet has sharply pushed up land prices."
+    ]
+}

@@ -1,79 +1,66 @@
-[
-    {
-        "type": "Tsunami",
-        "location": "Asia",
-        "time": "PRESENT_REF, 2018-04-21",
-        "frames": [
-            "donation_needs_or_offers_or_volunteering_services #:# The tsunami that crashed into coastlines across southern Asia is likely to present the United Nations with its biggest and costliest relief effort, the UN emergency relief coordinator said yesterday."
-        ]
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "PXY, 2018-01",
-        "frames": [
-            "injured_or_dead_people #:# and a number of years to bury the dead, battle disease and recover from the wall of water that has killed more than 23,000 people, said Jan Egeland, who heads the UN office for the Coordination of Humanitarian Affairs."
-        ]
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "2018-04-22",
-        "frames": [
-            "donation_needs_or_offers_or_volunteering_services #:# Today, aid agencies struggled to cope with the scale of the disaster, with the International Red Cross saying it may have to treble its appeal for funds."
-        ]
-    },
-    {
-        "type": "Earthquake Tsunami",
-        "location": "Indian Ocean; Indonesia; Sumatra",
-        "time": "2018-04-22",
-        "frames": [
-            "missing_trapped_or_found_people #:# The IFRC issued a flash appeal on Sunday for 7.5 million Swiss francs ($6.57 million) for survivors after the tsunami hit six Asian nations following a massive 9.0-magnitude earthquake under the Indian Ocean off Indonesia?s Sumatra island."
-        ]
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "",
-        "frames": [
-            "missing_trapped_or_found_people #:# For many desperate survivors, aid has been too slow in coming."
-        ]
-    },
-    {
-        "type": "Rebellion",
-        "location": "Indonesia",
-        "time": "P28Y",
-        "frames": [
-            "injured_or_dead_people #:# In southern Thailand, local people were using spades, hoes and hand saws to try to reach survivors and the dead.",
-            "missing_trapped_or_found_people #:# In southern Thailand, local people were using spades, hoes and hand saws to try to reach survivors and the dead.",
-            "donation_needs_or_offers_or_volunteering_services #:# Several Asian nations have sent naval ships carrying emergency supplies and doctors to devastated coastal areas.",
-            "injured_or_dead_people #:# A Thai naval ship with an onboard hospital was headed to the devastated island resort of Phuket, where 203 people are known to have died and many more were injured."
-        ]
-    },
-    {
-        "type": "Epidemic",
-        "location": "Sri Lanka; Indonesia",
-        "time": "",
-        "frames": [
-            "donation_needs_or_offers_or_volunteering_services #:# Relief teams in Sri Lanka and Indonesia, two of the worst affected nations, sought to prevent the spread of disease from rotting corpses and putrefied water by burying corpses in mass graves and flying in shelter and water sanitation kits."
-        ]
-    },
-    {
-        "type": "Tsunami",
-        "location": "",
-        "time": "2018-04-22",
-        "frames": [
-            "missing_trapped_or_found_people #:# ?Hundreds of thousands of people fought to survive the tsunamis on Sunday.",
-            "donation_needs_or_offers_or_volunteering_services #:# Now we need to help them survive the aftermath,.",
-            "missing_trapped_or_found_people #:# Now we need to help them survive the aftermath,."
-        ]
-    },
-    {
-        "type": "Epidemic",
-        "location": "",
-        "time": "PXD",
-        "frames": [
-            "donation_needs_or_offers_or_volunteering_services #:# fund."
-        ]
-    }
-]
+{
+    "Events": [
+        {
+            "type": "Tsunami",
+            "location": "Asia",
+            "time": "PRESENT_REF, 2018-04-23"
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": "PXY, 2018-01"
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": "2018-04-24"
+        },
+        {
+            "type": "Tsunami Earthquake",
+            "location": "Indian Ocean; Indonesia; Sumatra",
+            "time": "2018-04-22"
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": ""
+        },
+        {
+            "type": "Rebellion",
+            "location": "Indonesia",
+            "time": "P28Y"
+        },
+        {
+            "type": "Epidemic",
+            "location": "Sri Lanka; Indonesia",
+            "time": ""
+        },
+        {
+            "type": "Tsunami",
+            "location": "",
+            "time": "2018-04-22"
+        },
+        {
+            "type": "Epidemic",
+            "location": "",
+            "time": "PXD"
+        }
+    ],
+    "Frames": [
+        "donation_needs_or_offers_or_volunteering_services #:# The tsunami that crashed into coastlines across southern Asia is likely to present the United Nations with its biggest and costliest relief effort, the UN emergency relief coordinator said yesterday.",
+        "injured_or_dead_people #:# and a number of years to bury the dead, battle disease and recover from the wall of water that has killed more than 23,000 people, said Jan Egeland, who heads the UN office for the Coordination of Humanitarian Affairs.",
+        "donation_needs_or_offers_or_volunteering_services #:# Today, aid agencies struggled to cope with the scale of the disaster, with the International Red Cross saying it may have to treble its appeal for funds.",
+        "missing_trapped_or_found_people #:# The IFRC issued a flash appeal on Sunday for 7.5 million Swiss francs ($6.57 million) for survivors after the tsunami hit six Asian nations following a massive 9.0-magnitude earthquake under the Indian Ocean off Indonesia?s Sumatra island.",
+        "missing_trapped_or_found_people #:# For many desperate survivors, aid has been too slow in coming.",
+        "missing_trapped_or_found_people #:# In southern Thailand, local people were using spades, hoes and hand saws to try to reach survivors and the dead.",
+        "injured_or_dead_people #:# In southern Thailand, local people were using spades, hoes and hand saws to try to reach survivors and the dead.",
+        "donation_needs_or_offers_or_volunteering_services #:# Several Asian nations have sent naval ships carrying emergency supplies and doctors to devastated coastal areas.",
+        "injured_or_dead_people #:# A Thai naval ship with an onboard hospital was headed to the devastated island resort of Phuket, where 203 people are known to have died and many more were injured.",
+        "donation_needs_or_offers_or_volunteering_services #:# Relief teams in Sri Lanka and Indonesia, two of the worst affected nations, sought to prevent the spread of disease from rotting corpses and putrefied water by burying corpses in mass graves and flying in shelter and water sanitation kits.",
+        "missing_trapped_or_found_people #:# ?Hundreds of thousands of people fought to survive the tsunamis on Sunday.",
+        "missing_trapped_or_found_people #:# Now we need to help them survive the aftermath,.",
+        "donation_needs_or_offers_or_volunteering_services #:# Now we need to help them survive the aftermath,.",
+        "donation_needs_or_offers_or_volunteering_services #:# fund.",
+        "missing_trapped_or_found_people #:# Unicef said Sri Lankan survivors faced a new threat from land-mines dislodged by the tsunami."
+    ]
+}
