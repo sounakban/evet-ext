@@ -112,7 +112,7 @@ def run_classifier(sentences, labels, test_docs):
 	from sklearn.multiclass import OneVsRestClassifier
 	from sklearn.svm import SVC
 	estimator = SVC(kernel='linear')
-	classifier = OneVsRestClassifier(estimator, n_jobs=1)
+	classifier = OneVsRestClassifier(estimator, n_jobs=-1)
 	classifier.fit(train_matrix, label_matrix)
 	predictions = classifier.predict(sentence_matrix)
 
