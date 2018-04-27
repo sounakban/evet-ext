@@ -157,9 +157,11 @@ def run_classifierAccuracy(trainSentences, trainLabels, testSentences, testLabel
 
 
 	from sklearn.multiclass import OneVsRestClassifier
-	from sklearn.svm import SVC
-	estimator = SVC(kernel='linear')
-	classifier = OneVsRestClassifier(estimator, n_jobs=1)
+	from sklearn.svm import LinearSVC
+	from sklearn.ensemble import RandomForestClassifier
+	# estimator = LinearSVC()
+	estimator = RandomForestClassifier(n_estimators=50, max_depth=None, min_samples_split=2, random_state=0, n_jobs = -1)
+	classifier = OneVsRestClassifier(estimator, n_jobs=-1)
 	classifier.fit(train_matrix, train_label_matrix)
 	predictions = classifier.predict(test_matrix)
 
@@ -181,6 +183,8 @@ def run_classifierAccuracy(trainSentences, trainLabels, testSentences, testLabel
 
 
 trainSentences, trainLabels = get_trainData()
+# trainSentences, trainLabels = trainSentences[:1000000], trainLabels[:1000000]
+# trainSentences, trainLabels = trainSentences[:100000], trainLabels[:100000]
 trainLabels = [set(label[1:-1].replace('\'', '').replace(' ', '').split(',')) for label in trainLabels]
 for labels in trainLabels:
 	if '' in labels:
