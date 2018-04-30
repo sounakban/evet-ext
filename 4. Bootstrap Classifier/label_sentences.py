@@ -125,14 +125,14 @@ sentence_label_list = []
 terms, labels = get_classTerms()
 
 import os
-# for filename in os.listdir("./text_data/docs_for_train_text"):
-# 	test_doc = get_testDoc(os.path.join("./text_data/docs_for_train_text", filename))
-# 	sentence_label_list.extend(run_classifier(terms, labels, test_doc))
+for filename in os.listdir("./text_data/natural_disaster_text"):
+	test_doc = get_testDoc(os.path.join("./text_data/natural_disaster_text", filename))
+	sentence_label_list.extend(run_classifier(terms, labels, test_doc))
 
-for filename in os.listdir("/home/sounak/Resources/Data/rcv1_flat_text"):
-	test_doc = get_testDoc(os.path.join("/home/sounak/Resources/Data/rcv1_flat_text", filename))
-	if len(test_doc[0]) > 0:
-		sentence_label_list.extend(run_classifier(terms, labels, test_doc))
+# for filename in os.listdir("/home/sounak/Resources/Data/rcv1_flat_text"):
+# 	test_doc = get_testDoc(os.path.join("/home/sounak/Resources/Data/rcv1_flat_text", filename))
+# 	if len(test_doc[0]) > 0:
+# 		sentence_label_list.extend(run_classifier(terms, labels, test_doc))
 
 import csv
 with open('train_sentences.csv', 'w') as fl:
