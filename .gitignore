@@ -106,3 +106,4 @@ python-sutime-master/
 stanford-ner-2018-02-27/
 text_data/
 train_sentences.csv
+.DS_Store
