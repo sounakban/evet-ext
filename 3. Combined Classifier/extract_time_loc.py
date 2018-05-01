@@ -114,6 +114,7 @@ def run_extraction2(test_docs, output_file="ext_sent"):
 	curr_event['type'] = "None"
 	curr_event['location'] = ""
 	curr_event['time'] = ""
+	curr_event['sentence'] = ""
 	frames = []
 
 	sentences, labels = get_sent_label_pair(test_docs)
@@ -128,6 +129,7 @@ def run_extraction2(test_docs, output_file="ext_sent"):
 			curr_event['type'] = " ".join(list(sentence_events))
 			curr_event['location'] = ""
 			curr_event['time'] = ""
+			curr_event['sentence'] = sentences[i]
 			# print("Event : ", curr_event['type'])
 
 			locations = tli.get_location(sentences[i])

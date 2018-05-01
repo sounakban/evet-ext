@@ -11,7 +11,6 @@ def get_classTerms():
 	labels = []
 	terms = []
 	with open("wordList.txt") as fl:
-		# data = fl.readlines(fl)
 		for line in fl:
 			if line == "#$#\n":
 				labels.append(fl.readline().strip())
@@ -125,8 +124,9 @@ sentence_label_list = []
 terms, labels = get_classTerms()
 
 import os
-for filename in os.listdir("./text_data/natural_disaster_text"):
-	test_doc = get_testDoc(os.path.join("./text_data/natural_disaster_text", filename))
+input_dir = "./text_data/natural_disaster_text"
+for filename in os.listdir(input_dir):
+	test_doc = get_testDoc(os.path.join(input_dir, filename))
 	sentence_label_list.extend(run_classifier(terms, labels, test_doc))
 
 # for filename in os.listdir("/home/sounak/Resources/Data/rcv1_flat_text"):

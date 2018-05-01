@@ -110,8 +110,9 @@ def run_classifier(sentences, labels, test_docs):
 	label_matrix = mlb.fit_transform(labels)
 
 	from sklearn.multiclass import OneVsRestClassifier
-	from sklearn.svm import SVC
-	estimator = SVC(kernel='linear')
+	from sklearn.svm import linearSVC
+	# estimator = SVC(kernel='linear')
+	estimator = linearSVC()
 	classifier = OneVsRestClassifier(estimator, n_jobs=-1)
 	classifier.fit(train_matrix, label_matrix)
 	predictions = classifier.predict(sentence_matrix)
@@ -136,15 +137,28 @@ def run_classifier(sentences, labels, test_docs):
 
 
 def run_classifierAccuracy(trainSentences, trainLabels, testSentences, testLabels):
-	labels = ["Drought", "Earthquake", "Flood", "Epidemic", "Hurricane", \
+	all_labels = ["Drought", "Earthquake", "Flood", "Epidemic", "Hurricane", \
 			"Rebellion", "Terrorism", "Tornado", "Tsunami", "displaced_people_and_evacuations", \
 			"donation_needs_or_offers_or_volunteering_services", "infrastructure_and_utilities_damage", \
 			"injured_or_dead_people", "missing_trapped_or_found_people"]
+	disaster_labels = ["Drought", "Earthquake", "Flood", "Hurricane", \
+			"Tornado", "Tsunami", "displaced_people_and_evacuations", \
+			"donation_needs_or_offers_or_volunteering_services", "infrastructure_and_utilities_damage", \
+			"injured_or_dead_people", "missing_trapped_or_found_people"]
+	health_labels = ["Epidemic", "displaced_people_and_evacuations", \
+			"donation_needs_or_offers_or_volunteering_services", \
+			"injured_or_dead_people"]
+	conflict_labels = ["Rebellion", "Terrorism", "displaced_people_and_evacuations", \
+			"infrastructure_and_utilities_damage", \
+			"injured_or_dead_people", "missing_trapped_or_found_people"]
 	import numpy as np
+	curr_labels = all_labels
+
+	trainLabels = [list(set(l).intersection(curr_labels)) for l in trainLabels]
+	testLabels = [list(set(l).intersection(curr_labels))for l in testLabels]
 
 	from sklearn.preprocessing import MultiLabelBinarizer
-	mlb = MultiLabelBinarizer(classes=labels)
-	# mlb = MultiLabelBinarizer()
+	mlb = MultiLabelBinarizer(classes=curr_labels)
 	train_label_matrix = mlb.fit(trainLabels)
 	print("Labels : ", mlb.classes_)
 	train_label_matrix = mlb.transform(trainLabels)

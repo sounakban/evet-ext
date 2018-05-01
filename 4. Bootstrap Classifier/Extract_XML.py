@@ -31,8 +31,11 @@ import os
 # 	except:
 # 		pass
 
-for filename in os.listdir("/Users/sounakbanerjee/Desktop/Now/evet-ext/4. Bootstrap Classifier/text_data/natural_disaster"):
+
+input_dir = "./text_data/natural_disaster"
+output_dir = "./text_data/natural_disaster_text"
+for filename in os.listdir(input_dir):
 	try:
-		run_extraction_FIRE(os.path.join("/Users/sounakbanerjee/Desktop/Now/evet-ext/4. Bootstrap Classifier/text_data/natural_disaster", filename), os.path.join("/Users/sounakbanerjee/Desktop/Now/evet-ext/4. Bootstrap Classifier/text_data/natural_disaster_text", filename))
+		run_extraction_FIRE(os.path.join(input_dir, filename), os.path.join(output_dir, filename))
 	except:
 		pass
