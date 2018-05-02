@@ -1,58 +1,65 @@
 {
     "Events": [
         {
-            "type": "Tsunami Rebellion",
+            "type": "Rebellion Tsunami",
             "location": "Tamil Nadu; Nagapattinam",
-            "time": ""
+            "time": "",
+            "sentence": "Soldiers stepped in to help tsunami-hit Tamil Nadu after dozens of angry survivors blocked roads to protest the delay in disposing of unclaimed bodies in Nagapattinam, the state?s worst-hit district."
         },
         {
             "type": "Rebellion",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "in restoring communication links, damaged bridges and particularly in mass burial of the dead, chief minister Jayalalithaa told reporters, asked about rising public anger over health concerns in the tropical climate."
         },
         {
             "type": "Rebellion",
             "location": "Nagapattinam",
-            "time": ""
+            "time": "",
+            "sentence": "In Nagapattinam, which has so far reported 2,414 deaths, protesters stopped traffic at several places as the smell of decomposing flesh, garbage, dung, faeces and putrid water made it difficult to breathe even through masks."
         },
         {
             "type": "Tsunami",
             "location": "",
-            "time": "2018-04-23"
+            "time": "2018-04-30",
+            "sentence": "said shopkeeper Bhoomi Nathan, pointing to a large marsh created by the tsunami in the centre of the village."
         },
         {
             "type": "Rebellion",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "Anger mounted in the village as a military helicopter flew over the beach ."
         },
         {
             "type": "Tsunami",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "reduced to a bed of bricks after waves tore through every building in their path."
         },
         {
             "type": "Epidemic",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "?We just want the government to help us dispose of bodies, spread some disinfectant and give medicines."
         }
     ],
     "Frames": [
-        "missing_trapped_or_found_people #:# Soldiers stepped in to help tsunami-hit Tamil Nadu after dozens of angry survivors blocked roads to protest the delay in disposing of unclaimed bodies in Nagapattinam, the state?s worst-hit district.",
         "injured_or_dead_people #:# Soldiers stepped in to help tsunami-hit Tamil Nadu after dozens of angry survivors blocked roads to protest the delay in disposing of unclaimed bodies in Nagapattinam, the state?s worst-hit district.",
         "donation_needs_or_offers_or_volunteering_services #:# Soldiers stepped in to help tsunami-hit Tamil Nadu after dozens of angry survivors blocked roads to protest the delay in disposing of unclaimed bodies in Nagapattinam, the state?s worst-hit district.",
-        "injured_or_dead_people #:# in restoring communication links, damaged bridges and particularly in mass burial of the dead, chief minister Jayalalithaa told reporters, asked about rising public anger over health concerns in the tropical climate.",
+        "missing_trapped_or_found_people #:# Soldiers stepped in to help tsunami-hit Tamil Nadu after dozens of angry survivors blocked roads to protest the delay in disposing of unclaimed bodies in Nagapattinam, the state?s worst-hit district.",
         "infrastructure_and_utilities_damage #:# in restoring communication links, damaged bridges and particularly in mass burial of the dead, chief minister Jayalalithaa told reporters, asked about rising public anger over health concerns in the tropical climate.",
-        "displaced_people_and_evacuations #:# In Akkarapatti village, Jayalalithaa said, a massive operation by the army was going on for ?removing a huge heap of bodies.",
+        "injured_or_dead_people #:# in restoring communication links, damaged bridges and particularly in mass burial of the dead, chief minister Jayalalithaa told reporters, asked about rising public anger over health concerns in the tropical climate.",
         "injured_or_dead_people #:# In Akkarapatti village, Jayalalithaa said, a massive operation by the army was going on for ?removing a huge heap of bodies.",
+        "displaced_people_and_evacuations #:# In Akkarapatti village, Jayalalithaa said, a massive operation by the army was going on for ?removing a huge heap of bodies.",
         "injured_or_dead_people #:# Huge cranes were pressed into service in Kanyakumari district, which has reported 665 deaths so far, to scoop out bodies from the debris and bury them quickly.",
         "injured_or_dead_people #:# In Nagapattinam, which has so far reported 2,414 deaths, protesters stopped traffic at several places as the smell of decomposing flesh, garbage, dung, faeces and putrid water made it difficult to breathe even through masks.",
         "injured_or_dead_people #:# While bodies kept piling up at the mortuary at the headquarters hospital, a large number of corpses lay unclaimed in the open.",
-        "missing_trapped_or_found_people #:# In the former Dutch settlement of Tranquebar, villagers complained that the debris was yet to be searched for bodies.",
         "injured_or_dead_people #:# In the former Dutch settlement of Tranquebar, villagers complained that the debris was yet to be searched for bodies.",
+        "missing_trapped_or_found_people #:# In the former Dutch settlement of Tranquebar, villagers complained that the debris was yet to be searched for bodies.",
         "donation_needs_or_offers_or_volunteering_services #:# In Tharangampadi, a fishing village, residents complained that not one government official, policeman or soldier came to help 48 hours after the tragedy.",
         "injured_or_dead_people #:# ?Several bodies of children must be stuck inside.",
-        "displaced_people_and_evacuations #:# ?Some fire service personnel came yesterday and fled after seeing the destruction..",
         "infrastructure_and_utilities_damage #:# ?Some fire service personnel came yesterday and fled after seeing the destruction..",
+        "displaced_people_and_evacuations #:# ?Some fire service personnel came yesterday and fled after seeing the destruction..",
         "injured_or_dead_people #:# ?We just want the government to help us dispose of bodies, spread some disinfectant and give medicines.",
         "donation_needs_or_offers_or_volunteering_services #:# ?We just want the government to help us dispose of bodies, spread some disinfectant and give medicines.",
         "injured_or_dead_people #:# ?Those who are dead are gone.",

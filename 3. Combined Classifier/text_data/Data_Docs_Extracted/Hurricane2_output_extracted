@@ -3,50 +3,58 @@
         {
             "type": "Hurricane",
             "location": "Florida",
-            "time": ""
+            "time": "",
+            "sentence": " A resident walks her dog as Hurricane Frances slams into south Florida."
         },
         {
             "type": "Hurricane",
             "location": "Florida; Florida",
-            "time": "2018-09-05"
+            "time": "2018-09-05",
+            "sentence": " Cocoa, Florida, Sept. 5 Reuters): Hurricane Frances roared into eastern Florida with stinging rains and fierce winds that ripped away roofs, trees and boat moorings and cut power to 1.3 million homes and businesses."
         },
         {
             "type": "Hurricane",
             "location": "Floridas Atlantic",
-            "time": "2018-04-23, PT15H"
+            "time": "2018-04-30, PT15H",
+            "sentence": "Then yesterday, Frances hammered Floridas Atlantic coast with 160 kph wind gusts and promised to dump torrential rain on the peninsula for up to 15 hours in what emergency officials said could be a marathon of anxiety and devastation."
         },
         {
             "type": "Hurricane",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "Weve still got the back side to deal with, said National Hurricane Center director Max Mayfield."
         },
         {
             "type": "Epidemic",
             "location": "Florida; Florida; Brevard; Indian River; Palm Beach; St. Lucie",
-            "time": "2018-04-23"
+            "time": "2018-04-30",
+            "sentence": "President George W. Bush yesterday declared Florida a major disaster and ordered federal aid to make grants and loans available in five coastal counties in Central Florida: Brevard, Indian River, Martin, Palm Beach and St. Lucie."
         },
         {
             "type": "Hurricane",
             "location": "",
-            "time": "2018-04-03"
+            "time": "2018-04-10",
+            "sentence": "State officials reported some 71,000 people in public shelters, including some left homeless by Hurricane Charley, which caused $7.4 billion in insured losses and killed more than 20 people when it hit Floridas southwest coast three weeks ago."
         },
         {
             "type": "Terrorism",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "Local television reported one shelter resident died of a heart attack as Frances howled ashore."
         },
         {
             "type": "Hurricane",
             "location": "West Palm; Beach; Florida; US; Miami",
-            "time": ""
+            "time": "",
+            "sentence": "At 0300 GMT, the centre of the storm was about 56 km northeast of West Palm Beach, Florida, at latitude 27.1 north and longitude 79.7 west, the US National Hurricane Center in Miami said."
         }
     ],
     "Frames": [
         "displaced_people_and_evacuations #:# The massive storm crept over Floridas Atlantic coast, where 2.5 million people had been told to flee inland.",
         "infrastructure_and_utilities_damage #:# Power lines snapped and sparked while lightning illuminated blacked-out beach towns and flood waters submerged cars in low-lying parking garages.",
-        "displaced_people_and_evacuations #:# State officials reported some 71,000 people in public shelters, including some left homeless by Hurricane Charley, which caused $7.4 billion in insured losses and killed more than 20 people when it hit Floridas southwest coast three weeks ago.",
-        "injured_or_dead_people #:# State officials reported some 71,000 people in public shelters, including some left homeless by Hurricane Charley, which caused $7.4 billion in insured losses and killed more than 20 people when it hit Floridas southwest coast three weeks ago.",
         "infrastructure_and_utilities_damage #:# State officials reported some 71,000 people in public shelters, including some left homeless by Hurricane Charley, which caused $7.4 billion in insured losses and killed more than 20 people when it hit Floridas southwest coast three weeks ago.",
+        "injured_or_dead_people #:# State officials reported some 71,000 people in public shelters, including some left homeless by Hurricane Charley, which caused $7.4 billion in insured losses and killed more than 20 people when it hit Floridas southwest coast three weeks ago.",
+        "displaced_people_and_evacuations #:# State officials reported some 71,000 people in public shelters, including some left homeless by Hurricane Charley, which caused $7.4 billion in insured losses and killed more than 20 people when it hit Floridas southwest coast three weeks ago.",
         "injured_or_dead_people #:# Local television reported one shelter resident died of a heart attack as Frances howled ashore.",
         "infrastructure_and_utilities_damage #:# The storms top sustained winds were near 170 kph, well down from the devastating 235-kph winds of two days ago but strong enough to uproot trees, down power lines and destroy mobile homes."
     ]

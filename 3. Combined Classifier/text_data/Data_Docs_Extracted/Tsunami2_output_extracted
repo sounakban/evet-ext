@@ -3,67 +3,80 @@
         {
             "type": "Tsunami",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "of tsunamis."
         },
         {
             "type": "Tsunami Earthquake",
             "location": "India",
-            "time": ""
+            "time": "",
+            "sentence": "Despite India?s proximity to the earthquake-prone Indonesian archipelago, scientists have no record of a tsunami ever calling on the Indian coastline."
         },
         {
             "type": "Tsunami",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "?The coastlines in this region were not under the tsunami watch umbrella.."
         },
         {
             "type": "Tsunami Earthquake",
             "location": "west coast; of Sumatra",
-            "time": ""
+            "time": "",
+            "sentence": "The tsunami, triggered this morning by the earthquake near the west coast of Sumatra and travelling at about 600-800 km an hour ."
         },
         {
             "type": "Tsunami",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "the typical speed of such a wave ."
         },
         {
             "type": "Tsunami",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "As it approached land, the waves would have gained height in the shallow coastal waters."
         },
         {
             "type": "Earthquake",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "But this requires a sophisticated network of instruments on land and in the sea to continuously analyse the impact of an earthquake on the seawater ?in real time?, he said."
         },
         {
             "type": "Tsunami Earthquake",
             "location": "Sumatra",
-            "time": ""
+            "time": "",
+            "sentence": "Seismic stations managed by the Indian Meteorological Department picked up the undersea earthquake near Sumatra but there was no programme in place for the scientists to use the quake information to predict whether it would lead to a tsunami."
         },
         {
             "type": "Tsunami Earthquake",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "?This would have required detailed data about the earthquake and undersea topography along the path of the tsunami,."
         },
         {
             "type": "Tsunami",
             "location": "Pacific Ocean",
-            "time": ""
+            "time": "",
+            "sentence": "The existing international tsunami watch network is focused exclusively on the Pacific Ocean, which has recorded the highest number of tsunamis in the past."
         },
         {
             "type": "Tsunami Earthquake",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "Scientists cannot predict earthquakes but they can track the behaviour of tsunamis with instruments that measure changing sea levels along the path of the waves and forecast where they will strike the coast."
         },
         {
             "type": "Tsunami",
             "location": "Indian Ocean",
-            "time": ""
+            "time": "",
+            "sentence": "?Maybe it is now time for us to think of a tsunami warning system in the Indian Ocean,."
         },
         {
             "type": "Tsunami",
             "location": "",
-            "time": "2013-04-24"
+            "time": "2013-05-01",
+            "sentence": "They cite historical records and anecdotal accounts of what appear to be tsunamis."
         }
     ],
     "Frames": []

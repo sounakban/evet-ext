@@ -3,27 +3,32 @@
         {
             "type": "Epidemic",
             "location": "",
-            "time": "PRESENT_REF, 2018-04-23"
+            "time": "PRESENT_REF, 2018-04-30",
+            "sentence": "The Prime Minister?s Office asked him to return to take stock of the situation and ensure that authorities are ready not just with supplies of medicines but a focused plan to prevent the outbreak of epidemics like cholera and dysentery."
         },
         {
             "type": "Epidemic",
             "location": "",
-            "time": "2018-04-24"
+            "time": "2018-05-01",
+            "sentence": "Officials kept saying teams of doctors had been sent out to affected areas but there was no urgency to come to grips with the situation or anticipate the outbreak of diseases that invariably occur after such disasters."
         },
         {
             "type": "Epidemic",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "?It has been decided to outline relief interventions in the form of medical assistance, medicines, treatment methods and deployment of medical personnel for on-the-spot medical relief."
         },
         {
             "type": "Epidemic",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "State governments are also being provided technical guidelines on public health measure prepared by the National Institute of Communicable Disease for the control of waterborne diseases, vector-borne diseases, measles and disposal of bodies in emergency conditions,."
         },
         {
             "type": "Tsunami",
             "location": "India",
-            "time": "2018-04-23"
+            "time": "2018-04-30",
+            "sentence": "Unicef has already reached the tsunami-hit areas of south India."
         }
     ],
     "Frames": [

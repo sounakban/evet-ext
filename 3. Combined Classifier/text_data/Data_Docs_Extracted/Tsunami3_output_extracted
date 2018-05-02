@@ -3,17 +3,20 @@
         {
             "type": "Tsunami",
             "location": "Andaman; Nicobar Islands",
-            "time": "2018-01-01"
+            "time": "2018-01-01",
+            "sentence": "stranded in the tsunami-hit Andaman and Nicobar Islands ."
         },
         {
             "type": "Epidemic",
             "location": "",
-            "time": "2018-04-24"
+            "time": "2018-05-01",
+            "sentence": "The government, quick to react to the Centre?s call for aid, today sent a plane carrying relief material to the Andamans, where thousands are feared dead."
         },
         {
             "type": "Tsunami Earthquake",
             "location": "Sumatra; Orissa; Orissa",
-            "time": "P1W"
+            "time": "P1W",
+            "sentence": "Expressing concern and sorrow over the deaths caused by the tsunami following an earthquake, which originated in Sumatra, Orissa chief minister Naveen Patnaik said, ?Orissa has faced a similar disaster and we want to help the others.."
         }
     ],
     "Frames": [
@@ -26,8 +29,8 @@
         "injured_or_dead_people #:# Expressing concern and sorrow over the deaths caused by the tsunami following an earthquake, which originated in Sumatra, Orissa chief minister Naveen Patnaik said, ?Orissa has faced a similar disaster and we want to help the others..",
         "donation_needs_or_offers_or_volunteering_services #:# Expressing concern and sorrow over the deaths caused by the tsunami following an earthquake, which originated in Sumatra, Orissa chief minister Naveen Patnaik said, ?Orissa has faced a similar disaster and we want to help the others..",
         "donation_needs_or_offers_or_volunteering_services #:# This morning, the government set up a relief centre at Kalyan Mandap in the Unit-8 area of the city where scores of people were engaged in making food packets.",
-        "missing_trapped_or_found_people #:# Rescue experts and special equipment for rescue are also ready,.",
         "displaced_people_and_evacuations #:# Rescue experts and special equipment for rescue are also ready,.",
+        "missing_trapped_or_found_people #:# Rescue experts and special equipment for rescue are also ready,.",
         "donation_needs_or_offers_or_volunteering_services #:# ?We are in touch with the Centre, which will inform us in case it needs help."
     ]
 }

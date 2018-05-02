@@ -3,28 +3,32 @@
         {
             "type": "Terrorism",
             "location": "",
-            "time": "2018-04-23"
+            "time": "2018-04-30",
+            "sentence": "The Lok Janshakti chief and the Nationalist Congress Party leader condemned the proposal to take out the yatra as a sinister political act."
         },
         {
-            "type": "Terrorism Rebellion",
+            "type": "Rebellion Terrorism",
             "location": "Gujarat; WTC",
-            "time": "2018-09-11"
+            "time": "2018-09-11",
+            "sentence": "Paswan drew a parallel between President George W. Bush and Narendra Modi, comparing Modis handling of the Gujarat riots to Bushs handling of the crisis after the terrorist attack on the WTC on September 11."
         },
         {
             "type": "Terrorism",
             "location": "",
-            "time": "P1D"
+            "time": "P1D",
+            "sentence": "But Bush never blamed Muslims as a community and the BJP government was doing everything possibly to paint the entire community as terrorists, Paswan told Kalam."
         },
         {
-            "type": "Terrorism Rebellion",
+            "type": "Rebellion Terrorism",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "The leaders said it was shocking to learn that while the Prime Minister himself had termed the violence as a national shame, his party was trying to glorify the riots."
         }
     ],
     "Frames": [
         "injured_or_dead_people #:# Bush went on TV within an hour and said it was the work of Osama bin Laden and that he wanted him dead or alive.",
-        "injured_or_dead_people #:# As a nation, it would be most shameful of us if we were to let such an act of glorification of deaths and destruction take place, Paswan and Mishra told the President, slamming the intention behind the Gaurav Yatra.",
         "infrastructure_and_utilities_damage #:# As a nation, it would be most shameful of us if we were to let such an act of glorification of deaths and destruction take place, Paswan and Mishra told the President, slamming the intention behind the Gaurav Yatra.",
+        "injured_or_dead_people #:# As a nation, it would be most shameful of us if we were to let such an act of glorification of deaths and destruction take place, Paswan and Mishra told the President, slamming the intention behind the Gaurav Yatra.",
         "injured_or_dead_people #:# Paswan apprised the President on how the BJP-led government had tried to exaggerate the Godhra killings by not publicising the exact death toll in the Sabarmati Express.",
         "injured_or_dead_people #:# According to the reservation charts released by the railways, only four of the 56 passengers who had booked berths in S-6 bogie had died, nine were injured and seven missing, he said.",
         "injured_or_dead_people #:# The state government had claimed that 58 people had died in coach S-6.",

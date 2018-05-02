@@ -3,58 +3,67 @@
         {
             "type": "Earthquake",
             "location": "Gujarat",
-            "time": "2001-01-26, P1D"
+            "time": "2001-01-26, P1D",
+            "sentence": "WHEN NATURAL CALAMITY STRIKES Shobita Punja\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tJanuary 26, 2001 at 8.46 am, when the nation was preparing to celebrate our 52nd Republic Day, an earthquake struck the state of Gujarat."
         },
         {
             "type": "Earthquake",
             "location": "Bhuj",
-            "time": ""
+            "time": "",
+            "sentence": "It was of enormous magnitude, between 7-8 points on the Richter scale with its epicentre just 20 kilometres northeast of Bhuj."
         },
         {
             "type": "Earthquake",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "The death and destruction that followed the earthquake spread over 15,000 kilometres with the loss of life estimated at 20,000, apart from loss of livestock and crores worth of property."
         },
         {
             "type": "Earthquake",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "The earthquake took everyone by surprise, but that is the character of natural calamities."
         },
         {
             "type": "Earthquake",
             "location": "Gujarat",
-            "time": ""
+            "time": "",
+            "sentence": "In terms of the irreplaceable loss of national, cultural and historic assets of Gujarat, the earthquake exposed another aspect of our lack of preparedness and concern."
         },
         {
             "type": "Earthquake",
             "location": "India",
-            "time": "PXW"
+            "time": "PXW",
+            "sentence": "The Archaeological Survey of India and the state department of archaeology in subsequent weeks estimated that over 900 protected monuments had been affected by the earthquake and needed urgent attention."
         },
         {
             "type": "Earthquake",
             "location": "Kutch; Indias",
-            "time": "PXY, PXY"
+            "time": "PXY, PXY",
+            "sentence": "The region of Kutch, known to be in the seismic zone with a record of tremors every 30-50 years, has one of Indias most beautiful traditions of vernacular building and extraordinary crafts traditions of communities who have adapted to the harsh near-desert environment over centuries."
         },
         {
             "type": "Earthquake",
             "location": "Kalyaneshwar Temple; Bhuj",
-            "time": ""
+            "time": "",
+            "sentence": "Leveller\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tThe earthquake, like all natural phenomena, made no distinction between caste or religion or class and colour and devastated the Jubilee Hospital, the Fateh Mohammeds tomb, the Kalyaneshwar Temple, the Jail and the Alfred School in Bhuj."
         },
         {
             "type": "Earthquake",
             "location": "Ahmedabad; Hriday Kunj",
-            "time": "2018-05, P1D, P1Y"
+            "time": "2018-05, P1D, P1Y",
+            "sentence": "Even in Ahmedabad the quake damaged Gandhis historic meeting place, the Hriday Kunj, where he had sat spinning his charka in the Sabarmati Ashram."
         }
     ],
     "Frames": [
-        "injured_or_dead_people #:# The death and destruction that followed the earthquake spread over 15,000 kilometres with the loss of life estimated at 20,000, apart from loss of livestock and crores worth of property.",
         "infrastructure_and_utilities_damage #:# The death and destruction that followed the earthquake spread over 15,000 kilometres with the loss of life estimated at 20,000, apart from loss of livestock and crores worth of property.",
+        "injured_or_dead_people #:# The death and destruction that followed the earthquake spread over 15,000 kilometres with the loss of life estimated at 20,000, apart from loss of livestock and crores worth of property.",
         "infrastructure_and_utilities_damage #:# Even in Ahmedabad the quake damaged Gandhis historic meeting place, the Hriday Kunj, where he had sat spinning his charka in the Sabarmati Ashram.",
         "infrastructure_and_utilities_damage #:# The clock tower at the Ranjit Vilas palace in Wankaner was seriously damaged and the clock had stopped at 8.46 am.",
-        "injured_or_dead_people #:# Each one of us must ask should an earthquake, flood, natural disaster happen unexpectedly today somewhere in India  do we have a task force to bring aid immediately to the injured and the dying, food and shelter for the homeless and helpless.",
-        "donation_needs_or_offers_or_volunteering_services #:# Each one of us must ask should an earthquake, flood, natural disaster happen unexpectedly today somewhere in India  do we have a task force to bring aid immediately to the injured and the dying, food and shelter for the homeless and helpless.",
-        "displaced_people_and_evacuations #:# Each one of us must ask should an earthquake, flood, natural disaster happen unexpectedly today somewhere in India  do we have a task force to bring aid immediately to the injured and the dying, food and shelter for the homeless and helpless.",
         "infrastructure_and_utilities_damage #:# Each one of us must ask should an earthquake, flood, natural disaster happen unexpectedly today somewhere in India  do we have a task force to bring aid immediately to the injured and the dying, food and shelter for the homeless and helpless.",
+        "injured_or_dead_people #:# Each one of us must ask should an earthquake, flood, natural disaster happen unexpectedly today somewhere in India  do we have a task force to bring aid immediately to the injured and the dying, food and shelter for the homeless and helpless.",
+        "displaced_people_and_evacuations #:# Each one of us must ask should an earthquake, flood, natural disaster happen unexpectedly today somewhere in India  do we have a task force to bring aid immediately to the injured and the dying, food and shelter for the homeless and helpless.",
+        "donation_needs_or_offers_or_volunteering_services #:# Each one of us must ask should an earthquake, flood, natural disaster happen unexpectedly today somewhere in India  do we have a task force to bring aid immediately to the injured and the dying, food and shelter for the homeless and helpless.",
         "donation_needs_or_offers_or_volunteering_services #:# We need adequate documentation ready to help us repair and restore these buildings of historic value to their former glory."
     ]
 }

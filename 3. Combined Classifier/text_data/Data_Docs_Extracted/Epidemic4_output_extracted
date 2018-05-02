@@ -3,62 +3,71 @@
         {
             "type": "Epidemic",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": " on g8 to tackle ?worst cataclysm of modern era."
         },
         {
             "type": "Tsunami",
             "location": "Indonesia; Indian Ocean",
-            "time": "2017-12-30, 2018-04-24"
+            "time": "2017-12-30, 2018-05-01",
+            "sentence": " Banda Aceh (Indonesia), Dec. 30 (Reuters): The death toll in the Indian Ocean tsunami disaster soared above 125,000 today as millions scrambled for food and fresh water."
         },
         {
             "type": "Epidemic",
             "location": "Indonesia; Sri Lanka",
-            "time": ""
+            "time": "",
+            "sentence": "Aid agencies warned many more, from Indonesia to Sri Lanka, could die in epidemics if shattered communications and transport hampered what may prove history?s biggest relief operation."
         },
         {
             "type": "Hurricane",
             "location": "Bangladesh",
-            "time": ""
+            "time": "",
+            "sentence": "Rescue workers pressed on into isolated villages shattered by a disaster that could yet eclipse a cyclone that struck Bangladesh in 1991, killing 138,000 people."
         },
         {
             "type": "Epidemic",
             "location": "",
-            "time": "P1D"
+            "time": "P1D",
+            "sentence": "Italian Prime Minister Silvio Berlusconi called for an emergency meeting of the Group of Eight so that the rich nations club could discuss aid and possible debt reduction following ?the worst cataclysm of the modern era?."
         },
         {
             "type": "Earthquake",
             "location": "Aceh",
-            "time": ""
+            "time": "",
+            "sentence": "Indonesian health ministry sources said just under 80,000 had died in the northern Aceh province that was close to the undersea quake, some 28,000 more than previously announced."
         },
         {
             "type": "Epidemic",
             "location": "Banda Aceh",
-            "time": ""
+            "time": "",
+            "sentence": "The airport of the main city, Banda Aceh, was busy with aid flights, but residents said little was getting through to them."
         },
         {
             "type": "Epidemic",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "Hungry crowds jostling for aid biscuits besieged people delivering them in the town."
         },
         {
             "type": "Earthquake",
             "location": "",
-            "time": "P40Y"
+            "time": "P40Y",
+            "sentence": "Residents of the city fled their homes when two aftershocks revived fresh memories of the worst earthquake in 40 years."
         }
     ],
     "Frames": [
         "infrastructure_and_utilities_damage #:# A damaged McDonald?s mannequin inside a destroyed restaurant in Phuket, Thailand.",
         "injured_or_dead_people #:#  Banda Aceh (Indonesia), Dec. 30 (Reuters): The death toll in the Indian Ocean tsunami disaster soared above 125,000 today as millions scrambled for food and fresh water.",
         "donation_needs_or_offers_or_volunteering_services #:#  Banda Aceh (Indonesia), Dec. 30 (Reuters): The death toll in the Indian Ocean tsunami disaster soared above 125,000 today as millions scrambled for food and fresh water.",
-        "displaced_people_and_evacuations #:# Aid agencies warned many more, from Indonesia to Sri Lanka, could die in epidemics if shattered communications and transport hampered what may prove history?s biggest relief operation.",
         "injured_or_dead_people #:# Aid agencies warned many more, from Indonesia to Sri Lanka, could die in epidemics if shattered communications and transport hampered what may prove history?s biggest relief operation.",
+        "displaced_people_and_evacuations #:# Aid agencies warned many more, from Indonesia to Sri Lanka, could die in epidemics if shattered communications and transport hampered what may prove history?s biggest relief operation.",
         "donation_needs_or_offers_or_volunteering_services #:# Aid agencies warned many more, from Indonesia to Sri Lanka, could die in epidemics if shattered communications and transport hampered what may prove history?s biggest relief operation.",
-        "missing_trapped_or_found_people #:# Rescue workers pressed on into isolated villages shattered by a disaster that could yet eclipse a cyclone that struck Bangladesh in 1991, killing 138,000 people.",
-        "displaced_people_and_evacuations #:# Rescue workers pressed on into isolated villages shattered by a disaster that could yet eclipse a cyclone that struck Bangladesh in 1991, killing 138,000 people.",
         "injured_or_dead_people #:# Rescue workers pressed on into isolated villages shattered by a disaster that could yet eclipse a cyclone that struck Bangladesh in 1991, killing 138,000 people.",
+        "displaced_people_and_evacuations #:# Rescue workers pressed on into isolated villages shattered by a disaster that could yet eclipse a cyclone that struck Bangladesh in 1991, killing 138,000 people.",
+        "missing_trapped_or_found_people #:# Rescue workers pressed on into isolated villages shattered by a disaster that could yet eclipse a cyclone that struck Bangladesh in 1991, killing 138,000 people.",
         "injured_or_dead_people #:# Prime Minister Goran Persson said more than 1,000 Swedes may have been killed in the disaster.",
-        "injured_or_dead_people #:# Indonesian health ministry sources said just under 80,000 had died in the northern Aceh province that was close to the undersea quake, some 28,000 more than previously announced.",
         "infrastructure_and_utilities_damage #:# Indonesian health ministry sources said just under 80,000 had died in the northern Aceh province that was close to the undersea quake, some 28,000 more than previously announced.",
+        "injured_or_dead_people #:# Indonesian health ministry sources said just under 80,000 had died in the northern Aceh province that was close to the undersea quake, some 28,000 more than previously announced.",
         "donation_needs_or_offers_or_volunteering_services #:# ?Some cars come by and throw food like that.",
         "donation_needs_or_offers_or_volunteering_services #:# The fastest get the food, the strong one wins.",
         "displaced_people_and_evacuations #:# Residents of the city fled their homes when two aftershocks revived fresh memories of the worst earthquake in 40 years.",

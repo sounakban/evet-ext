@@ -3,37 +3,42 @@
         {
             "type": "Tornado",
             "location": "Knoxville; Tennessee; United States; South",
-            "time": "2017-11-11, 2018-04-23, 2018-04-24"
+            "time": "2017-11-11, 2018-04-30, 2018-05-01",
+            "sentence": " \tKnoxville (Tennessee), Nov. 11 (Reuters): Tornadoes ripped through the eastern United States from the Great Lakes into the deep South yesterday and early today, wiping out small towns, killing at least 30 and leaving up to 150 missing."
         },
         {
             "type": "Tornado",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "Cecil Whaley of the Tennessee Emergency Management Agency said a tornado there left an area about one-and-a-half square miles around Mossy Grove wiped out."
         },
         {
             "type": "Tornado",
             "location": "North; Alabama; East; Tennessee; Ohio",
-            "time": "2018-04-23TMO"
+            "time": "2018-04-30TMO",
+            "sentence": "The weather services Storm Prediction Center said it had reports of 45 tornadoes since early yesterday morning across a half-dozen states, though not all of the reports were confirmed It said the biggest concentrations in North central Alabama, East central Tennessee and north central and northwest Ohio."
         },
         {
             "type": "Tornado",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "Generally speaking, however, the tornado season tends to be concentrated the spring."
         },
         {
             "type": "Tornado",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "A tornado cut a swath a mile and a half across that area and leveled thirty to forty homes, he said."
         }
     ],
     "Frames": [
         "injured_or_dead_people #:#  \tKnoxville (Tennessee), Nov. 11 (Reuters): Tornadoes ripped through the eastern United States from the Great Lakes into the deep South yesterday and early today, wiping out small towns, killing at least 30 and leaving up to 150 missing.",
-        "missing_trapped_or_found_people #:# Officials warned the death toll could rise as rescue workers began tearing into devastated homes and other structures amid fog and continuing rain in some areas.",
-        "displaced_people_and_evacuations #:# Officials warned the death toll could rise as rescue workers began tearing into devastated homes and other structures amid fog and continuing rain in some areas.",
         "injured_or_dead_people #:# Officials warned the death toll could rise as rescue workers began tearing into devastated homes and other structures amid fog and continuing rain in some areas.",
+        "displaced_people_and_evacuations #:# Officials warned the death toll could rise as rescue workers began tearing into devastated homes and other structures amid fog and continuing rain in some areas.",
+        "missing_trapped_or_found_people #:# Officials warned the death toll could rise as rescue workers began tearing into devastated homes and other structures amid fog and continuing rain in some areas.",
         "injured_or_dead_people #:# Tennessee appeared to be the hardest hit, with 16 confirmed deaths.",
-        "injured_or_dead_people #:# Its mass destruction, death, a police officer in nearby Oliver Springs told the Knoxville News-Sentinel.Mossy Grove is destroyed.",
         "infrastructure_and_utilities_damage #:# Its mass destruction, death, a police officer in nearby Oliver Springs told the Knoxville News-Sentinel.Mossy Grove is destroyed.",
+        "injured_or_dead_people #:# Its mass destruction, death, a police officer in nearby Oliver Springs told the Knoxville News-Sentinel.Mossy Grove is destroyed.",
         "infrastructure_and_utilities_damage #:# Roger Edwards, a forecaster at the centre, said massive tornadic outbreaks are not unusual in November and that many of the same areas hit in the latest storms suffered damage from a similar outbreak in 1992.",
         "injured_or_dead_people #:# Whaley said one of the dead was a small boy, killed in the Manchester area, where at least 20 homes were levelled and 18 people were taken to the hospital.",
         "injured_or_dead_people #:# As many as nine people may have been killed and 50 others injured in Alabama."

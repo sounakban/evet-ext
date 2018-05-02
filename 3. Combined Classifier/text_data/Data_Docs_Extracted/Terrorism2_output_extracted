@@ -3,32 +3,38 @@
         {
             "type": "Terrorism",
             "location": "New Delhi; Gandhinagar",
-            "time": "2018-09-26"
+            "time": "2018-09-26",
+            "sentence": "New Delhi, Sept. 26: Al Badr or Jaish-e-Mohammad might be behind the terror attack on the Swaminarayan temple in Gandhinagar, sleuths believe."
         },
         {
             "type": "Terrorism",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "Intelligence agencies are certain that the attackers were not local Gujaratis, though the identities of the two slain militants are yet to be established."
         },
         {
             "type": "Terrorism",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "Unlike during the attacks on Parliament and the Kaluchak army camp, the temple attackers have not left any tell-tale signs behind."
         },
         {
             "type": "Terrorism",
             "location": "Pakistan",
-            "time": ""
+            "time": "",
+            "sentence": "Indian agencies say the ISI is making certain that fingers dont point to Pakistan."
         },
         {
             "type": "Terrorism",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "The dry fruits carried by the two attackers had Indian labels."
         },
         {
             "type": "Terrorism",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "Intelligence agencies say it could take some time to pinpoint which terror group was behind the attack, but they are confident of tracking it down."
         }
     ],
     "Frames": []

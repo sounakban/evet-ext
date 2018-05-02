@@ -1,24 +1,28 @@
 {
     "Events": [
         {
-            "type": "Terrorism Rebellion",
+            "type": "Rebellion Terrorism",
             "location": "Moscow",
-            "time": "2018-04-24"
+            "time": "2018-05-01",
+            "sentence": "An Arab satellite television station showed today tapes of Chechen rebels saying they were ready to die for the independence of their homeland and to take the lives of infidel hostages seized in a Moscow theatre."
         },
         {
             "type": "Rebellion",
             "location": "Moscow",
-            "time": ""
+            "time": "",
+            "sentence": "Al Jazeera television showed a tape of what it said was one of the women rebels saying: It makes no difference to us where we die and we chose to die here in Moscow and we will take with us the souls of the infidels."
         },
         {
             "type": "Rebellion",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "Jazeera also showed in a separate tape what it said was one of the male rebels seated in front of a laptop with a Quran by his side."
         },
         {
-            "type": "Terrorism Rebellion",
+            "type": "Rebellion Terrorism",
             "location": "Moscow; Russia",
-            "time": "2018-04-23"
+            "time": "2018-04-30",
+            "sentence": "Rebels in Moscow seized hundreds of theatre-goers as hostages yesterday in an attack believed to have been carried out by Chechen separatist guerrillas who have threatened to shoot their captives or blow up the building unless Russia pulled its troops out of their homeland."
         }
     ],
     "Frames": [

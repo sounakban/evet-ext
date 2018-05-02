@@ -3,67 +3,80 @@
         {
             "type": "Epidemic",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": " A spurt in the number of HIV/AIDS cases detected in a city centre has coincided with the call for a hospital dedicated to address the disease."
         },
         {
             "type": "Epidemic",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "At the School of Tropical Medicine, the nodal centre for HIV/AIDS treatment in the state, 608 patients out of over 1,000 have tested positive for the virus in the past eight months."
         },
         {
             "type": "Epidemic",
             "location": "",
-            "time": "2018-04-20"
+            "time": "2018-04-27",
+            "sentence": "The city on Friday was also told that it would get its first hospital dedicated to treatment of the disease."
         },
         {
             "type": "Epidemic",
             "location": "India",
-            "time": ""
+            "time": "",
+            "sentence": "More than five million people are suffering from this disease in India."
         },
         {
             "type": "Epidemic",
             "location": "Calcutta",
-            "time": "2005-01, 2018-04-20"
+            "time": "2005-01, 2018-04-27",
+            "sentence": "Raju, bishop of the Calcutta diocese, following an AIDS sensitisation programme in CNI schools."
         },
         {
             "type": "Epidemic",
             "location": "",
-            "time": "2018, 2017"
+            "time": "2018, 2017",
+            "sentence": "Of the new cases detected at the School of Tropical Medicine, 578 patents were from the city, a figure which, experts believe, is likely to go up in the next four months, taking this years tally far beyond that of last year."
         },
         {
             "type": "Epidemic",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "In 2003, over 1,200 tested positive at the School of Tropical Medicine, but the number from the city was smaller."
         },
         {
             "type": "Epidemic",
             "location": "",
-            "time": "PXY"
+            "time": "PXY",
+            "sentence": "The vulnerable age-group is the 20-35 years bracket and, while most infections are because of unprotected sex, some were also due to contaminated blood transfusions, said Bhibuti Saha, head of the department, tropical medicine."
         },
         {
             "type": "Epidemic",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "The School of Tropical Medicine disclosure comes close on the heels of a survey conducted by the National AIDS Control Organisation that monitors HIV infection nationally."
         },
         {
             "type": "Epidemic",
             "location": "Delhi; Bengal",
-            "time": ""
+            "time": "",
+            "sentence": "It concluded that besides Delhi, Bengal is a cause of concern in terms of new infections."
         },
         {
             "type": "Epidemic",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "The number of mother-to-child infections has also shot up."
         },
         {
             "type": "Epidemic",
             "location": "",
-            "time": "2018-W17"
+            "time": "2018-W18",
+            "sentence": "The survey said there has been a 250 per cent increase in the number of HIV infections from unprotected sex and another 50 per cent in the number of mother-to-child infections."
         },
         {
             "type": "Epidemic",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "We were surprised to find that many women have heard about AIDS but they do not know how fatal the disease is."
         }
     ],
     "Frames": [

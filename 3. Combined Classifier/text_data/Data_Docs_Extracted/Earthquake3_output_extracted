@@ -3,39 +3,45 @@
         {
             "type": "Earthquake",
             "location": "Gujarat; Kutch",
-            "time": "2001-01-26"
+            "time": "2001-01-26",
+            "sentence": "The Gujarat chief minister, known for fiery speeches and abrasive behaviour, broke down while recalling the January 26, 2001, earthquake that devastated Kutch and also affected the rest of the state."
         },
         {
             "type": "Earthquake",
             "location": "Gujarat",
-            "time": "P3Y"
+            "time": "P3Y",
+            "sentence": "He said Gujarat had recovered from the earthquake in less than three years."
         },
         {
             "type": "Earthquake",
             "location": "GK Hospital",
-            "time": ""
+            "time": "",
+            "sentence": "Vajpayee recalled the heart-rending scenes he witnessed at GK Hospital that collapsed during the quake, killing 182 people."
         },
         {
             "type": "Earthquake",
             "location": "GK Hospital; New Zealand",
-            "time": ""
+            "time": "",
+            "sentence": "GK Hospital has been rebuilt with earthquake-resistant technology developed on the New Zealand model of base-isolation technology that can withstand quakes as high as 8 on the Richter scale."
         },
         {
             "type": "Earthquake",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "The technology uses lead-rubber bearings to isolate and protect structures during earthquakes."
         },
         {
             "type": "Earthquake",
             "location": "Gujarat",
-            "time": ""
+            "time": "",
+            "sentence": "Earlier, Modi announced that Gujarat would soon have a world-class seismic institute."
         }
     ],
     "Frames": [
         "donation_needs_or_offers_or_volunteering_services #:# Atal Bihari Vajpayee made this promise while dedicating the multi-speciality GK General Hospital, reconstructed from the Prime Ministers Relief Fund, to the people of Kutch.",
         "donation_needs_or_offers_or_volunteering_services #:# The chief minister went on to recall the help he had received from the Prime Minister in tackling the disaster.",
-        "injured_or_dead_people #:# Vajpayee recalled the heart-rending scenes he witnessed at GK Hospital that collapsed during the quake, killing 182 people.",
         "infrastructure_and_utilities_damage #:# Vajpayee recalled the heart-rending scenes he witnessed at GK Hospital that collapsed during the quake, killing 182 people.",
+        "injured_or_dead_people #:# Vajpayee recalled the heart-rending scenes he witnessed at GK Hospital that collapsed during the quake, killing 182 people.",
         "injured_or_dead_people #:# He described the reconstruction as victory of life over death and said he saw tremendous scope for the hospital to expand.",
         "donation_needs_or_offers_or_volunteering_services #:# He offered central assistance for a corpus for this state-of-the-art hospital, which is to be run with the help of public sector units.",
         "donation_needs_or_offers_or_volunteering_services #:# He revealed that Vajpayee was so concerned about post-quake relief that he had appointed an officer to look after rehabilitation and monitored the progress."

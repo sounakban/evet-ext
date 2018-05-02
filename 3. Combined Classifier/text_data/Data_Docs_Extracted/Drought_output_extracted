@@ -3,22 +3,26 @@
         {
             "type": "Drought",
             "location": "",
-            "time": "2018-05-07"
+            "time": "2018-05-07",
+            "sentence": " CHANDRIMA S. BHATTACHARYA\t\t\t\t \t Bachchan: Healing touchMumbai, May 7: Western Maharashtra, reeling under severe drought, has got a healing touch."
         },
         {
             "type": "Drought",
             "location": "",
-            "time": "P1M"
+            "time": "P1M",
+            "sentence": "Amitabh Bachchan has decided to bring relief to two drought-affected villages there by adopting them."
         },
         {
             "type": "Drought",
             "location": "Kohlapur; Maharashtra",
-            "time": "2018-05-11, P1M"
+            "time": "2018-05-11, P1M",
+            "sentence": "Along with Solapur and Kohlapur, Sangli is one of the severely drought-affected districts of western Maharashtra."
         },
         {
             "type": "Drought",
             "location": "",
-            "time": "P2Y"
+            "time": "P2Y",
+            "sentence": "But because of the drought that has affected the region for more than two years, grapes and other agricultural produce like sugarcane have suffered acutely."
         }
     ],
     "Frames": [

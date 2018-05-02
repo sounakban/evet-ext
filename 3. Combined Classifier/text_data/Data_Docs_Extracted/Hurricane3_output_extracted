@@ -3,32 +3,38 @@
         {
             "type": "Hurricane",
             "location": "Florida; Florida; Bahamas; US",
-            "time": "2018-09-04, 2018-04-24"
+            "time": "2018-09-04, 2018-05-01",
+            "sentence": " Cocoa (Florida), Sept. 4 (Reuters): Strong winds and whipping rains began to lash eastern Florida today as Hurricane Frances, an enormous storm, crept across the northern Bahamas toward the US."
         },
         {
             "type": "Hurricane",
             "location": "Floridas Atlantic; Bahamas",
-            "time": ""
+            "time": "",
+            "sentence": "Although weaker than it had been, Frances promised to bring torrential rain to Floridas Atlantic coast, where 2.5 million people had been told to evacuate their homes, after delivering a long pounding to the Bahamas."
         },
         {
             "type": "Hurricane",
             "location": "",
-            "time": ""
+            "time": "",
+            "sentence": "Unlike (recent Hurricane) Charley, this storm has an awful lot of moisture with it."
         },
         {
             "type": "Hurricane",
             "location": "Bahamas",
-            "time": ""
+            "time": "",
+            "sentence": "In the Bahamas, the hurricane killed one person, blew off roofs, downed trees and power lines and caused widespread flooding in the 700-island archipelago that is home to 300,000 people."
         },
         {
             "type": "Hurricane",
             "location": "West Palm; Beach; Florida; Grand Bahama; US",
-            "time": "2018-04-25"
+            "time": "2018-05-02",
+            "sentence": "By noon GMT, the slow-moving storm was about 180 km east of West Palm Beach, Florida, and hanging over Freeport on Grand Bahama island, the US National Hurricane Center said."
         },
         {
             "type": "Hurricane",
             "location": "Floridas east; coast; Miami; Fort Lauderdale",
-            "time": ""
+            "time": "",
+            "sentence": "Hurricane-force winds were expected to spread out 170 km from the center, but seemed likely to spare some of the most populated areas of Floridas east coast, such as Miami and Fort Lauderdale, from the full brunt of their fury."
         }
     ],
     "Frames": [
