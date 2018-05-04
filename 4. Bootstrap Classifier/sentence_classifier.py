@@ -3,7 +3,7 @@
 def get_trainData():
 	import pandas as pd
 
-	df = pd.read_csv("train_sentences.csv", header=None)
+	df = pd.read_csv("train_sentences_fire.csv", header=None)
 	sentences = df[0].tolist()
 	labels = df[1].tolist()
 
