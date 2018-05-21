@@ -107,13 +107,12 @@ def run_classifier(sentences, labels, test_doc_list, output_file_path_list):
 
 	from sklearn.multiclass import OneVsRestClassifier
 	from sklearn.svm import LinearSVC
-	# estimator = SVC(kernel='linear')
 	estimator = LinearSVC()
 	classifier = OneVsRestClassifier(estimator, n_jobs=-1)
 	classifier.fit(train_matrix, label_matrix)
 
 	for test_doc, output_file_path in zip(test_doc_list, output_file_path_list):
-		test_sentences = doc2sentences(test_doc)
+		test_sentences = doc2sentences([test_doc])
 		sentence_matrix = tfidf.transform(test_sentences)
 		print("Shape of sentence matrix : ", sentence_matrix.shape)
 		predictions = classifier.predict(sentence_matrix)
