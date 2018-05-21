@@ -1,0 +1,36 @@
+#$#
+Avalanche
+avalanche snowslide | avalanche snowslide
+#$#
+Aviation_Hazard
+airplane airbus aircraft aviation | accident hazard crash
+#$#
+Blizzard
+blizzard snowstorm white-out freeze snow ice hail | blizzard snowstorm white-out storm blast
+#$#
+Cold_Wave
+freeze cold frost temprature minus mercury | point wave bite drop dip wind celsius fahrenheit
+#$#
+Earthquake
+earthquake earthquakes quake quakes richter epicentre seismic | earthquake earthquakes quake quakes richter event
+#$#
+Epidemic
+epidemic hiv aids hepatitis virus infection infections disease diseases | epidemic injection injections medicine medicines syringe syringes
+#$#
+Fire
+flames fire burn | accident hazard
+#$#
+displaced_people_and_evacuations
+displace maroon homeless rescue operation flee evacuate evacuated evacuation | displace maroon homeless rescue operation flee evacuate evacuated evacuation
+#$#
+donation_needs_or_offers_or_volunteering_services
+volunteer food meal | relief starve hungry lack
+#$#
+infrastructure_and_utilities_damage
+damage submerge destruction overflow destroy collapse | damage submerge destruction overflow destroy collapse
+#$#
+injured_or_dead_people
+kill killed dead death claim live die died victim body bodies patient suffer | kill killed dead death claim live die died victim body bodies patient suffer
+#$#
+missing_trapped_or_found_people
+remain strand stranded survive survivors survived rescue | remain strand stranded survive survivors survived rescue
