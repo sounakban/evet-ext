@@ -1,0 +1,7 @@
+from bs4 import BeautifulSoup
+file = open("....xml").read()
+soup = BeautifulSoup(file,'html.parser')
+for each in soup.findAll('p'):
+	print([tag.name for tag in each.find_all()])
+for each in soup.findAll('p'):
+	print([tag.text for tag in each.find_all()])

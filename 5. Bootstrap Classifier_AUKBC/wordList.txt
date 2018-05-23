@@ -1,23 +1,23 @@
 #$#
-Avalanche
+avalanches
 avalanche snowslide | avalanche snowslide
 #$#
-Aviation_Hazard
+aviation_hazard
 airplane airbus aircraft aviation | accident hazard crash
 #$#
-Blizzard
+blizzard
 blizzard snowstorm white-out freeze snow ice hail | blizzard snowstorm white-out storm blast
 #$#
-Cold_Wave
+cold_wave
 freeze cold frost temprature minus mercury | point wave bite drop dip wind celsius fahrenheit
 #$#
-Earthquake
+earthquake
 earthquake earthquakes quake quakes richter epicentre seismic | earthquake earthquakes quake quakes richter event
 #$#
-Epidemic
+epidemic
 epidemic hiv aids hepatitis virus infection infections disease diseases | epidemic injection injections medicine medicines syringe syringes
 #$#
-Fire
+fire
 flames fire burn | accident hazard
 #$#
 displaced_people_and_evacuations

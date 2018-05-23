@@ -22,6 +22,8 @@ def run_extraction_RCV(input_file, output_file):
 	with open(output_file, "w") as fl:
 		fl.write(currDoc.replace('\t', ' ').replace('\n', ' '))
 
+
+
 ###################################################### Calling Functions ######################################################
 
 import os
