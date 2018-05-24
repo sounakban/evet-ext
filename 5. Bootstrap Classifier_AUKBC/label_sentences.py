@@ -188,7 +188,6 @@ def run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabel
 	test_label_matrix = mlb.transform(testLabels)
 	print("Shape of label matrix : ", test_label_matrix.shape)
 
-	print(terms1, terms2)
 	class_terms_matrix1, tfidf1 = tf_idf_fit_transform(terms1)
 	class_terms_matrix2, tfidf2 = tf_idf_fit_transform(terms2)
 	sentence_matrix1 = tfidf1.transform(testSentences)

@@ -182,16 +182,15 @@ def run_classifierAccuracy(trainSentences, trainLabels, testSentences, testLabel
 	predictions = classifier.predict(test_matrix)
 
 	from sklearn.metrics import f1_score, precision_score, recall_score
+	print("All-Precision", precision_score(test_label_matrix, predictions, average=None))
+	print("All-Recall", recall_score(test_label_matrix, predictions, average=None))
+	print("All-F1", f1_score(test_label_matrix, predictions, average=None))
 	print("Micro-Precision", precision_score(test_label_matrix, predictions, average='micro'))
 	print("Micro-Recall", recall_score(test_label_matrix, predictions, average='micro'))
 	print("Micro-F1", f1_score(test_label_matrix, predictions, average='micro'))
 	print("Macro-Precision", precision_score(test_label_matrix, predictions, average='macro'))
 	print("Macro-Recall", recall_score(test_label_matrix, predictions, average='macro'))
 	print("Macro-F1", f1_score(test_label_matrix, predictions, average='macro'))
-	print("All-Precision", precision_score(test_label_matrix, predictions, average=None))
-	print("All-Recall", recall_score(test_label_matrix, predictions, average=None))
-	print("All-F1", f1_score(test_label_matrix, predictions, average=None))
-
 
 
 

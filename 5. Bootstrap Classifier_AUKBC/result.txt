@@ -33,3 +33,29 @@ Macro-Precision 0.875044754744
 Macro-Recall 0.66747264123
 Macro-F1 0.679940214824
 
+
+
+
+
+
+#######################################################################################
+
+[sounak@localhost 5. Bootstrap Classifier_AUKBC]$ python sentence_classifier.py 
+Labels :  ['avalanches' 'cold_wave' 'earthquake' 'aviation_hazard' 'fire' 'blizzard'
+ 'epidemic']
+Shape of label matrix :  (352, 7)
+Shape of sentence matrix :  (352, 1000)
+/home/sounak/miniconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+All-Precision [ 0.  0.  1.  1.  1.  0.  0.]
+All-Recall [ 0.          0.          0.08695652  0.14285714  0.05        0.          0.        ]
+/home/sounak/miniconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+All-F1 [ 0.         0.         0.16       0.25       0.0952381  0.         0.       ]
+Micro-Precision 0.818181818182
+Micro-Recall 0.0697674418605
+Micro-F1 0.128571428571
+Macro-Precision 0.428571428571
+Macro-Recall 0.0399733806566
+Macro-F1 0.0721768707483
+

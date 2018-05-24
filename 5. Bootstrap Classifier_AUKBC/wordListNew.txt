@@ -106,6 +106,7 @@ type
 reason
 #$#
 after_effects
+caused result | caused of
 #$#
 casualties
 #$#
