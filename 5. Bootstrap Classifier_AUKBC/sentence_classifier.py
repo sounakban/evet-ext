@@ -3,7 +3,7 @@
 def get_trainData():
 	import pandas as pd
 
-	df = pd.read_csv("train_sentences_fire.csv", header=None)
+	df = pd.read_csv("train_sentences.csv", header=None)
 	sentences = df[0].tolist()
 	labels = df[1].tolist()
 
@@ -13,7 +13,7 @@ def get_trainData():
 def get_testSentences():
 	import pandas as pd
 
-	df = pd.read_csv("classification_groundTruth.csv", header=None)
+	df = pd.read_csv("test_sentences.csv", header=None)
 	sentences = df[0].tolist()
 	labels = df[1].tolist()
 
@@ -96,14 +96,10 @@ def binary_rel(similarity_matrix, threshold=0.0):
 ###################################################### Main Functions ######################################################
 
 
-def run_classifier(sentences, labels, test_docs, output_file_path):
+def run_classifier(sentences, labels, test_doc_list, output_file_path_list):
 	import numpy as np
 
 	train_matrix, tfidf = tf_idf_fit_transform(sentences)
-
-	test_sentences = doc2sentences(test_docs)
-	sentence_matrix = tfidf.transform(test_sentences)
-	print("Shape of sentence matrix : ", sentence_matrix.shape)
 
 	from sklearn.preprocessing import MultiLabelBinarizer
 	mlb = MultiLabelBinarizer()
@@ -111,44 +107,60 @@ def run_classifier(sentences, labels, test_docs, output_file_path):
 
 	from sklearn.multiclass import OneVsRestClassifier
 	from sklearn.svm import LinearSVC
-	# estimator = SVC(kernel='linear')
 	estimator = LinearSVC()
 	classifier = OneVsRestClassifier(estimator, n_jobs=-1)
 	classifier.fit(train_matrix, label_matrix)
-	predictions = classifier.predict(sentence_matrix)
 
-	from lxml import etree
-	document = etree.Element('doc')
-	doc_tree = etree.ElementTree(document)
-	for i in range(len(test_sentences)):
-		curr_pred = [mlb.classes_[x] for x in range(predictions.shape[1]) if predictions[i][x]==1]
-		etree.SubElement(document, "Sent", classes=", ".join(curr_pred)).text = test_sentences[i]
-	doc_tree.write(output_file_path)
+	for test_doc, output_file_path in zip(test_doc_list, output_file_path_list):
+		test_sentences = doc2sentences([test_doc])
+		sentence_matrix = tfidf.transform(test_sentences)
+		print("Shape of sentence matrix : ", sentence_matrix.shape)
+		predictions = classifier.predict(sentence_matrix)
+
+		from lxml import etree
+		document = etree.Element('doc')
+		doc_tree = etree.ElementTree(document)
+		for i in range(len(test_sentences)):
+			curr_pred = [mlb.classes_[x] for x in range(predictions.shape[1]) if predictions[i][x]==1]
+			etree.SubElement(document, "Sent", classes=", ".join(curr_pred)).text = test_sentences[i]
+		doc_tree.write(output_file_path)
 
 
 def run_classifierAccuracy(trainSentences, trainLabels, testSentences, testLabels):
-	all_labels = ["Drought", "Earthquake", "Flood", "Epidemic", "Hurricane", \
-			"Rebellion", "Terrorism", "Tornado", "Tsunami", "displaced_people_and_evacuations", \
-			"donation_needs_or_offers_or_volunteering_services", "infrastructure_and_utilities_damage", \
-			"injured_or_dead_people", "missing_trapped_or_found_people"]
-	disaster_labels = ["Drought", "Earthquake", "Flood", "Hurricane", \
-			"Tornado", "Tsunami", "displaced_people_and_evacuations", \
-			"donation_needs_or_offers_or_volunteering_services", "infrastructure_and_utilities_damage", \
-			"injured_or_dead_people", "missing_trapped_or_found_people"]
-	health_labels = ["Epidemic", "displaced_people_and_evacuations", \
-			"donation_needs_or_offers_or_volunteering_services", \
-			"injured_or_dead_people"]
-	conflict_labels = ["Rebellion", "Terrorism", "displaced_people_and_evacuations", \
-			"infrastructure_and_utilities_damage", \
-			"injured_or_dead_people", "missing_trapped_or_found_people"]
+	all_labels = ['tsunami', 'heat_wave', 'cold_wave', 'forest_fire', 'limnic_erruptions', \
+				'storm', 'avalanches', 'blizzard', 'earthquake', 'floods', 'hurricane', \
+				'drought', 'volcano', 'fire', 'cyclone', 'hail_storms', 'land_slide', \
+				'intensity', 'epicentre', 'temperature', 'depth', 'speed', 'magnitude', \
+				'terrorist_attack', 'suicide_attack', 'normal_bombing', 'shoot_out', \
+				'aviation_hazard', 'train_collision', 'industrial_accident', \
+				'vehicular_collision', 'surgical_strikes', 'transport_hazards', 'riots', \
+				'epidemic', 'famine', 'time', 'place', 'type', 'reason', 'after_effects', \
+				'casualties', 'name', 'participant']
+	disaster_labels = ['tsunami', 'heat_wave', 'cold_wave', 'forest_fire', 'limnic_erruptions', \
+				'storm', 'avalanches', 'blizzard', 'earthquake', 'floods', 'hurricane', \
+				'drought', 'volcano', 'fire', 'cyclone', 'hail_storms', 'land_slide', \
+				'intensity', 'epicentre', 'temperature', 'depth', 'speed', 'magnitude', \
+				'time', 'place', 'type', 'reason', 'after_effects', \
+				'casualties', 'name', 'participant']
+	health_labels = ['epidemic', 'famine', 'time', 'place', 'type', 'reason', 'after_effects', \
+				'casualties', 'name', 'participant']
+	conflict_labels = ['terrorist_attack', 'suicide_attack', 'normal_bombing', 'shoot_out', \
+				'aviation_hazard', 'train_collision', 'industrial_accident', \
+				'vehicular_collision', 'surgical_strikes', 'transport_hazards', 'riots', \
+				'time', 'place', 'type', 'reason', 'after_effects', \
+				'casualties', 'name', 'participant']
 	import numpy as np
-	curr_labels = all_labels
+	curr_labels = set(all_labels)
 
 	trainLabels = [list(set(l).intersection(curr_labels)) for l in trainLabels]
+	curr_labels = []
+	for l in trainLabels:
+		curr_labels.extend(l)
+	curr_labels = set(curr_labels)
 	testLabels = [list(set(l).intersection(curr_labels))for l in testLabels]
 
 	from sklearn.preprocessing import MultiLabelBinarizer
-	mlb = MultiLabelBinarizer(classes=curr_labels)
+	mlb = MultiLabelBinarizer(classes=list(curr_labels))
 	train_label_matrix = mlb.fit(trainLabels)
 	print("Labels : ", mlb.classes_)
 	train_label_matrix = mlb.transform(trainLabels)
@@ -163,8 +175,8 @@ def run_classifierAccuracy(trainSentences, trainLabels, testSentences, testLabel
 	from sklearn.multiclass import OneVsRestClassifier
 	from sklearn.svm import LinearSVC
 	from sklearn.ensemble import RandomForestClassifier
-	# estimator = LinearSVC()
-	estimator = RandomForestClassifier(n_estimators=50, max_depth=None, min_samples_split=2, random_state=0, n_jobs = -1)
+	estimator = LinearSVC()
+	# estimator = RandomForestClassifier(n_estimators=50, max_depth=None, min_samples_split=2, random_state=0, n_jobs = -1)
 	classifier = OneVsRestClassifier(estimator, n_jobs=-1)
 	classifier.fit(train_matrix, train_label_matrix)
 	predictions = classifier.predict(test_matrix)
@@ -197,23 +209,28 @@ for labels in trainLabels:
 
 
 # For classifying sentences in docs
-test_docs_path = "./text_data/DisasterAnnotatedDocs-English-AUKBC"
-output_dir_path = "./text_data/Pipeline_classified"
-import os
-for filename in os.listdir(test_docs_path):
-	if not filename.endswith(".xml"):
-		test_doc = get_testDoc(os.path.join(test_docs_path, filename))
-		output_file_path = "/".join([output_dir_path, filename])
-		output_file_path = output_file_path + ".xml"
-		run_classifier(trainSentences, trainLabels, [test_doc], output_file_path)
+# test_docs_path = "./text_data/DisasterAnnotatedDocs-English-AUKBC"
+# output_dir_path = "./text_data/Pipeline_classified"
+# import os
+# test_doc_list = []
+# output_file_path_list = []
+# for filename in os.listdir(test_docs_path):
+# 	if not filename.endswith(".xml"):
+# 		test_doc = get_testDoc(os.path.join(test_docs_path, filename))
+# 		output_file_path = "/".join([output_dir_path, filename])
+# 		output_file_path = output_file_path + ".xml"
+# 		test_doc_list.append(test_doc)
+# 		output_file_path_list.append(output_file_path)
+#
+# run_classifier(trainSentences, trainLabels, test_doc_list, output_file_path_list)
 
 
 
 # For classifying pre-labelled sentences and get accuracy
-# testSentences, testLabels = get_testSentences()
-# testLabels = [set(label[1:-1].replace('\'', '').replace(' ', '').split(',')) for label in testLabels]
-# for labels in testLabels:
-# 	if '' in labels:
-# 		labels.remove('')
-#
-# run_classifierAccuracy(trainSentences, trainLabels, testSentences, testLabels)
+testSentences, testLabels = get_testSentences()
+testLabels = [set(label.replace('\'', '').replace(' ', '').split(',')) for label in testLabels]
+for labels in testLabels:
+	if '' in labels:
+		labels.remove('')
+
+run_classifierAccuracy(trainSentences, trainLabels, testSentences, testLabels)

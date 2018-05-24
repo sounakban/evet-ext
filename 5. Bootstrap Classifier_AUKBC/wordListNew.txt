@@ -24,7 +24,7 @@ blizzard
 blizzard snowstorm white-out freeze snow ice hail | blizzard snowstorm white-out storm blast
 #$#
 earthquake
-earthquake earthquakes quake quakes richter epicentre seismic | earthquake earthquakes quake quakes richter event tremor
+earthquake earthquakes quake quakes richter epicentre seismic | earthquake earthquakes quake quakes richter event
 #$#
 floods
 flood water | flood drown
@@ -50,6 +50,8 @@ ice hail | winds storm
 land_slide
 land mud soil rock debris | slide slope flow topple
 #$#
+intensity
+#$#
 epicentre
 epicentre earthquake quake | epicentre origin originate centre
 #$#
@@ -68,11 +70,45 @@ quake earthquake richter | magnitude richter
 terrorist_attack
 terrorism terrorist isi isis jihadi jihad terror attacker attack | terrorism terrorist isi isis jihadi jihad hostage guerrilla
 #$#
+suicide_attack
+#$#
+normal_bombing
+#$#
+shoot_out
+#$#
 aviation_hazard
 airplane airbus aircraft aviation | accident hazard crash
+#$#
+train_collision
+#$#
+industrial_accident
+#$#
+vehicular_collision
+#$#
+surgical_strikes
+#$#
+transport_hazards
 #$#
 riots
 rebel rebels rebellion war riot riots protest protester protests protesters angry anger angered | rebel rebels rebellion war riot riots protest protester protests protesters mob
 #$#
 epidemic
 epidemic hiv aids hepatitis virus infection infections disease diseases | epidemic injection injections medicine medicines syringe syringes
+#$#
+famine
+#$#
+time
+#$#
+place
+#$#
+type
+#$#
+reason
+#$#
+after_effects
+#$#
+casualties
+#$#
+name
+#$#
+participant

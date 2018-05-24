@@ -8,8 +8,8 @@ def create_AUKBC_labelled(fl_path):
 	sentences = []
 	labels = []
 	soup = BeautifulSoup(file,'html.parser')
-	for each in soup.findAll('p'):
-		sentences.append( ' '.join([tag.text.strip() for tag in each.find_all()]) )
+	#for each in soup.findAll('p'):
+		#sentences.append( ' '.join([tag.text.strip() for tag in each.find_all()]) )
 	for each in soup.findAll('p'):
 		curr_labels = []
 		for tag in each.find_all():
@@ -19,7 +19,9 @@ def create_AUKBC_labelled(fl_path):
 				curr_labels.append(tag['type'].lower())
 			else:
 				continue
-		labels.append( ', '.join(curr_labels) )
+		if len(curr_labels) > 0:
+			sentences.append( ' '.join([tag.text.strip() for tag in each.find_all()]) )
+			labels.append( ', '.join(set(curr_labels)) )
 
 	return sentences, labels
 
