@@ -1,0 +1,35 @@
+[sounak@localhost 5. Bootstrap Classifier_AUKBC]$ python label_sentences.py
+Labels :  ['avalanches' 'aviation_hazard' 'blizzard' 'cold_wave' 'earthquake'
+ 'epidemic' 'fire']
+Shape of label matrix :  (352, 7)
+['avalanche snowslide snow', 'airplane airbus aircraft aviation', 'blizzard snowstorm white-out freeze snow ice hail', 'freeze cold frost temprature minus mercury', 'earthquake earthquakes quake quakes richter epicentre seismic', 'epidemic hiv aids hepatitis virus infection infections disease diseases', 'flames fire burn'] ['avalanche snowslide slide', 'accident hazard crash', 'blizzard snowstorm white-out storm blast', 'point wave bite drop dip wind celsius fahrenheit', 'earthquake earthquakes quake quakes richter event', 'epidemic injection injections medicine medicines syringe syringes', 'accident hazard']
+Shape of sentence matrix 1 :  (352, 33)
+Shape of sentence matrix 2 :  (352, 28)
+Shape of class terms matrix 1 :  (7, 33)
+Shape of class terms matrix 2 :  (7, 28)
+[[ 0.  0.  0. ...,  1.  0.  0.]
+ [ 0.  0.  0. ...,  1.  0.  0.]
+ [ 0.  0.  0. ...,  1.  0.  0.]
+ ..., 
+ [ 0.  0.  0. ...,  0.  0.  0.]
+ [ 0.  0.  0. ...,  0.  1.  0.]
+ [ 0.  0.  0. ...,  0.  1.  0.]]
+[[0 0 0 ..., 1 0 0]
+ [0 0 0 ..., 1 0 0]
+ [0 0 0 ..., 1 0 0]
+ ..., 
+ [0 0 0 ..., 0 0 0]
+ [0 0 0 ..., 0 1 0]
+ [0 0 0 ..., 0 1 0]]
+(352, 7) (352, 7)
+All-Precision [ 0.85714286  1.          0.28571429  1.          0.98245614  1.          1.        ]
+All-Recall [ 1.          0.28571429  0.5         1.          0.8115942   1.          0.075     ]
+All-F1 [ 0.92307692  0.44444444  0.36363636  1.          0.88888889  1.
+  0.13953488]
+Micro-Precision 0.911392405063
+Micro-Recall 0.558139534884
+Micro-F1 0.692307692308
+Macro-Precision 0.875044754744
+Macro-Recall 0.66747264123
+Macro-F1 0.679940214824
+
