@@ -179,17 +179,16 @@ def run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabel
 	curr_labels = []
 	for l in trainLabels:
 		curr_labels.extend(l)
-	curr_labels = set(curr_labels)
-	testLabels = [list(set(l).intersection(curr_labels)) for l in testLabels]
+	testLabels = [list(set(l).intersection(set(curr_labels))) for l in testLabels]
 
 	from sklearn.preprocessing import MultiLabelBinarizer
-	mlb = MultiLabelBinarizer(classes=list(curr_labels))
+	mlb = MultiLabelBinarizer(classes=curr_labels)
 	train_label_matrix = mlb.fit(trainLabels)
 	print("Labels : ", mlb.classes_)
-	train_label_matrix = mlb.transform(trainLabels)
 	test_label_matrix = mlb.transform(testLabels)
 	print("Shape of label matrix : ", test_label_matrix.shape)
 
+	print(terms1, terms2)
 	class_terms_matrix1, tfidf1 = tf_idf_fit_transform(terms1)
 	class_terms_matrix2, tfidf2 = tf_idf_fit_transform(terms2)
 	sentence_matrix1 = tfidf1.transform(testSentences)
@@ -204,17 +203,19 @@ def run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabel
 	similarity_matrix2 = cosine_similarity(sentence_matrix2, class_terms_matrix2)
 	predictions = binary_rel(similarity_matrix1, similarity_matrix2, threshold=0)
 
+	print(predictions)
+	print(test_label_matrix)
 	print(test_label_matrix.shape, predictions.shape)
 	from sklearn.metrics import f1_score, precision_score, recall_score
+	print("All-Precision", precision_score(test_label_matrix, predictions, average=None))
+	print("All-Recall", recall_score(test_label_matrix, predictions, average=None))
+	print("All-F1", f1_score(test_label_matrix, predictions, average=None))
 	print("Micro-Precision", precision_score(test_label_matrix, predictions, average='micro'))
 	print("Micro-Recall", recall_score(test_label_matrix, predictions, average='micro'))
 	print("Micro-F1", f1_score(test_label_matrix, predictions, average='micro'))
 	print("Macro-Precision", precision_score(test_label_matrix, predictions, average='macro'))
 	print("Macro-Recall", recall_score(test_label_matrix, predictions, average='macro'))
 	print("Macro-F1", f1_score(test_label_matrix, predictions, average='macro'))
-	print("All-Precision", precision_score(test_label_matrix, predictions, average=None))
-	print("All-Recall", recall_score(test_label_matrix, predictions, average=None))
-	print("All-F1", f1_score(test_label_matrix, predictions, average=None))
 
 
 ###################################################### Calling Functions ######################################################
