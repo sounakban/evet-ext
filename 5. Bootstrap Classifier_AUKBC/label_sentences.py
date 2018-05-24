@@ -7,6 +7,16 @@ def get_testDoc(file_path="target_doc"):
 	return docs
 
 
+def get_testSentences():
+	import pandas as pd
+
+	df = pd.read_csv("test_sentences.csv", header=None)
+	sentences = df[0].tolist()
+	labels = df[1].tolist()
+
+	return (sentences, labels)
+
+
 def get_classTerms():
 	# Gets terms in different lists seperated by '|'
 	labels = []
@@ -119,33 +129,132 @@ def run_classifier(terms1, terms2, labels, test_docs):
 	sent_class_list = []
 	# for i in range(len(test_sentences)):
 	# 	for j in range(len(predictions[i])):
-	# 		sent_class_list.append((test_sentences[i][0:-1], predictions[i][j]))
+	# 		sent_class_list.append((test_sentences[i][:-1], predictions[i][j]))
 	for i in range(len(test_sentences)):
 		if len(predictions[i]) > 0:
-			sent_class_list.append((test_sentences[i][0:-1], predictions[i]))
+			sent_class_list.append((test_sentences[i][:-1], predictions[i]))
 
 	return sent_class_list
+
+
+
+def run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabels):
+	all_labels = ['tsunami', 'heat_wave', 'cold_wave', 'forest_fire', 'limnic_erruptions', \
+				'storm', 'avalanches', 'blizzard', 'earthquake', 'floods', 'hurricane', \
+				'drought', 'volcano', 'fire', 'cyclone', 'hail_storms', 'land_slide', \
+				'intensity', 'epicentre', 'temperature', 'depth', 'speed', 'magnitude', \
+				'terrorist_attack', 'suicide_attack', 'normal_bombing', 'shoot_out', \
+				'aviation_hazard', 'train_collision', 'industrial_accident', \
+				'vehicular_collision', 'surgical_strikes', 'transport_hazards', 'riots', \
+				'epidemic', 'famine', 'time', 'place', 'type', 'reason', 'after_effects', \
+				'casualties', 'name', 'participant']
+	disaster_labels = ['tsunami', 'heat_wave', 'cold_wave', 'forest_fire', 'limnic_erruptions', \
+				'storm', 'avalanches', 'blizzard', 'earthquake', 'floods', 'hurricane', \
+				'drought', 'volcano', 'fire', 'cyclone', 'hail_storms', 'land_slide', \
+				'intensity', 'epicentre', 'temperature', 'depth', 'speed', 'magnitude', \
+				'time', 'place', 'type', 'reason', 'after_effects', \
+				'casualties', 'name', 'participant']
+	health_labels = ['epidemic', 'famine', 'time', 'place', 'type', 'reason', 'after_effects', \
+				'casualties', 'name', 'participant']
+	conflict_labels = ['terrorist_attack', 'suicide_attack', 'normal_bombing', 'shoot_out', \
+				'aviation_hazard', 'train_collision', 'industrial_accident', \
+				'vehicular_collision', 'surgical_strikes', 'transport_hazards', 'riots', \
+				'time', 'place', 'type', 'reason', 'after_effects', \
+				'casualties', 'name', 'participant']
+	import numpy as np
+	curr_labels = set(all_labels)
+
+	trainLabels_temp = trainLabels	;	trainLabels = []
+	terms1_temp = terms1	;	terms1 = []
+	terms2_temp = terms2	;	terms2 = []
+	for ind in range(len(trainLabels_temp)):
+		if len(list(set(trainLabels_temp[ind]).intersection(curr_labels))) > 0:
+			trainLabels.append(trainLabels_temp[ind])
+			terms1.append(terms1_temp[ind])
+			terms2.append(terms2_temp[ind])
+	del trainLabels_temp
+	del terms1_temp
+	del terms2_temp
+
+	curr_labels = []
+	for l in trainLabels:
+		curr_labels.extend(l)
+	curr_labels = set(curr_labels)
+	testLabels = [list(set(l).intersection(curr_labels)) for l in testLabels]
+
+	from sklearn.preprocessing import MultiLabelBinarizer
+	mlb = MultiLabelBinarizer(classes=list(curr_labels))
+	train_label_matrix = mlb.fit(trainLabels)
+	print("Labels : ", mlb.classes_)
+	train_label_matrix = mlb.transform(trainLabels)
+	test_label_matrix = mlb.transform(testLabels)
+	print("Shape of label matrix : ", test_label_matrix.shape)
+
+	class_terms_matrix1, tfidf1 = tf_idf_fit_transform(terms1)
+	class_terms_matrix2, tfidf2 = tf_idf_fit_transform(terms2)
+	sentence_matrix1 = tfidf1.transform(testSentences)
+	sentence_matrix2 = tfidf2.transform(testSentences)
+	print("Shape of sentence matrix 1 : ", sentence_matrix1.shape)
+	print("Shape of sentence matrix 2 : ", sentence_matrix2.shape)
+	print("Shape of class terms matrix 1 : ", class_terms_matrix1.shape)
+	print("Shape of class terms matrix 2 : ", class_terms_matrix2.shape)
+
+	from sklearn.metrics.pairwise import cosine_similarity
+	similarity_matrix1 = cosine_similarity(sentence_matrix1, class_terms_matrix1)
+	similarity_matrix2 = cosine_similarity(sentence_matrix2, class_terms_matrix2)
+	predictions = binary_rel(similarity_matrix1, similarity_matrix2, threshold=0)
+
+	print(test_label_matrix.shape, predictions.shape)
+	from sklearn.metrics import f1_score, precision_score, recall_score
+	print("Micro-Precision", precision_score(test_label_matrix, predictions, average='micro'))
+	print("Micro-Recall", recall_score(test_label_matrix, predictions, average='micro'))
+	print("Micro-F1", f1_score(test_label_matrix, predictions, average='micro'))
+	print("Macro-Precision", precision_score(test_label_matrix, predictions, average='macro'))
+	print("Macro-Recall", recall_score(test_label_matrix, predictions, average='macro'))
+	print("Macro-F1", f1_score(test_label_matrix, predictions, average='macro'))
+	print("All-Precision", precision_score(test_label_matrix, predictions, average=None))
+	print("All-Recall", recall_score(test_label_matrix, predictions, average=None))
+	print("All-F1", f1_score(test_label_matrix, predictions, average=None))
 
 
 ###################################################### Calling Functions ######################################################
 
 
-sentence_label_list = []
 terms1, terms2, labels = get_classTerms()
 
 import os
-input_dir = "../4. Bootstrap Classifier/text_data/docs_for_train_text"
-for filename in os.listdir(input_dir):
-	test_doc = get_testDoc(os.path.join(input_dir, filename))
-	sentence_label_list.extend(run_classifier(terms1, terms2, labels, test_doc))
+# sentence_label_list = []
+# input_dir = "../4. Bootstrap Classifier/text_data/docs_for_train_text"
+# for filename in os.listdir(input_dir):
+# 	test_doc = get_testDoc(os.path.join(input_dir, filename))
+# 	sentence_label_list.extend(run_classifier(terms1, terms2, labels, test_doc))
+#
+# # for filename in os.listdir("/home/sounak/Resources/Data/rcv1_flat_text"):
+# # 	test_doc = get_testDoc(os.path.join("/home/sounak/Resources/Data/rcv1_flat_text", filename))
+# # 	if len(test_doc[0]) > 0:
+# # 		sentence_label_list.extend(run_classifier(terms, labels, test_doc))
+#
+# import csv
+# with open('train_sentences.csv', 'w') as fl:
+#    writer = csv.writer(fl)
+#    for row in sentence_label_list:
+# 	   writer.writerow(row)
 
-# for filename in os.listdir("/home/sounak/Resources/Data/rcv1_flat_text"):
-# 	test_doc = get_testDoc(os.path.join("/home/sounak/Resources/Data/rcv1_flat_text", filename))
-# 	if len(test_doc[0]) > 0:
-# 		sentence_label_list.extend(run_classifier(terms, labels, test_doc))
 
-import csv
-with open('train_sentences.csv', 'w') as fl:
-   writer = csv.writer(fl)
-   for row in sentence_label_list:
-	   writer.writerow(row)
+
+input_dir = "./text_data/docs_for_train_text"
+# For classifying pre-labelled sentences and get accuracy
+testSentences, testLabels = get_testSentences()
+testLabels = [set(label.replace('\'', '').replace(' ', '').split(',')) for label in testLabels]
+for lab in testLabels:
+	if '' in lab:
+		lab.remove('')
+
+temp = labels
+labels = []
+for lab in temp:
+	labels.append([lab])
+del temp
+
+trainLabels = labels
+run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabels)

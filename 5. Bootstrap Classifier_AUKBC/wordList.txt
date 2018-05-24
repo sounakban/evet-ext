@@ -1,6 +1,6 @@
 #$#
 avalanches
-avalanche snowslide | avalanche snowslide
+avalanche snowslide snow | avalanche snowslide slide
 #$#
 aviation_hazard
 airplane airbus aircraft aviation | accident hazard crash

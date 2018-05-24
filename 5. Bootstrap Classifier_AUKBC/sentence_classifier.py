@@ -188,9 +188,9 @@ def run_classifierAccuracy(trainSentences, trainLabels, testSentences, testLabel
 	print("Macro-Precision", precision_score(test_label_matrix, predictions, average='macro'))
 	print("Macro-Recall", recall_score(test_label_matrix, predictions, average='macro'))
 	print("Macro-F1", f1_score(test_label_matrix, predictions, average='macro'))
-	print("Macro-Precision", precision_score(test_label_matrix, predictions, average=None))
-	print("Macro-Recall", recall_score(test_label_matrix, predictions, average=None))
-	print("Macro-F1", f1_score(test_label_matrix, predictions, average=None))
+	print("All-Precision", precision_score(test_label_matrix, predictions, average=None))
+	print("All-Recall", recall_score(test_label_matrix, predictions, average=None))
+	print("All-F1", f1_score(test_label_matrix, predictions, average=None))
 
 
 
