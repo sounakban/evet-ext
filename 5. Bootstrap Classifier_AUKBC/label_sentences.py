@@ -7,6 +7,16 @@ def get_testDoc(file_path="target_doc"):
 	return docs
 
 
+def get_trainData():
+	import pandas as pd
+
+	df = pd.read_csv("train_sentences.csv", header=None)
+	sentences = df[0].tolist()
+	labels = df[1].tolist()
+
+	return (sentences, labels)
+
+
 def get_testSentences():
 	import pandas as pd
 
@@ -22,7 +32,7 @@ def get_classTerms():
 	labels = []
 	terms1 = []
 	terms2 = []
-	with open("wordList.txt") as fl:
+	with open("wordListNew.txt") as fl:
 		for line in fl:
 			if line == "#$#\n":
 				labels.append(fl.readline().strip())
@@ -138,6 +148,56 @@ def run_classifier(terms1, terms2, labels, test_docs):
 
 
 
+def run_pipelineClassifier(terms1, terms2, labels, test_docs, output_file_path_list):
+	import numpy as np
+	class_terms_matrix1, tfidf1 = tf_idf_fit_transform(terms1)
+	class_terms_matrix2, tfidf2 = tf_idf_fit_transform(terms2)
+
+	print("Shape of sentence matrix 1 : ", sentence_matrix1.shape)
+	print("Shape of sentence matrix 2 : ", sentence_matrix2.shape)
+
+	from sklearn.metrics.pairwise import cosine_similarity
+	# similarity_matrix1 = cosine_similarity(sentence_matrix1, class_terms_matrix1)
+	# similarity_matrix2 = cosine_similarity(sentence_matrix2, class_terms_matrix2)
+	# label_matrix = binary_rel(similarity_matrix1, similarity_matrix2, threshold=0)
+    #
+	# predictions = []
+	# for i in range(len(test_sentences)):
+	# 	predictions.append(tuple([labels[x] for x in range(label_matrix.shape[1]) if label_matrix[i][x]==1]))
+
+	# sent_class_list = []
+	# # for i in range(len(test_sentences)):
+	# # 	for j in range(len(predictions[i])):
+	# # 		sent_class_list.append((test_sentences[i][:-1], predictions[i][j]))
+	# for i in range(len(test_sentences)):
+	# 	if len(predictions[i]) > 0:
+	# 		sent_class_list.append((test_sentences[i][:-1], predictions[i]))
+    #
+	# return sent_class_list
+
+
+	for test_doc, output_file_path in zip(test_docs, output_file_path_list):
+		test_sentences = doc2sentences(test_docs)
+		sentence_matrix1 = tfidf1.transform(test_sentences)
+		sentence_matrix2 = tfidf2.transform(test_sentences)
+		similarity_matrix1 = cosine_similarity(sentence_matrix1, class_terms_matrix1)
+		similarity_matrix2 = cosine_similarity(sentence_matrix2, class_terms_matrix2)
+		label_matrix = binary_rel(similarity_matrix1, similarity_matrix2, threshold=0)
+
+		predictions = []
+		for i in range(len(test_sentences)):
+			predictions.append(tuple([labels[x] for x in range(label_matrix.shape[1]) if label_matrix[i][x]==1]))
+
+		from lxml import etree
+		document = etree.Element('doc')
+		doc_tree = etree.ElementTree(document)
+		for i in range(len(test_sentences)):
+			curr_pred = [mlb.classes_[x] for x in range(predictions.shape[1]) if predictions[i][x]==1]
+			etree.SubElement(document, "Sent", classes=", ".join(curr_pred)).text = test_sentences[i]
+		doc_tree.write(output_file_path)
+
+
+
 def run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabels):
 	all_labels = ['tsunami', 'heat_wave', 'cold_wave', 'forest_fire', 'limnic_erruptions', \
 				'storm', 'avalanches', 'blizzard', 'earthquake', 'floods', 'hurricane', \
@@ -221,8 +281,9 @@ def run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabel
 
 
 terms1, terms2, labels = get_classTerms()
-
 import os
+
+####################################################################################################
 # sentence_label_list = []
 # input_dir = "../4. Bootstrap Classifier/text_data/docs_for_train_text"
 # for filename in os.listdir(input_dir):
@@ -239,22 +300,49 @@ import os
 #    writer = csv.writer(fl)
 #    for row in sentence_label_list:
 # 	   writer.writerow(row)
+####################################################################################################
 
 
+####################################################################################################
+# input_dir = "./text_data/docs_for_train_text"
+# # For classifying pre-labelled sentences and get accuracy
+# testSentences, testLabels = get_testSentences()
+# testLabels = [set(label.replace('\'', '').replace(' ', '').split(',')) for label in testLabels]
+# for lab in testLabels:
+# 	if '' in lab:
+# 		lab.remove('')
+#
+# temp = labels
+# labels = []
+# for lab in temp:
+# 	labels.append([lab])
+# del temp
+#
+# trainLabels = labels
+# run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabels)
+####################################################################################################
 
-input_dir = "./text_data/docs_for_train_text"
-# For classifying pre-labelled sentences and get accuracy
-testSentences, testLabels = get_testSentences()
-testLabels = [set(label.replace('\'', '').replace(' ', '').split(',')) for label in testLabels]
-for lab in testLabels:
-	if '' in lab:
-		lab.remove('')
+####################################################################################################
+# For classifying sentences in docs
+trainSentences, trainLabels = get_trainData()
+trainLabels = [set(label[1:-1].replace('\'', '').replace(' ', '').split(',')) for label in trainLabels]
+for labels in trainLabels:
+	if '' in labels:
+		labels.remove('')
 
-temp = labels
-labels = []
-for lab in temp:
-	labels.append([lab])
-del temp
 
-trainLabels = labels
-run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabels)
+test_docs_path = "./text_data/DisasterAnnotatedDocs-English-AUKBC"
+output_dir_path = "./text_data/Pipeline_classified"
+import os
+test_doc_list = []
+output_file_path_list = []
+for filename in os.listdir(test_docs_path):
+	if not filename.endswith(".xml"):
+		test_doc = get_testDoc(os.path.join(test_docs_path, filename))
+		output_file_path = "/".join([output_dir_path, filename])
+		output_file_path = output_file_path + ".xml"
+		test_doc_list.append(test_doc)
+		output_file_path_list.append(output_file_path)
+
+run_classifier(trainSentences, trainLabels, test_doc_list, output_file_path_list)
+####################################################################################################
