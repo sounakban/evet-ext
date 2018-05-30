@@ -21,7 +21,7 @@ avalanches
 avalanche snowslide | avalanche snowslide
 #$#
 blizzard
-blizzard snowstorm white-out freeze snow ice hail | blizzard snowstorm white-out storm blast
+blizzard snowstorm white-out freeze snow ice | blizzard snowstorm white-out storm blast
 #$#
 earthquake
 earthquake earthquakes quake quakes richter epicentre seismic | earthquake earthquakes quake quakes richter event
@@ -30,7 +30,7 @@ floods
 flood water | flood drown
 #$#
 hurricane
-hurricane hurricanes | hurricane hurricanes cyclone
+hurricane hurricanes | hurricane hurricanes
 #$#
 drought
 drought droughts | drought droughts
@@ -39,7 +39,7 @@ volcano
 volcano lava magma eruption | volcano lava magma
 #$#
 fire
-flames fire burn | accident hazard
+firefighter flames fire burn | firefighter accident hazard
 #$#
 cyclone
 cyclone water | cyclone storm winds
@@ -106,26 +106,8 @@ epidemic hiv aids hepatitis virus infection infections disease diseases | epidem
 famine
 famine starve hungry scarcity low | famine starve hungry food rainfall crop
 #$#
-time
-|
-#$#
-place
-|
-#$#
-type
-|
-#$#
-reason
-|
-#$#
 after_effects
 caused result | caused of
 #$#
 casualties
 death dead injured kill killed not | death dead injured kill killed found
-#$#
-name
-|
-#$#
-participant
-|
