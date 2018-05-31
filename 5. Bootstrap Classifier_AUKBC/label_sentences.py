@@ -153,8 +153,8 @@ def run_pipelineClassifier(terms1, terms2, labels, test_docs, output_file_path_l
 	class_terms_matrix1, tfidf1 = tf_idf_fit_transform(terms1)
 	class_terms_matrix2, tfidf2 = tf_idf_fit_transform(terms2)
 
-	print("Shape of sentence matrix 1 : ", sentence_matrix1.shape)
-	print("Shape of sentence matrix 2 : ", sentence_matrix2.shape)
+	# print("Shape of sentence matrix 1 : ", sentence_matrix1.shape)
+	# print("Shape of sentence matrix 2 : ", sentence_matrix2.shape)
 
 	from sklearn.metrics.pairwise import cosine_similarity
 	# similarity_matrix1 = cosine_similarity(sentence_matrix1, class_terms_matrix1)
@@ -177,7 +177,7 @@ def run_pipelineClassifier(terms1, terms2, labels, test_docs, output_file_path_l
 
 
 	for test_doc, output_file_path in zip(test_docs, output_file_path_list):
-		test_sentences = doc2sentences(test_docs)
+		test_sentences = doc2sentences(test_doc)
 		sentence_matrix1 = tfidf1.transform(test_sentences)
 		sentence_matrix2 = tfidf2.transform(test_sentences)
 		similarity_matrix1 = cosine_similarity(sentence_matrix1, class_terms_matrix1)
@@ -192,7 +192,8 @@ def run_pipelineClassifier(terms1, terms2, labels, test_docs, output_file_path_l
 		document = etree.Element('doc')
 		doc_tree = etree.ElementTree(document)
 		for i in range(len(test_sentences)):
-			curr_pred = [mlb.classes_[x] for x in range(predictions.shape[1]) if predictions[i][x]==1]
+			# curr_pred = [mlb.classes_[x] for x in range(len(predictions[i])) if predictions[i][x]==1]
+			curr_pred = predictions[i]
 			etree.SubElement(document, "Sent", classes=", ".join(curr_pred)).text = test_sentences[i]
 		doc_tree.write(output_file_path)
 
@@ -324,13 +325,6 @@ import os
 
 ####################################################################################################
 # For classifying sentences in docs
-trainSentences, trainLabels = get_trainData()
-trainLabels = [set(label[1:-1].replace('\'', '').replace(' ', '').split(',')) for label in trainLabels]
-for labels in trainLabels:
-	if '' in labels:
-		labels.remove('')
-
-
 test_docs_path = "./text_data/DisasterAnnotatedDocs-English-AUKBC"
 output_dir_path = "./text_data/Pipeline_classified"
 import os
@@ -344,5 +338,5 @@ for filename in os.listdir(test_docs_path):
 		test_doc_list.append(test_doc)
 		output_file_path_list.append(output_file_path)
 
-run_classifier(trainSentences, trainLabels, test_doc_list, output_file_path_list)
+run_pipelineClassifier(terms1, terms2, labels, test_doc_list, output_file_path_list)
 ####################################################################################################
