@@ -39,7 +39,7 @@ volcano
 volcano lava magma eruption | volcano lava magma
 #$#
 fire
-firefighter firefighters fireman firemen ash ashes flames fire burn | firefighter firefighters fireman firemen ash ashes accident hazard tender fighter engine man men blazing destroy destroyed smoke broke kill killing killed die dead death
+firefighter firefighters fireman firemen ash ashes flames fire burn | firefighter firefighters fireman firemen ash ashes accident mishap hazard tender fighter engine man men blazing destroy destroyed smoke broke kill killing killed die dead death
 #$#
 cyclone
 cyclone water | cyclone storm winds
@@ -60,7 +60,7 @@ depth
 depth | depth
 #$#
 speed
-storm wind | speed
+storm wind | speed miles kilometre per
 #$#
 magnitude
 quake earthquake richter | magnitude richter
@@ -78,22 +78,22 @@ shoot_out
 shoot shot gun gunman pistol weapon bullet arms arm | shoot shot gun gunman kill killing killed die dead death
 #$#
 aviation_hazard
-airplane airbus aircraft aviation aeroplane plane pilot cockpit | accident hazard crash hijack terror terrorist attack
+airplane airbus aircraft aviation aeroplane plane pilot cockpit | accident hazard mishap crash hijack terror terrorist attack
 #$#
 train_collision
 derail train rail railway | derail accident collision
 #$#
 industrial_accident
-industry industrial factory chemical mechanical | accident disaster burst catastrophe death die dead killed
+industry industrial factory worker chemical mechanical | accident disaster mishap burst catastrophe death die dead kill killed
 #$#
 vehicular_collision
-vehicle bus car cycle bike run motorcycle motorbike | collision accident crash kill killing killed die dead death over hit
+vehicle bus car truck tempo lorry jeep cycle bike run motorcycle motorcyclist motorbike road | collision accident mishap crash ram rammed kill killing killed die dead death over hit
 #$#
 surgical_strikes
 strike military army | surgical attack guerrilla kill killing killed die dead death
 #$#
 transport_hazards
-bike car bus vehicle | accident disaster hazard kill killing killed die dead death injured
+bike car bus vehicle | accident disaster mishap hazard kill killing killed die dead death injured
 #$#
 riots
 rebel rebels rebellion war riot riots protest protester protests protesters angry anger angered | rebel rebels rebellion war riot riots protest protester protests protesters mob
@@ -105,4 +105,4 @@ famine
 famine starve hungry scarcity low | famine starve hungry food rainfall crop
 #$#
 casualties
-death die dead hospitalize hospitalized treatment treat injury injured kill killed not | death die dead hospitalize hospitalized treatment treat injury injured kill killed found
+death die dead hospitalize hospitalized treatment treat injury injured kill killed | death die dead hospitalize hospitalized treatment treat injury injured kill killed found
