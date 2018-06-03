@@ -3,10 +3,10 @@ tsunami
 tsunami tsunamis water tall huge | tsunami tsunamis wave
 #$#
 heat_wave
-loo heat sun high | loo stroke temprature mercury celsius fahrenheit
+heatwave loo heat sun high | heatwave loo stroke temperature mercury celsius fahrenheit intense kill killing killed die dead death
 #$#
 cold_wave
-freeze cold frost temprature minus mercury | point wave bite drop dip wind celsius fahrenheit
+freeze cold frost temperature minus mercury | point wave bite drop dip wind celsius fahrenheit
 #$#
 forest_fire
 forest tree | fire burn ashes flames
@@ -15,10 +15,10 @@ limnic_eruption
 limnic CO2 carbon water | eruption dioxide burst suffocation
 #$#
 storm
-tornado tornados | tornado tornados
+storm tornado tornados | storm tornado tornados
 #$#
 avalanches
-avalanche snowslide | avalanche snowslide
+avalanche snowslide snow | avalanche snowslide slide
 #$#
 blizzard
 blizzard snowstorm white-out freeze snow ice | blizzard snowstorm white-out storm blast
@@ -39,19 +39,16 @@ volcano
 volcano lava magma eruption | volcano lava magma
 #$#
 fire
-firefighter flames fire burn | firefighter accident hazard
+firefighter firefighters fireman firemen ash ashes flames fire burn | firefighter firefighters fireman firemen ash ashes accident hazard tender fighter engine man men blazing destroy destroyed smoke broke kill killing killed die dead death
 #$#
 cyclone
 cyclone water | cyclone storm winds
 #$#
 hail_storms
-ice hail | winds storm
+hailstorm hailstorms ice hail | hailstorm hailstorms wind winds storm
 #$#
 land_slide
-land mud soil rock debris | slide slope flow topple
-#$#
-intensity
-heavy | rainfall
+landslide land mud soil rock debris | landslide slide slope flow topple
 #$#
 epicentre
 epicentre earthquake quake | epicentre origin originate centre
@@ -69,34 +66,34 @@ magnitude
 quake earthquake richter | magnitude richter
 #$#
 terrorist_attack
-terrorism terrorist isi isis jihadi jihad terror attacker attack | terrorism terrorist isi isis jihadi jihad hostage guerrilla
+terrorism terrorist militant isi isis jihadi jihad terror radical attacker attack | terrorism terrorist militant isi isis jihadi jihad hostage guerrilla group
 #$#
 suicide_attack
-suicide | attack bomb bombing mission
+suicide self | attack bomb bombing mission kill killing killed die dead death
 #$#
 normal_bombing
-bomb bombing | bombing bomb
+bombing bomb blast | bombing bomb blast kill killing killed die dead death collapse
 #$#
 shoot_out
-shoot | dead kill
+shoot shot gun gunman pistol weapon bullet arms arm | shoot shot gun gunman kill killing killed die dead death
 #$#
 aviation_hazard
-airplane airbus aircraft aviation | accident hazard crash
+airplane airbus aircraft aviation aeroplane plane pilot cockpit | accident hazard crash hijack terror terrorist attack
 #$#
 train_collision
 derail train rail railway | derail accident collision
 #$#
 industrial_accident
-industry factory chemical mechanical | accident disaster burst catastrophe
+industry industrial factory chemical mechanical | accident disaster burst catastrophe death die dead killed
 #$#
 vehicular_collision
-vehicle bus car bike run | collision accident dead death kill over hit
+vehicle bus car cycle bike run motorcycle motorbike | collision accident crash kill killing killed die dead death over hit
 #$#
 surgical_strikes
-surgical guerrilla | strike military 
+strike military army | surgical attack guerrilla kill killing killed die dead death
 #$#
 transport_hazards
-bike car bus | accident disaster hazard
+bike car bus vehicle | accident disaster hazard kill killing killed die dead death injured
 #$#
 riots
 rebel rebels rebellion war riot riots protest protester protests protesters angry anger angered | rebel rebels rebellion war riot riots protest protester protests protesters mob
@@ -107,8 +104,5 @@ epidemic hiv aids hepatitis virus infection infections disease diseases | epidem
 famine
 famine starve hungry scarcity low | famine starve hungry food rainfall crop
 #$#
-after_effects
-caused result | caused of
-#$#
 casualties
-death dead injured kill killed not | death dead injured kill killed found
+death die dead hospitalize hospitalized treatment treat injury injured kill killed not | death die dead hospitalize hospitalized treatment treat injury injured kill killed found

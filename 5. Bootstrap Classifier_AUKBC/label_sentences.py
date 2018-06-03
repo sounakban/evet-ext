@@ -203,27 +203,29 @@ def run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabel
 	all_labels = ['tsunami', 'heat_wave', 'cold_wave', 'forest_fire', 'limnic_erruptions', \
 				'storm', 'avalanches', 'blizzard', 'earthquake', 'floods', 'hurricane', \
 				'drought', 'volcano', 'fire', 'cyclone', 'hail_storms', 'land_slide', \
-				'intensity', 'epicentre', 'temperature', 'depth', 'speed', 'magnitude', \
+				'epicentre', 'temperature', 'depth', 'speed', 'magnitude', \
 				'terrorist_attack', 'suicide_attack', 'normal_bombing', 'shoot_out', \
 				'aviation_hazard', 'train_collision', 'industrial_accident', \
 				'vehicular_collision', 'surgical_strikes', 'transport_hazards', 'riots', \
-				'epidemic', 'famine', 'time', 'place', 'type', 'reason', 'after_effects', \
-				'casualties', 'name', 'participant']
+				'epidemic', 'famine', 'casualties', 'name', 'participant']
 	disaster_labels = ['tsunami', 'heat_wave', 'cold_wave', 'forest_fire', 'limnic_erruptions', \
 				'storm', 'avalanches', 'blizzard', 'earthquake', 'floods', 'hurricane', \
 				'drought', 'volcano', 'fire', 'cyclone', 'hail_storms', 'land_slide', \
-				'intensity', 'epicentre', 'temperature', 'depth', 'speed', 'magnitude', \
-				'time', 'place', 'type', 'reason', 'after_effects', \
+				'epicentre', 'temperature', 'depth', 'speed', 'magnitude', \
 				'casualties', 'name', 'participant']
-	health_labels = ['epidemic', 'famine', 'time', 'place', 'type', 'reason', 'after_effects', \
-				'casualties', 'name', 'participant']
+	health_labels = ['epidemic', 'famine', 'casualties', 'name', 'participant']
 	conflict_labels = ['terrorist_attack', 'suicide_attack', 'normal_bombing', 'shoot_out', \
 				'aviation_hazard', 'train_collision', 'industrial_accident', \
 				'vehicular_collision', 'surgical_strikes', 'transport_hazards', 'riots', \
-				'time', 'place', 'type', 'reason', 'after_effects', \
 				'casualties', 'name', 'participant']
+	dataset_labels = ['tsunami', 'heat_wave', 'cold_wave', 'forest_fire', 'storm', 'avalanches', \
+				'blizzard', 'earthquake', 'floods', 'drought', 'volcano', 'fire', 'cyclone', 'hail_storms',  \
+				'land_slide', 'epicentre', 'depth', 'speed', 'magnitude', 'terrorist_attack', \
+				'suicide_attack', 'normal_bombing', 'shoot_out', 'aviation_hazard', 'train_collision',  \
+				'industrial_accident', 'vehicular_collision', 'surgical_strikes', 'transport_hazards', \
+				'epidemic', 'famine', 'casualties']
 	import numpy as np
-	curr_labels = set(all_labels)
+	curr_labels = set(dataset_labels)
 
 	trainLabels_temp = trainLabels	;	trainLabels = []
 	terms1_temp = terms1	;	terms1 = []
@@ -248,6 +250,7 @@ def run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabel
 	print("Labels : ", mlb.classes_)
 	test_label_matrix = mlb.transform(testLabels)
 	print("Shape of label matrix : ", test_label_matrix.shape)
+	print(test_label_matrix.sum(axis=0))
 
 	class_terms_matrix1, tfidf1 = tf_idf_fit_transform(terms1)
 	class_terms_matrix2, tfidf2 = tf_idf_fit_transform(terms2)
@@ -285,6 +288,7 @@ terms1, terms2, labels = get_classTerms()
 import os
 
 ####################################################################################################
+# Create train samples for Bootstrap
 # sentence_label_list = []
 # input_dir = "../4. Bootstrap Classifier/text_data/docs_for_train_text"
 # for filename in os.listdir(input_dir):
@@ -305,38 +309,38 @@ import os
 
 
 ####################################################################################################
-# input_dir = "./text_data/docs_for_train_text"
-# # For classifying pre-labelled sentences and get accuracy
-# testSentences, testLabels = get_testSentences()
-# testLabels = [set(label.replace('\'', '').replace(' ', '').split(',')) for label in testLabels]
-# for lab in testLabels:
-# 	if '' in lab:
-# 		lab.remove('')
-#
-# temp = labels
-# labels = []
-# for lab in temp:
-# 	labels.append([lab])
-# del temp
-#
-# trainLabels = labels
-# run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabels)
+# For classifying pre-labelled sentences and get accuracy
+input_dir = "./text_data/docs_for_train_text"
+testSentences, testLabels = get_testSentences()
+testLabels = [set(label.replace('\'', '').replace(' ', '').split(',')) for label in testLabels]
+for lab in testLabels:
+	if '' in lab:
+		lab.remove('')
+
+temp = labels
+labels = []
+for lab in temp:
+	labels.append([lab])
+del temp
+
+trainLabels = labels
+run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabels)
 ####################################################################################################
 
 ####################################################################################################
 # For classifying sentences in docs
-test_docs_path = "./text_data/DisasterAnnotatedDocs-English-AUKBC"
-output_dir_path = "./text_data/Pipeline_classified"
-import os
-test_doc_list = []
-output_file_path_list = []
-for filename in os.listdir(test_docs_path):
-	if not filename.endswith(".xml"):
-		test_doc = get_testDoc(os.path.join(test_docs_path, filename))
-		output_file_path = "/".join([output_dir_path, filename])
-		output_file_path = output_file_path + ".xml"
-		test_doc_list.append(test_doc)
-		output_file_path_list.append(output_file_path)
-
-run_pipelineClassifier(terms1, terms2, labels, test_doc_list, output_file_path_list)
+# test_docs_path = "./text_data/DisasterAnnotatedDocs-English-AUKBC"
+# output_dir_path = "./text_data/Pipeline_classified"
+# import os
+# test_doc_list = []
+# output_file_path_list = []
+# for filename in os.listdir(test_docs_path):
+# 	if not filename.endswith(".xml"):
+# 		test_doc = get_testDoc(os.path.join(test_docs_path, filename))
+# 		output_file_path = "/".join([output_dir_path, filename])
+# 		output_file_path = output_file_path + ".xml"
+# 		test_doc_list.append(test_doc)
+# 		output_file_path_list.append(output_file_path)
+#
+# run_pipelineClassifier(terms1, terms2, labels, test_doc_list, output_file_path_list)
 ####################################################################################################
