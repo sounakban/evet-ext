@@ -3,7 +3,7 @@
 def get_trainData():
 	import pandas as pd
 
-	df = pd.read_csv("train_sentences.csv", header=None)
+	df = pd.read_csv("./Intermediate_Files/train_sentences.csv", header=None)
 	sentences = df[0].tolist()
 	labels = df[1].tolist()
 
@@ -13,14 +13,14 @@ def get_trainData():
 def get_testSentences():
 	import pandas as pd
 
-	df = pd.read_csv("test_sentences.csv", header=None)
+	df = pd.read_csv("./Intermediate_Files/test_sentences.csv", header=None)
 	sentences = df[0].tolist()
 	labels = df[1].tolist()
 
 	return (sentences, labels)
 
 
-def get_testDoc(file_path="target_doc"):
+def get_testDoc(file_path="./Intermediate_Files/target_doc"):
 	with open(file_path, encoding='latin-1') as fl:
 		doc = fl.read()
 	return doc
@@ -198,13 +198,10 @@ def run_classifierAccuracy(trainSentences, trainLabels, testSentences, testLabel
 
 
 trainSentences, trainLabels = get_trainData()
-# trainSentences, trainLabels = trainSentences[:1000000], trainLabels[:1000000]
-# trainSentences, trainLabels = trainSentences[:100000], trainLabels[:100000]
 trainLabels = [set(label[1:-1].replace('\'', '').replace(' ', '').split(',')) for label in trainLabels]
 for labels in trainLabels:
 	if '' in labels:
 		labels.remove('')
-# print(trainLabels[10])
 
 
 # For classifying sentences in docs

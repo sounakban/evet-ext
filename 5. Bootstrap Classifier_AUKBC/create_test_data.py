@@ -33,7 +33,7 @@ all_sentences = []
 all_labels = []
 import os
 input_dir = "./text_data/beng_docs"
-output_file = "./test_sentences_beng.csv"
+output_file = "./Intermediate_Files/test_sentences_beng.csv"
 for filename in os.listdir(input_dir):
 	if filename.endswith(".xml"):
 		try:
@@ -51,9 +51,3 @@ with open(output_file, 'w') as fl:
    writer = csv.writer(fl)
    for row in sentence_label_list:
 	   writer.writerow(row)
-
-
-# lebs = []
-# for l in all_labels:
-# 	lebs.extend(l.split(', '))
-# print( set(lebs))

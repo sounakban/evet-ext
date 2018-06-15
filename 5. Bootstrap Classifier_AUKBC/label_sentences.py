@@ -1,6 +1,6 @@
 ###################################################### Utility Functions ######################################################
 
-def get_testDoc(file_path="target_doc"):
+def get_testDoc(file_path="./Intermediate_Files/target_doc"):
 	docs = []
 	with open(file_path, encoding='latin-1') as fl:
 		docs.append(fl.read())
@@ -10,14 +10,14 @@ def get_testDoc(file_path="target_doc"):
 def get_trainData():
 	import pandas as pd
 
-	df = pd.read_csv("train_sentences.csv", header=None)
+	df = pd.read_csv("./Intermediate_Files/train_sentences.csv", header=None)
 	sentences = df[0].tolist()
 	labels = df[1].tolist()
 
 	return (sentences, labels)
 
 
-def get_testSentences(csv_file="test_sentences.csv"):
+def get_testSentences(csv_file="./Intermediate_Files/test_sentences.csv"):
 	import pandas as pd
 
 	df = pd.read_csv(csv_file, header=None)
@@ -310,7 +310,7 @@ import os
 
 ####################################################################################################
 # For classifying pre-labelled sentences and get accuracy
-csv_file = "./test_sentences_beng.csv"
+csv_file = "./Intermediate_Files/test_sentences_beng.csv"
 testSentences, testLabels = get_testSentences()
 testLabels = [set(label.replace('\'', '').replace(' ', '').split(',')) for label in testLabels]
 for lab in testLabels:
