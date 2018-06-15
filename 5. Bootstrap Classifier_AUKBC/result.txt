@@ -59,3 +59,75 @@ Macro-Precision 0.428571428571
 Macro-Recall 0.0399733806566
 Macro-F1 0.0721768707483
 
+
+
+
+
+
+#######################################################################################
+
+REULT FOR BENGALI DOCUMENTS
+
+[sounak@localhost 5. Bootstrap Classifier_AUKBC]$ python label_sentences.py
+Labels :  ['tsunami' 'heat_wave' 'cold_wave' 'forest_fire' 'storm' 'avalanches'
+ 'blizzard' 'earthquake' 'floods' 'hurricane' 'drought' 'volcano' 'fire'
+ 'cyclone' 'hail_storms' 'land_slide' 'intensity' 'epicentre' 'temperature'
+ 'depth' 'speed' 'magnitude' 'terrorist_attack' 'suicide_attack'
+ 'normal_bombing' 'shoot_out' 'aviation_hazard' 'train_collision'
+ 'industrial_accident' 'vehicular_collision' 'surgical_strikes'
+ 'transport_hazards' 'riots' 'epidemic' 'famine' 'after_effects'
+ 'casualties']
+Shape of label matrix :  (352, 37)
+Shape of sentence matrix 1 :  (352, 109)
+Shape of sentence matrix 2 :  (352, 95)
+Shape of class terms matrix 1 :  (37, 109)
+Shape of class terms matrix 2 :  (37, 95)
+[[ 0.  0.  0. ...,  0.  0.  0.]
+ [ 0.  0.  0. ...,  0.  0.  0.]
+ [ 0.  0.  0. ...,  0.  0.  0.]
+ ..., 
+ [ 0.  0.  0. ...,  0.  1.  0.]
+ [ 0.  0.  0. ...,  0.  0.  0.]
+ [ 0.  0.  0. ...,  0.  1.  1.]]
+[[0 0 0 ..., 0 0 0]
+ [0 0 0 ..., 0 0 0]
+ [0 0 0 ..., 0 0 0]
+ ..., 
+ [0 0 0 ..., 0 0 1]
+ [0 0 0 ..., 0 0 1]
+ [0 0 0 ..., 0 1 1]]
+(352, 37) (352, 37)
+/home/sounak/miniconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+All-Precision [ 0.125       1.          1.          1.          0.          0.85714286
+  0.33333333  0.98245614  0.77777778  0.          1.          0.71428571
+  0.6         1.          1.          0.          0.          0.625       0.
+  0.92307692  0.          1.          0.88888889  1.          0.75        0.
+  1.          0.86666667  0.          0.61904762  0.          0.          0.
+  1.          1.          0.14285714  0.95145631]
+/home/sounak/miniconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1137: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples.
+  'recall', 'true', average, warn_for)
+All-Recall [ 0.5         0.33333333  1.          0.6         0.          1.          0.5
+  0.8115942   0.875       0.          1.          0.83333333  0.075       0.5625
+  0.1         0.          0.          0.83333333  0.          0.92307692
+  0.          0.93103448  0.53333333  0.42857143  0.21428571  0.
+  0.28571429  0.65        0.          0.325       0.          0.          0.
+  1.          1.          0.1875      0.53846154]
+/home/sounak/miniconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/home/sounak/miniconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1137: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true samples.
+  'recall', 'true', average, warn_for)
+All-F1 [ 0.2         0.5         1.          0.75        0.          0.92307692
+  0.4         0.88888889  0.82352941  0.          1.          0.76923077
+  0.13333333  0.72        0.18181818  0.          0.          0.71428571
+  0.          0.92307692  0.          0.96428571  0.66666667  0.6
+  0.33333333  0.          0.44444444  0.74285714  0.          0.42622951
+  0.          0.          0.          1.          1.          0.16216216
+  0.6877193 ]
+Micro-Precision 0.797222222222
+Micro-Recall 0.481543624161
+Micro-F1 0.600418410042
+Macro-Precision 0.571810523625
+Macro-Recall 0.43354248403
+Macro-F1 0.458241578802
+

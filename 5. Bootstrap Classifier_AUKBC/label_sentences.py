@@ -17,10 +17,10 @@ def get_trainData():
 	return (sentences, labels)
 
 
-def get_testSentences():
+def get_testSentences(csv_file="test_sentences.csv"):
 	import pandas as pd
 
-	df = pd.read_csv("test_sentences.csv", header=None)
+	df = pd.read_csv(csv_file, header=None)
 	sentences = df[0].tolist()
 	labels = df[1].tolist()
 
@@ -305,38 +305,38 @@ import os
 
 
 ####################################################################################################
-# input_dir = "./text_data/docs_for_train_text"
-# # For classifying pre-labelled sentences and get accuracy
-# testSentences, testLabels = get_testSentences()
-# testLabels = [set(label.replace('\'', '').replace(' ', '').split(',')) for label in testLabels]
-# for lab in testLabels:
-# 	if '' in lab:
-# 		lab.remove('')
-#
-# temp = labels
-# labels = []
-# for lab in temp:
-# 	labels.append([lab])
-# del temp
-#
-# trainLabels = labels
-# run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabels)
+# For classifying pre-labelled sentences and get accuracy
+csv_file = "./test_sentences_beng.csv"
+testSentences, testLabels = get_testSentences()
+testLabels = [set(label.replace('\'', '').replace(' ', '').split(',')) for label in testLabels]
+for lab in testLabels:
+	if '' in lab:
+		lab.remove('')
+
+temp = labels
+labels = []
+for lab in temp:
+	labels.append([lab])
+del temp
+
+trainLabels = labels
+run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabels)
 ####################################################################################################
 
 ####################################################################################################
-# For classifying sentences in docs
-test_docs_path = "./text_data/DisasterAnnotatedDocs-English-AUKBC"
-output_dir_path = "./text_data/Pipeline_classified"
-import os
-test_doc_list = []
-output_file_path_list = []
-for filename in os.listdir(test_docs_path):
-	if not filename.endswith(".xml"):
-		test_doc = get_testDoc(os.path.join(test_docs_path, filename))
-		output_file_path = "/".join([output_dir_path, filename])
-		output_file_path = output_file_path + ".xml"
-		test_doc_list.append(test_doc)
-		output_file_path_list.append(output_file_path)
-
-run_pipelineClassifier(terms1, terms2, labels, test_doc_list, output_file_path_list)
+# # For classifying sentences in docs
+# test_docs_path = "./text_data/DisasterAnnotatedDocs-English-AUKBC"
+# output_dir_path = "./text_data/Pipeline_classified"
+# import os
+# test_doc_list = []
+# output_file_path_list = []
+# for filename in os.listdir(test_docs_path):
+# 	if not filename.endswith(".xml"):
+# 		test_doc = get_testDoc(os.path.join(test_docs_path, filename))
+# 		output_file_path = "/".join([output_dir_path, filename])
+# 		output_file_path = output_file_path + ".xml"
+# 		test_doc_list.append(test_doc)
+# 		output_file_path_list.append(output_file_path)
+#
+# run_pipelineClassifier(terms1, terms2, labels, test_doc_list, output_file_path_list)
 ####################################################################################################

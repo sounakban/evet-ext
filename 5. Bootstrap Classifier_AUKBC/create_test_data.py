@@ -1,7 +1,10 @@
-from bs4 import BeautifulSoup
-
+################################################################################
+#### creates a csv file containing all sentences and corresponding labels  #####
+## from PaLinkA format annotated data. It parses all files given a directory ###
+################################################################################
 
 def create_AUKBC_labelled(fl_path):
+	from bs4 import BeautifulSoup
 
 	file = open(fl_path).read()
 
@@ -29,8 +32,8 @@ def create_AUKBC_labelled(fl_path):
 all_sentences = []
 all_labels = []
 import os
-input_dir = "./text_data/DisasterAnnotatedDocs-English-AUKBC"
-output_dir = "./test_sentences.csv"
+input_dir = "./text_data/beng_docs"
+output_file = "./test_sentences_beng.csv"
 for filename in os.listdir(input_dir):
 	if filename.endswith(".xml"):
 		try:
@@ -44,7 +47,7 @@ sentence_label_list = []
 for i in range(len(all_sentences)):
 	sentence_label_list.append((all_sentences[i], all_labels[i]))
 import csv
-with open('test_sentences.csv', 'w') as fl:
+with open(output_file, 'w') as fl:
    writer = csv.writer(fl)
    for row in sentence_label_list:
 	   writer.writerow(row)
