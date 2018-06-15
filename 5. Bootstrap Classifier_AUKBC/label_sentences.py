@@ -310,11 +310,7 @@ import os
 
 ####################################################################################################
 # For classifying pre-labelled sentences and get accuracy
-<<<<<<< HEAD
 csv_file = "./test_sentences_beng.csv"
-=======
-input_dir = "./text_data/docs_for_train_text"
->>>>>>> 20a4c81364b0083f64c60a6fa3b305ae221c609a
 testSentences, testLabels = get_testSentences()
 testLabels = [set(label.replace('\'', '').replace(' ', '').split(',')) for label in testLabels]
 for lab in testLabels:
@@ -332,11 +328,7 @@ run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabels)
 ####################################################################################################
 
 ####################################################################################################
-<<<<<<< HEAD
 # # For classifying sentences in docs
-=======
-# For classifying sentences in docs
->>>>>>> 20a4c81364b0083f64c60a6fa3b305ae221c609a
 # test_docs_path = "./text_data/DisasterAnnotatedDocs-English-AUKBC"
 # output_dir_path = "./text_data/Pipeline_classified"
 # import os
