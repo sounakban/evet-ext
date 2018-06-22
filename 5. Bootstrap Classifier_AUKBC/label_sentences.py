@@ -27,12 +27,12 @@ def get_testSentences(csv_file="./Intermediate_Files/test_sentences.csv"):
 	return (sentences, labels)
 
 
-def get_classTerms():
+def get_classTerms(labelsFile="wordListNew.txt"):
 	# Gets terms in different lists seperated by '|'
 	labels = []
 	terms1 = []
 	terms2 = []
-	with open("wordListNew.txt") as fl:
+	with open(labelsFile) as fl:
 		for line in fl:
 			if line == "#$#\n":
 				labels.append(fl.readline().strip())
@@ -257,6 +257,7 @@ def run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabel
 	sentence_matrix1 = tfidf1.transform(testSentences)
 	sentence_matrix2 = tfidf2.transform(testSentences)
 	print("Shape of sentence matrix 1 : ", sentence_matrix1.shape)
+	print("Sentence matrix 1 : ", sentence_matrix1)
 	print("Shape of sentence matrix 2 : ", sentence_matrix2.shape)
 	print("Shape of class terms matrix 1 : ", class_terms_matrix1.shape)
 	print("Shape of class terms matrix 2 : ", class_terms_matrix2.shape)
@@ -266,8 +267,8 @@ def run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabel
 	similarity_matrix2 = cosine_similarity(sentence_matrix2, class_terms_matrix2)
 	predictions = binary_rel(similarity_matrix1, similarity_matrix2, threshold=0)
 
-	print(predictions)
-	print(test_label_matrix)
+	# print(predictions)
+	# print(test_label_matrix)
 	print(test_label_matrix.shape, predictions.shape)
 	from sklearn.metrics import f1_score, precision_score, recall_score
 	print("All-Precision", precision_score(test_label_matrix, predictions, average=None))
@@ -284,7 +285,7 @@ def run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabel
 ###################################################### Calling Functions ######################################################
 
 
-terms1, terms2, labels = get_classTerms()
+terms1, terms2, labels = get_classTerms("wordListNew_bengali.txt")
 import os
 
 ####################################################################################################
@@ -311,7 +312,7 @@ import os
 ####################################################################################################
 # For classifying pre-labelled sentences and get accuracy
 csv_file = "./Intermediate_Files/test_sentences_beng.csv"
-testSentences, testLabels = get_testSentences()
+testSentences, testLabels = get_testSentences(csv_file)
 testLabels = [set(label.replace('\'', '').replace(' ', '').split(',')) for label in testLabels]
 for lab in testLabels:
 	if '' in lab:

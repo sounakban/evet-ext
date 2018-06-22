@@ -131,3 +131,67 @@ Macro-Precision 0.571810523625
 Macro-Recall 0.43354248403
 Macro-F1 0.458241578802
 
+
+
+
+
+
+#######################################################################################
+
+REULT FOR ENGLISH DOCUMENTS FINAL
+
+[sounak@localhost 5. Bootstrap Classifier_AUKBC]$ python label_sentences.py
+Labels :  ['tsunami' 'heat_wave' 'cold_wave' 'forest_fire' 'storm' 'avalanches'
+ 'blizzard' 'earthquake' 'floods' 'drought' 'volcano' 'fire' 'cyclone'
+ 'hail_storms' 'land_slide' 'epicentre' 'depth' 'speed' 'magnitude'
+ 'terrorist_attack' 'suicide_attack' 'normal_bombing' 'shoot_out'
+ 'aviation_hazard' 'train_collision' 'industrial_accident'
+ 'vehicular_collision' 'surgical_strikes' 'transport_hazards' 'epidemic'
+ 'famine' 'casualties']
+Shape of label matrix :  (352, 32)
+[  2   3   1   5  13   6   4  69   8   2   6  40  16  10   7   6  13   3
+  29  15   7  14  15   7  20   3  40  10   4   2   1 182]
+Shape of sentence matrix 1 :  (352, 133)
+Shape of sentence matrix 2 :  (352, 118)
+Shape of class terms matrix 1 :  (32, 133)
+Shape of class terms matrix 2 :  (32, 118)
+[[ 0.  0.  0. ...,  0.  0.  0.]
+ [ 0.  0.  0. ...,  0.  0.  0.]
+ [ 0.  0.  0. ...,  0.  0.  0.]
+ ..., 
+ [ 0.  0.  0. ...,  0.  0.  0.]
+ [ 0.  0.  0. ...,  1.  0.  0.]
+ [ 0.  0.  0. ...,  1.  0.  1.]]
+[[0 0 0 ..., 0 0 0]
+ [0 0 0 ..., 0 0 0]
+ [0 0 0 ..., 0 0 0]
+ ..., 
+ [0 0 0 ..., 0 0 1]
+ [0 0 0 ..., 1 0 1]
+ [0 0 0 ..., 1 0 1]]
+(352, 32) (352, 32)
+All-Precision [ 0.125       0.75        0.5         1.          0.5         0.85714286
+  0.33333333  0.98245614  0.77777778  1.          0.71428571  0.73684211
+  1.          1.          0.66666667  0.625       0.92307692  0.5         1.
+  0.72727273  1.          0.90909091  0.9         1.          0.86666667
+  1.          0.65306122  0.44444444  0.12        1.          1.
+  0.95275591]
+All-Recall [ 0.5         1.          1.          0.6         0.61538462  1.          0.5
+  0.8115942   0.875       1.          0.83333333  0.7         0.5625      0.9
+  0.57142857  0.83333333  0.92307692  0.33333333  0.93103448  0.53333333
+  0.57142857  0.71428571  0.6         0.57142857  0.65        0.66666667
+  0.8         0.4         0.75        1.          1.          0.66483516]
+All-F1 [ 0.2         0.85714286  0.66666667  0.75        0.55172414  0.92307692
+  0.4         0.88888889  0.82352941  1.          0.76923077  0.71794872
+  0.72        0.94736842  0.61538462  0.71428571  0.92307692  0.4
+  0.96428571  0.61538462  0.72727273  0.8         0.72        0.72727273
+  0.74285714  0.8         0.71910112  0.42105263  0.20689655  1.          1.
+  0.78317152]
+Micro-Precision 0.799204771372
+Micro-Recall 0.714031971581
+Micro-F1 0.754221388368
+Macro-Precision 0.767652293605
+Macro-Recall 0.731624900548
+Macro-F1 0.721738087546
+
+
