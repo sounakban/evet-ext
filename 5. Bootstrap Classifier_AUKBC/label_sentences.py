@@ -1,9 +1,13 @@
 ###################################################### Utility Functions ######################################################
 
-def get_testDoc(file_path="./Intermediate_Files/target_doc"):
+def get_testDoc(file_path="./Intermediate_Files/target_doc", language='english'):
 	docs = []
-	with open(file_path, encoding='latin-1') as fl:
-		docs.append(fl.read())
+	if language=='english':
+		with open(file_path, encoding='latin-1') as fl:
+			docs.append(fl.read())
+	else:
+		with open(file_path, encoding='utf-8') as fl:
+			docs.append(fl.read())
 	return docs
 
 
@@ -90,11 +94,28 @@ def tokenize(text):
 	return filtered_tokens
 
 
+
+def tokenize_otherLanguage(text):
+	from nltk.tokenize import RegexpTokenizer, word_tokenize
+	import re
+	tokenizer = RegexpTokenizer(r'\w+', flags=re.UNICODE)
+	cachedStopWords = []
+
+	#min_length = 3
+	# text = text.encode("utf-8")
+	# words = tokenizer.tokenize(text)
+	words = word_tokenize(text)
+	words = [word for word in words if word not in cachedStopWords]
+	return words
+
+
 # Perform fit and transform input
-def tf_idf_fit_transform(docs):
+def tf_idf_fit_transform(docs, language='english'):
 	from sklearn.feature_extraction.text import TfidfVectorizer
-	# tfidf = TfidfVectorizer(tokenizer=tokenize, min_df=1, max_df=1.0, max_features=1000, use_idf=True, sublinear_tf=True);
-	tfidf = TfidfVectorizer(tokenizer=tokenize, min_df=1, max_df=1.0, max_features=1000, use_idf=True, sublinear_tf=False);
+	if not language == 'english':
+		tfidf = TfidfVectorizer(tokenizer=tokenize_otherLanguage, min_df=1, max_df=1.0, max_features=1000, use_idf=True, sublinear_tf=False);
+	else:
+		tfidf = TfidfVectorizer(tokenizer=tokenize, min_df=1, max_df=1.0, max_features=1000, use_idf=True, sublinear_tf=False);
 	tdm = tfidf.fit_transform(docs);
 	return (tdm, tfidf)
 
@@ -115,10 +136,10 @@ def binary_rel(similarity_matrix1, similarity_matrix2, threshold=0.1):
 ###################################################### Main Functions ######################################################
 
 
-def run_classifier(terms1, terms2, labels, test_docs):
+def run_classifier(terms1, terms2, labels, test_docs, language='english'):
 	import numpy as np
-	class_terms_matrix1, tfidf1 = tf_idf_fit_transform(terms1)
-	class_terms_matrix2, tfidf2 = tf_idf_fit_transform(terms2)
+	class_terms_matrix1, tfidf1 = tf_idf_fit_transform(terms1, language)
+	class_terms_matrix2, tfidf2 = tf_idf_fit_transform(terms2, language)
 
 	test_sentences = doc2sentences(test_docs)
 	sentence_matrix1 = tfidf1.transform(test_sentences)
@@ -148,34 +169,15 @@ def run_classifier(terms1, terms2, labels, test_docs):
 
 
 
-def run_pipelineClassifier(terms1, terms2, labels, test_docs, output_file_path_list):
+def run_pipelineClassifier(terms1, terms2, labels, test_docs, output_file_path_list, language='english'):
 	import numpy as np
-	class_terms_matrix1, tfidf1 = tf_idf_fit_transform(terms1)
-	class_terms_matrix2, tfidf2 = tf_idf_fit_transform(terms2)
+	class_terms_matrix1, tfidf1 = tf_idf_fit_transform(terms1, language)
+	class_terms_matrix2, tfidf2 = tf_idf_fit_transform(terms2, language)
 
 	# print("Shape of sentence matrix 1 : ", sentence_matrix1.shape)
 	# print("Shape of sentence matrix 2 : ", sentence_matrix2.shape)
 
 	from sklearn.metrics.pairwise import cosine_similarity
-	# similarity_matrix1 = cosine_similarity(sentence_matrix1, class_terms_matrix1)
-	# similarity_matrix2 = cosine_similarity(sentence_matrix2, class_terms_matrix2)
-	# label_matrix = binary_rel(similarity_matrix1, similarity_matrix2, threshold=0)
-    #
-	# predictions = []
-	# for i in range(len(test_sentences)):
-	# 	predictions.append(tuple([labels[x] for x in range(label_matrix.shape[1]) if label_matrix[i][x]==1]))
-
-	# sent_class_list = []
-	# # for i in range(len(test_sentences)):
-	# # 	for j in range(len(predictions[i])):
-	# # 		sent_class_list.append((test_sentences[i][:-1], predictions[i][j]))
-	# for i in range(len(test_sentences)):
-	# 	if len(predictions[i]) > 0:
-	# 		sent_class_list.append((test_sentences[i][:-1], predictions[i]))
-    #
-	# return sent_class_list
-
-
 	for test_doc, output_file_path in zip(test_docs, output_file_path_list):
 		test_sentences = doc2sentences(test_doc)
 		sentence_matrix1 = tfidf1.transform(test_sentences)
@@ -199,7 +201,7 @@ def run_pipelineClassifier(terms1, terms2, labels, test_docs, output_file_path_l
 
 
 
-def run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabels):
+def run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabels, language='english'):
 	all_labels = ['tsunami', 'heat_wave', 'cold_wave', 'forest_fire', 'limnic_erruptions', \
 				'storm', 'avalanches', 'blizzard', 'earthquake', 'floods', 'hurricane', \
 				'drought', 'volcano', 'fire', 'cyclone', 'hail_storms', 'land_slide', \
@@ -252,12 +254,13 @@ def run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabel
 	print("Shape of label matrix : ", test_label_matrix.shape)
 	print(test_label_matrix.sum(axis=0))
 
-	class_terms_matrix1, tfidf1 = tf_idf_fit_transform(terms1)
-	class_terms_matrix2, tfidf2 = tf_idf_fit_transform(terms2)
+	class_terms_matrix1, tfidf1 = tf_idf_fit_transform(terms1, language)
+	print("vocab :", tfidf1.vocabulary_)
+	class_terms_matrix2, tfidf2 = tf_idf_fit_transform(terms2, language)
 	sentence_matrix1 = tfidf1.transform(testSentences)
 	sentence_matrix2 = tfidf2.transform(testSentences)
 	print("Shape of sentence matrix 1 : ", sentence_matrix1.shape)
-	print("Sentence matrix 1 : ", sentence_matrix1)
+	# print("Sentence matrix 1 : ", sentence_matrix1)
 	print("Shape of sentence matrix 2 : ", sentence_matrix2.shape)
 	print("Shape of class terms matrix 1 : ", class_terms_matrix1.shape)
 	print("Shape of class terms matrix 2 : ", class_terms_matrix2.shape)
@@ -284,7 +287,7 @@ def run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabel
 
 ###################################################### Calling Functions ######################################################
 
-
+language='bengali'
 terms1, terms2, labels = get_classTerms("wordListNew_bengali.txt")
 import os
 
@@ -299,7 +302,7 @@ import os
 # # for filename in os.listdir("/home/sounak/Resources/Data/rcv1_flat_text"):
 # # 	test_doc = get_testDoc(os.path.join("/home/sounak/Resources/Data/rcv1_flat_text", filename))
 # # 	if len(test_doc[0]) > 0:
-# # 		sentence_label_list.extend(run_classifier(terms, labels, test_doc))
+# # 		sentence_label_list.extend(run_classifier(terms, labels, test_doc, language))
 #
 # import csv
 # with open('train_sentences.csv', 'w') as fl:
@@ -325,7 +328,7 @@ for lab in temp:
 del temp
 
 trainLabels = labels
-run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabels)
+run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabels, language)
 ####################################################################################################
 
 ####################################################################################################
@@ -343,5 +346,5 @@ run_classifierAccuracy(terms1, terms2, trainLabels, testSentences, testLabels)
 # 		test_doc_list.append(test_doc)
 # 		output_file_path_list.append(output_file_path)
 #
-# run_pipelineClassifier(terms1, terms2, labels, test_doc_list, output_file_path_list)
+# run_pipelineClassifier(terms1, terms2, labels, test_doc_list, output_file_path_list, language)
 ####################################################################################################

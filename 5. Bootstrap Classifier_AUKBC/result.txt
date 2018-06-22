@@ -70,66 +70,51 @@ REULT FOR BENGALI DOCUMENTS
 
 [sounak@localhost 5. Bootstrap Classifier_AUKBC]$ python label_sentences.py
 Labels :  ['tsunami' 'heat_wave' 'cold_wave' 'forest_fire' 'storm' 'avalanches'
- 'blizzard' 'earthquake' 'floods' 'hurricane' 'drought' 'volcano' 'fire'
- 'cyclone' 'hail_storms' 'land_slide' 'intensity' 'epicentre' 'temperature'
- 'depth' 'speed' 'magnitude' 'terrorist_attack' 'suicide_attack'
- 'normal_bombing' 'shoot_out' 'aviation_hazard' 'train_collision'
- 'industrial_accident' 'vehicular_collision' 'surgical_strikes'
- 'transport_hazards' 'riots' 'epidemic' 'famine' 'after_effects'
- 'casualties']
-Shape of label matrix :  (352, 37)
-Shape of sentence matrix 1 :  (352, 109)
-Shape of sentence matrix 2 :  (352, 95)
-Shape of class terms matrix 1 :  (37, 109)
-Shape of class terms matrix 2 :  (37, 95)
-[[ 0.  0.  0. ...,  0.  0.  0.]
- [ 0.  0.  0. ...,  0.  0.  0.]
- [ 0.  0.  0. ...,  0.  0.  0.]
- ..., 
- [ 0.  0.  0. ...,  0.  1.  0.]
- [ 0.  0.  0. ...,  0.  0.  0.]
- [ 0.  0.  0. ...,  0.  1.  1.]]
-[[0 0 0 ..., 0 0 0]
- [0 0 0 ..., 0 0 0]
- [0 0 0 ..., 0 0 0]
- ..., 
- [0 0 0 ..., 0 0 1]
- [0 0 0 ..., 0 0 1]
- [0 0 0 ..., 0 1 1]]
-(352, 37) (352, 37)
+ 'blizzard' 'earthquake' 'floods' 'drought' 'volcano' 'fire' 'cyclone'
+ 'hail_storms' 'land_slide' 'epicentre' 'depth' 'speed' 'magnitude'
+ 'terrorist_attack' 'suicide_attack' 'normal_bombing' 'shoot_out'
+ 'aviation_hazard' 'train_collision' 'industrial_accident'
+ 'vehicular_collision' 'surgical_strikes' 'transport_hazards' 'epidemic'
+ 'famine' 'casualties']
+Shape of label matrix :  (436, 32)
+[  0   0   1   0   2   0   3  11   0   0   0  18   0   0   1   2   0   2
+   2  36  19  60  33  20   4   0  11  20   9   4   0 220]
+vocab : {'সুনামি': 107, 'জলোচ্ছ্বাস': 39, 'ঢেউ': 48, 'লু': 97, 'তাপপ্রবাহ': 50, 'তাপমাত্রা': 51, 'পারা': 61, 'সেলসিয়াস': 108, 'ফারেনহাইট': 63, 'গরম': 21, 'তাপ': 49, 'শৈত্যপ্রবাহ': 101, 'ঠান্ডা': 46, 'হিমেল': 114, 'জমে': 35, 'জমা': 34, 'মাইনাস': 87, 'দাবানল': 56, 'বন': 64, 'জঙ্গল': 32, 'গাছ': 22, 'বন্য': 67, 'বনস্পতি': 65, 'ঘূর্ণাবর্ত': 27, 'ঝড়': 44, 'তুষারধস': 53, 'তুষার': 52, 'তুষারপাত': 54, 'বরফ': 69, 'ভূমিকম্প': 82, 'কম্পন': 14, 'রিখটার': 92, 'ভূমিকম্পে': 83, 'ভূমিকম্পের': 84, 'বন্যা': 68, 'বান': 70, 'হড়কা': 116, 'ডুবে': 47, 'পাড়': 62, 'জল': 36, 'জোলো': 43, 'খরা': 17, 'জলের': 38, 'বৃষ্টি': 73, 'বৃষ্টির': 75, 'চাষ': 29, 'চাষের': 30, 'আগ্নেয়গিরি': 6, 'লাভা': 96, 'অগ্ন্যুৎপাত': 1, 'অগ্নিকাণ্ড': 0, 'দমকল': 55, 'আগুন': 5, 'জলে': 37, 'সাইক্লোন': 106, 'ঘূর্ণিঝড়': 28, 'বৃষ্টিপাত': 74, 'শিলাবৃষ্টি': 100, 'শিল': 99, 'ভূমিস্খলন': 85, 'ধস': 58, 'ভূপাত': 81, 'গভীর': 20, 'নীচ': 59, 'গতি': 19, 'বেগ': 76, 'মাত্রা': 88, 'আতঙ্কবাদী': 7, 'জঙ্গি': 33, 'সন্ত্রাস': 104, 'সন্ত্রাসবাদী': 105, 'আইএসআই': 2, 'আইসিস': 3, 'জিহাদ': 40, 'জিহাদি': 41, 'আক্রমণ': 4, 'হামলা': 110, 'আল': 10, 'আত্মঘাত': 8, 'আত্মঘাতী': 9, 'বোমা': 78, 'বোম': 77, 'গুলি': 25, 'গালিগালা': 23, 'গুলিবিদ্ধ': 26, 'বন্দুক': 66, 'বিমান': 72, 'লাইনচ্যুত': 95, 'রেল': 93, 'কারখানা': 15, 'পথদুর্ঘটনা': 60, 'গাড়ি': 24, 'বাস': 71, 'ট্রেন': 45, 'মহামারি': 86, 'হানাদারি': 109, 'সংক্রমণ': 102, 'জীবাণু': 42, 'রোগ': 94, 'এহাইভি': 13, 'এইডস': 12, 'হেপাটাইটিস': 115, 'ভাইরাস': 80, 'সংক্রামক': 103, 'ব্যাধি': 79, 'দুর্ভিক্ষ': 57, 'মড়ক': 91, 'খাদ্য': 18, 'খদ্দের': 16, 'মৃত': 89, 'মৃত্যু': 90, 'আহত': 11, 'চিকিৎসাধীন': 31, 'শঙ্কাজনক': 98, 'হাসপাতাল': 111, 'হাসপাতালে': 112, 'হাসপাতালের': 113}
+Shape of sentence matrix 1 :  (436, 117)
+Shape of sentence matrix 2 :  (436, 112)
+Shape of class terms matrix 1 :  (32, 117)
+Shape of class terms matrix 2 :  (32, 112)
+(436, 32) (436, 32)
 /home/sounak/miniconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
   'precision', 'predicted', average, warn_for)
-All-Precision [ 0.125       1.          1.          1.          0.          0.85714286
-  0.33333333  0.98245614  0.77777778  0.          1.          0.71428571
-  0.6         1.          1.          0.          0.          0.625       0.
-  0.92307692  0.          1.          0.88888889  1.          0.75        0.
-  1.          0.86666667  0.          0.61904762  0.          0.          0.
-  1.          1.          0.14285714  0.95145631]
+All-Precision [ 0.          0.          1.          0.          1.          0.          1.
+  1.          0.          0.          0.          1.          0.          0.
+  1.          0.          0.          0.          1.          0.34210526
+  0.8         0.74074074  0.875       1.          1.          0.          0.5
+  0.11111111  0.          0.          0.          0.96031746]
 /home/sounak/miniconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1137: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples.
   'recall', 'true', average, warn_for)
-All-Recall [ 0.5         0.33333333  1.          0.6         0.          1.          0.5
-  0.8115942   0.875       0.          1.          0.83333333  0.075       0.5625
-  0.1         0.          0.          0.83333333  0.          0.92307692
-  0.          0.93103448  0.53333333  0.42857143  0.21428571  0.
-  0.28571429  0.65        0.          0.325       0.          0.          0.
-  1.          1.          0.1875      0.53846154]
+All-Recall [ 0.          0.          1.          0.          0.5         0.
+  0.66666667  0.27272727  0.          0.          0.          0.33333333
+  0.          0.          1.          0.          0.          0.          1.
+  0.36111111  0.21052632  0.33333333  0.21212121  0.5         0.25        0.
+  0.09090909  0.05        0.          0.          0.          0.55      ]
 /home/sounak/miniconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
   'precision', 'predicted', average, warn_for)
 /home/sounak/miniconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1137: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true samples.
   'recall', 'true', average, warn_for)
-All-F1 [ 0.2         0.5         1.          0.75        0.          0.92307692
-  0.4         0.88888889  0.82352941  0.          1.          0.76923077
-  0.13333333  0.72        0.18181818  0.          0.          0.71428571
-  0.          0.92307692  0.          0.96428571  0.66666667  0.6
-  0.33333333  0.          0.44444444  0.74285714  0.          0.42622951
-  0.          0.          0.          1.          1.          0.16216216
-  0.6877193 ]
-Micro-Precision 0.797222222222
-Micro-Recall 0.481543624161
-Micro-F1 0.600418410042
-Macro-Precision 0.571810523625
-Macro-Recall 0.43354248403
-Macro-F1 0.458241578802
+All-F1 [ 0.          0.          1.          0.          0.66666667  0.          0.8
+  0.42857143  0.          0.          0.          0.5         0.          0.
+  1.          0.          0.          0.          1.          0.35135135
+  0.33333333  0.45977011  0.34146341  0.66666667  0.4         0.
+  0.15384615  0.06896552  0.          0.          0.          0.69942197]
+Micro-Precision 0.751937984496
+Micro-Recall 0.405857740586
+Micro-F1 0.527173913043
+Macro-Precision 0.416539830479
+Macro-Recall 0.2290852605
+Macro-F1 0.277189269143
+
 
 
 
